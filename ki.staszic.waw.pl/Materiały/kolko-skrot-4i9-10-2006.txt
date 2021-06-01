@@ -1,0 +1,14 @@
+
+Na pierwszych 2 kolkach w roku szkolnym 2006/2007 omowilismy
+nastepujace tematy:
+1. Implementacja grafu za pomoca macierzy sasiedztwa i list sasiedztwa,
+  w szczegolnosci za pomoca tablicy wektorow int-ow w STLu.
+2. DFS (przeszukiwanie grafu wglab) i BFS (przeszukiwanie grafu wszerz),
+  problem spojnych skladowych i najszybszej sciezki w grafie, gdzie
+  wszystkie krawedzie maja te sama dlugosc.
+3. Algorytm Dijkstry w czasie O(n^2).
+4. Zwykly kopiec i jego implementacja.
+5. Algorytm Dijkstry z wykorzystaniem kopca, czyli w czasie O(m log n).
+6. Algorytm Floyda-Warshalla, na znajdowanie minimalnej odleglosci
+  w grafie miedzy kazda para wierzcholkow w czasie O(n^3).
+

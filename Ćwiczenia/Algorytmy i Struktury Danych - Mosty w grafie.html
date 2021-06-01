@@ -1,0 +1,2004 @@
+
+<!-- saved from url=(0050)https://eduinf.waw.pl/inf/alg/001_search/0130a.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+
+<meta http-equiv="Content-Language" content="pl">
+<title>Algorytmy i Struktury Danych - Mosty w grafie</title>
+<meta name="description" content="Artykuł opisuje różne algorytmy wyszukujące informacje w zbiorach danych takich jak przedziały liczbowe, tablice, macierze, wektory, listy, drzewa, grafy, teksty itp.">
+<meta name="keywords" content="wyszukiwanie, algorytm, programowanie, c++, pascal, basic, informatyka, liceum, matura, olimpiada, matematyka">
+<link rel="stylesheet" type="text/css" href="./Algorytmy i Struktury Danych - Mosty w grafie_files/001.css">
+<script src="./Algorytmy i Struktury Danych - Mosty w grafie_files/f.txt"></script><script src="./Algorytmy i Struktury Danych - Mosty w grafie_files/ca-pub-2048408300128807.js.pobrane"></script><script type="text/javascript" language="javascript" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/h.js.pobrane"></script>
+<!--<base target="_top">--><base href="." target="_top">
+        <script async="" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/f(1).txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2048408300128807",
+    enable_page_level_ads: true
+  });
+</script>
+<link rel="preload" href="./Algorytmy i Struktury Danych - Mosty w grafie_files/f(2).txt" as="script"><script type="text/javascript" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/f(2).txt"></script><link rel="preload" href="./Algorytmy i Struktury Danych - Mosty w grafie_files/f(3).txt" as="script"><script type="text/javascript" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/f(3).txt"></script></head>
+
+<body><table border="0" width="100%" cellpadding="0" style="border-collapse: collapse">
+  <tbody><tr>
+    <td width="164" style="text-align: left" valign="top" class="menu_l"><a href="http://www.i-lo.tarnow.pl/"><img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/i-lo_logo.gif" width="164" height="170" style="margin-top: 12px" alt="Do strony głównej I LO w Tarnowie"></a></td>
+    <td style="text-align: center" valign="top" class="menu_m" nowrap="">
+    <a class="exit" href="https://eduinf.waw.pl/inf/index.php"><span>Wyjście </span></a><a class="cont" href="https://eduinf.waw.pl/inf/alg/001_search/index.php"><span>Spis treści </span></a><a class="prev" href="https://eduinf.waw.pl/inf/alg/001_search/0130.php"><span>Poprzedni </span></a><a class="next" href="https://eduinf.waw.pl/inf/alg/001_search/0130b.php"><span>Następny </span></a>
+<p><img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_title.jpg" width="511" height="195" alt="tytuł"></p>
+    <span class="small">Prezentowane materiały są przeznaczone dla uczniów szkół ponadgimnazjalnych</span>.<br>
+    Autor artykułu: mgr Jerzy Wałaszek,&nbsp; wersja 2.0</td>
+    <td style="padding:8px; text-align: center" valign="top" class="menu_r" nowrap="" width="200">
+    <p class="small" style="line-height: 100%; margin-bottom: 0">&nbsp;&#169;2014 mgr Jerzy Wałaszek<br>
+    I LO w Tarnowie</p>
+    <p><img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_logo.gif" width="134" height="102" alt="logo"></p>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center" colspan="3" height="100">
+<script async="" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/f(1).txt"></script>
+<!-- normal_page -->
+<ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-2048408300128807" data-ad-slot="9328341371" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><iframe width="1200" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:1200px;height:90px;" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/saved_resource.html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+  </tr>
+  </tbody></table>
+<h1 class="sb1">Znajdowanie mostów w grafie</h1>
+<hr color="#336699" size="1">
+<table border="0" cellspacing="0" cellpadding="4" style="border-collapse: collapse" class="sb1" id="table248">
+	<tbody><tr>
+		<td bgcolor="#CCCCCC"><b>Tematy pokrewne</b></td>
+<td bgcolor="#CCCCCC">&nbsp;</td>
+<td bgcolor="#CCCCCC"><b>Podrozdziały</b></td>
+</tr>
+	<tr>
+		<td valign="top"><b><a href="https://eduinf.waw.pl/inf/alg/001_search/0122.php">Grafy</a></b><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0123.php">Podstawowe pojęcia dotyczące grafów</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0124.php">Reprezentacja grafów w komputerze</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0125.php">Przechodzenie grafów w głąb &#8211; DFS</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126.php">Przechodzenie grafów wszerz &#8211; BFS</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126a.php">Transpozycja grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126b.php">Kwadrat grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126c.php">Graf krawędziowy</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126d.php">Stopień grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0127.php">Znajdowanie ścieżki w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0128.php">Znajdowanie drogi w labiryncie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0128a.php">Spójność grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0129.php">Znajdowanie spójnych składowych w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0129a.php">Znajdowanie silnie spójnych 
+					składowych w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0130.php">Drzewa rozpinające grafu</a><br>
+		<font color="#FF0000"><b>Znajdowanie mostów w grafie</b></font><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0130b.php">Znajdowanie punktów artykulacji w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0131.php">Grafy dwudzielne</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0131a.php">Kojarzenie małżeństw</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0132.php">Cykliczność grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0133.php">Znajdowanie cykli w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0134.php">Istnienie cyklu lub ścieżki Eulera</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0135.php">Znajdowanie cyklu lub ścieżki Eulera</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0136.php">Znajdowanie cyklu lub ścieżki 
+					Hamiltona</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0137.php">Sortowanie topologiczne grafu 
+					skierowanego</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0138.php">Najkrótsza ścieżka w grafie ważonym &#8211; 
+					algorytm Dijkstry</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0138a.php">Najkrótsza ścieżka w grafie ważonym &#8211; 
+					algorytm Bellmana-Forda</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0138b.php">Najkrótsze ścieżki pomiędzy 
+					wszystkimi parami wierzchołków w grafie ważonym</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0139.php">Problem chińskiego listonosza</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0140.php">Problem komiwojażera</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0141.php">Minimalne drzewo rozpinające</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0142.php">Kolorowanie grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0143.php">Znajdowanie klik w grafie</a></td>
+		<td valign="top">&nbsp;</td>
+		<td valign="top"><a href="https://eduinf.waw.pl/inf/alg/001_search/0130a.php#P1">Rozwiązanie nr 1</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0130a.php#P2">Rozwiązanie nr 2</a></td>
+	</tr>
+</tbody></table>
+<div class="bl2">
+  <p class="mlink">&nbsp;</p></div>
+<div class="bl1">
+<h3>Problem</h3>
+<p class="bl2">Dla danego grafu nieskierowanego wyznaczyć wszystkie mosty.</p>
+<div class="sb1">
+	<p><br>
+	</p>
+	<p style="text-align: center">
+	<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_14.gif" width="427" height="148"></p>
+	<p style="text-align: center">&nbsp;</p>
+	<p><b>Mostem</b> <span class="rem">(ang. bridge)</span> nazywamy krawędź grafu, 
+	której usunięcie zwiększa liczbę spójnych składowych. Na powyższym rysunku 
+	mostem jest krawędź 0 &#8211; 1.</p>
+	<p>&nbsp;</p>
+</div>
+<h3><a name="P1"></a>Rozwiązanie nr 1
+</h3>
+<div class="sb1">
+	<p>&nbsp;</p>
+	<p>Naiwny sposób rozwiązania tego problemu jest następujący:</p>
+	<p>&nbsp;</p><div class="bl1">Obliczamy wstępnie liczbę spójnych składowych 
+		w grafie <span class="rem">(możemy tutaj wykorzystać algorytm opisany w
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0129.php#A">rozdziale o spójnych składowych</a>)</span> i zapamiętujemy 
+		ją. Następnie wybieramy kolejne krawędzie grafu. Wybraną krawędź usuwamy 
+		z grafu i ponownie wyznaczamy liczbę spójnych składowych. Jeśli będzie 
+		większa od zapamiętanej, to usunięta krawędź jest mostem. W takim 
+		przypadku krawędź tę zapamiętujemy, wstawiamy z powrotem do grafu i 
+		przechodzimy do następnej krawędzi. Gdy algorytm zakończy swoje 
+		działanie, otrzymamy listę krawędzi, które są mostami.</div>
+	<p>&nbsp;</p>
+<h4><a name="A1"></a>Algorytm naiwny wyszukiwania mostów w grafie nieskierowanym</h4>
+<h5>Wejście</h5>
+<div class="sb1">
+<table id="table252" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>n</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>liczba wierzchołków w grafie, <i>n</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>graf</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>zadany w dowolnie wybrany sposób, algorytm tego nie precyzuje</td>
+  </tr>
+  </tbody></table>
+</div>
+<h5>Wyjście:</h5>
+<div class="sb1">
+<table id="table258" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>L</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>lista par wierzchołków, które tworzą krawędzie-mosty.</td>
+  </tr>
+  </tbody></table>
+	</div>
+<h5>Elementy pomocnicze:</h5>
+<div class="sb1">
+<table id="table254" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap="">ccn(<i>n</i>,<i>graf</i>)</td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>funkcja zwracająca liczbę spójnych składowych w grafie</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>nc</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>liczba spójnych składowych grafu,&nbsp; <i>nc</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>v</i>,<i>u</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>numery wierzchołków grafu,&nbsp; <i>v,u</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  </tbody></table>
+</div>
+<h5><a href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#prezentacja">Lista kroków:</a></h5>
+<div class="bl1">
+  <table border="0" cellpadding="2" style="border-collapse: collapse" id="table255">
+    <tbody><tr>
+      <td valign="top">K01:</td>
+      <td nowrap="" valign="top">Utwórz pustą listę <i>L</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K02:</td>
+      <td nowrap="" valign="top"><i>nc</i> &#8592; ccn(<i>n</i>,<i>graf</i>)</td>
+      <td class="c" valign="top">; zapamiętujemy liczbę spójnych składowych</td>
+    </tr>
+    <tr>
+      <td valign="top">K03:</td>
+      <td nowrap="" valign="top"><b>Dla</b> <i>v</i> = 0,1,...,<i>n</i>-1, <b>
+		wykonuj</b> K04...K08</td>
+      <td class="c" valign="top">; przechodzimy przez kolejne wierzchołki grafu</td>
+    </tr>
+    <tr>
+      <td valign="top">K04:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Dla</b> każdego sąsiada <i>u</i> 
+		wierzchołka <i>v</i> <b>wykonuj</b> K05...K08</td>
+      <td class="c" valign="top">; przechodzimy przez wszystkich sąsiadów 
+		wierzchołka v</td>
+    </tr>
+    <tr>
+      <td valign="top">K05:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>
+		Jeśli</b> <i>u</i> &#8804; <i>v</i>, <b>to następny obieg pętli</b> K04</td>
+      <td class="c" valign="top">; każdą krawędź wybieramy jeden raz</td>
+    </tr>
+    <tr>
+      <td valign="top">K06:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Usuń 
+		krawędź <i>v-u</i> z <i>grafu</i></td>
+      <td class="c" valign="top">; wybraną krawędź usuwamy</td>
+    </tr>
+    <tr>
+      <td valign="top">K07:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>
+		Jeśli</b> ccn(<i>n</i>,<i>graf</i>) &gt; <i>nc</i>, <b>to</b> dodaj <i>v-u</i> 
+		do <i>L</i></td>
+      <td class="c" valign="top">; jeśli krawędź jest mostem, to zapamiętujemy 
+		ją w L</td>
+    </tr>
+    <tr>
+      <td valign="top">K08:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dodaj 
+		krawędź <i>v-u</i> do <i>grafu</i></td>
+      <td class="c" valign="top">; odtwarzamy krawędź</td>
+    </tr>
+    <tr>
+      <td valign="top">K09:</td>
+      <td nowrap="" valign="top"><b>Zakończ</b></td>
+      <td class="c" valign="top">; mosty w L</td>
+    </tr>
+    </tbody></table>
+  <p>&nbsp;</p></div>
+<h4>Program</h4> <div class="sb1"><table border="0" cellpadding="8" style="border-collapse: collapse">
+    <tbody><tr>
+      <td class="note"><b>Ważne</b>:<br>
+ <p class="bl1">Zanim uruchomisz program, przeczytaj <a target="_blank" href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#konsola">wstęp</a> do tego artykułu, w którym wyjaśniamy 
+      funkcje tych programów oraz sposób korzystania z nich. </p></td></tr>
+  </tbody></table>
+  <p>&nbsp;</p>
+</div><div class="sb1">
+	Program odczytuje <a target="_blank" href="https://eduinf.waw.pl/inf/alg/001_search/0124.php#P1">definicję</a> grafu 
+	nieskierowanego, wyszukuje w nim wszystkie mosty i wyświetla je w oknie 
+	konsoli. Ponieważ usuwanie krawędzi może być nieco kłopotliwe, 
+	zastosowaliśmy tu nieco inną metodę. Otóż wykorzystujemy dodatkową tablicę 
+	logiczną <i>VU</i>, której elementy odzwierciedlają wierzchołki. Jeśli dla 
+	danej krawędzi <i>v-u</i> oba elementy <i>VU</i>[<i>v</i>] i <i>VU</i>[<i>u</i>] 
+	mają wartość false, to krawędź <i>v-u</i> jest usunięta z grafu. Tablica <i>
+	VU</i> jest dodatkowym parametrem funkcji ccn().<p>&nbsp;</p>
+	<p>Przykładowe dane <span class="rem">(spójne składowe 
+	zostały pokolorowane w celach testowych)</span>:</p>
+	<table border="0" cellpadding="4" cellspacing="0">
+			<tbody><tr>
+				<td>
+				<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0129_03.gif" width="382" height="354"></td>
+				<td><span lang="en">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+				<td>17 17<br>
+				0 1 0 2 0 3<br>
+				1 2 1 14<br>
+				4 11 4 12<br>
+				5 6 5 9<br>
+				6 7 6 8<br>
+				10 15<br>
+				11 15<br>
+				12 15<br>
+				13 14 13 16<br>
+				14 16</td>
+			</tr>
+		</tbody></table>
+	<p>&nbsp;</p>
+	<table border="1" id="table257" cellspacing="0" cellpadding="4" style="border-collapse: collapse" bordercolor="#808080">
+		<tbody><tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Lazarus</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre>// Wyszukiwanie mostów w grafie nieskierowanym
+// Data: 27.12.2013
+// (C)2013 mgr Jerzy Wałaszek
+//--------------------------------------------
+
+program bridges;
+
+// Typy dla dynamicznej tablicy list sąsiedztwa, stosu i listy mostów
+type
+  PslistEl = ^slistEl;
+  slistEl =  record
+    next  : PslistEl;
+    v     : integer;
+  end;
+
+TList = array of PslistEl;
+
+// Definicja typu obiektowego stack
+//---------------------------------
+stack = object
+  private
+    S : PslistEl;  // lista przechowująca stos
+
+  public
+    constructor init;
+    destructor destroy;
+    function   empty : boolean;
+    function   top : integer;
+    procedure  push(v : integer);
+    procedure  pop;
+end;
+
+// Konstruktor
+//------------
+constructor stack.init;
+begin
+  S := nil;
+end;
+
+// Destruktor
+//-----------
+
+destructor stack.destroy;
+begin
+  while S &lt;&gt; nil do pop;
+end;
+
+// Sprawdza, czy stos jest pusty
+//------------------------------
+function stack.empty : boolean;
+begin
+  if S = nil then empty := true else empty := false;
+end;
+
+// Zwraca liczbę ze szczytu stosu
+//----------------------------------
+function stack.top : integer;
+begin
+  top := S^.v;
+end;
+
+// Umieszcza dane na stosie
+//-------------------------
+procedure stack.push(v : integer);
+var
+  e : PslistEl;
+begin
+  new(e);
+  e^.v := v;
+  e^.next := S;
+  S := e;
+end;
+
+// Usuwa dane ze stosu
+//--------------------
+procedure stack.pop;
+var
+  e :PslistEl;
+begin
+  if S &lt;&gt; NIL then
+  begin
+    e := S;
+    S := S^.next;
+    dispose(e);
+  end;
+end;
+
+// Funkcja oblicza liczbę spójnych składowych w grafie
+// n    - liczba wierzchołków w grafie
+// graf - tablica list sąsiedztwa
+// VU   - tablica dostępności krawędzi grafu
+//----------------------------------------------------
+function ccn(n : integer; var graf : TList; VU : array of boolean) : integer;
+var
+  C        : array of integer;
+  S        : stack;
+  cc,i,v,u : integer;
+  p        : PslistEl;
+
+begin
+  S.init;                    // Tworzymy pusty stos
+  SetLength(C,n);            // Tworzymy tablicę spójnych składowych
+  for i := 0 to n - 1 do
+    C[i] := 0;               // Zerujemy tablicę spójnych składowych
+
+  cc := 0;                   // Zerujemy licznik spójnych składowych
+
+  for i := 0 to n-1 do
+    if C[i] = 0 then         // Szukamy nieodwiedzonego jeszcze wierzchołka
+    begin
+      inc(cc);               // Zwiększamy licznik składowych
+      S.push(i);             // Na stosie umieszczamy numer bieżącego wierzchołka
+      C[i] := cc;            // Wierzchołek numerujemy i oznaczamy jako odwiedzony
+      while not S.empty do   // Przechodzimy graf algorytmem DFS
+      begin
+        v := S.top;          // Pobieramy wierzchołek
+        S.pop;               // Usuwamy go ze stosu
+        p := graf[v];        // Przeglądamy sąsiadów wierzchołka v
+        while p &lt;&gt; nil do
+        begin
+          u := p^.v;         // Numer sąsiada do u
+          if (VU[v] or VU[u]) and (C[u] = 0) then
+          begin
+            S.push(u);       // Na stos idą sąsiedzi nieodwiedzeni
+            C[u] := cc;      // i ponumerowani
+          end;
+          p := p^.next;
+        end;
+      end;
+    end;
+  SetLength(C,0);           // Usuwamy tablicę C
+  S.destroy;                // Usuwamy stos
+  ccn := cc;                // Zwracamy wynik
+end;
+
+// **********************
+// *** Program główny ***
+// **********************
+
+var
+  n,m      : integer;       // Liczba wierzchołków i krawędzi
+  A        : TList;         // Tablica list sąsiedztwa
+  nc,i,v,u : integer;
+  L,p,r    : PslistEl;
+  VU       : array of boolean;
+
+begin
+  read(n,m);                 // Odczytujemy liczbę wierzchołków i krawędzi
+
+  SetLength(A,n);            // Tworzymy tablice dynamiczne
+  SetLength(VU,n);
+
+  for i := 0 to n - 1 do
+  begin
+    A[i]  := nil;
+    VU[i] := true;
+  end;
+
+  // Odczytujemy kolejne definicje krawędzi
+
+  for i := 0 to m - 1 do
+  begin
+    read(v,u);               // Wierzchołki tworzące krawędź
+    new(p);                  // Tworzymy nowy element
+    p^.v := u;               // Numerujemy go jako w
+    p^.next := A[v];         // Dodajemy go na początek listy A[v]
+    A[v] := p;
+    new(p);                  // To samo dla krawędzi w drugą stronę
+    p^.v := v;
+    p^.next := A[u];
+    A[u] := p;
+  end;
+
+  // Algorytm znajdowania mostów
+
+  L := nil;                  // Pusta lista mostów
+
+  nc := ccn(n,A,VU);         // Zapamiętujemy liczbę spójnych składowych
+
+  for v := 0 to n - 1 do     // Przechodzimy przez kolejne wierzchołki grafu
+  begin
+    p := A[v];               // Przeglądamy listę sąsiedztwa wierzchołka v
+    while p &lt;&gt; nil do
+    begin
+      u := p^.v;             // u - numer wierzchołka sąsiedniego w grafie
+      if u &gt; v then          // Interesują nas tylko krawędzie w jedną stronę
+      begin
+        VU[v] := false;      // Zaznaczamy krawędź v-u jako usuniętą
+        VU[u] := false;
+        if ccn(n,A,VU) &gt; nc then
+        begin
+          new(r);            // Znaleziony most dodajemy do listy L
+          r^.v := u;
+          r^.next := L;
+          L := r;
+          new(r);
+          r^.v := v;
+          r^.next := L;
+          L := r;
+        end;
+        VU[v] := true;      // Kasujemy zaznaczenie krawędzi jako usuniętej
+        VU[u] := true;
+      end;
+      p := p^.next;
+    end;
+  end;
+
+  writeln;
+
+  // Wypisujemy znalezione mosty, jednocześnie usuwając listę L
+
+  v := 0;
+
+  while L &lt;&gt; nil do
+  begin
+    write(L^.v,' ');
+    v := (v + 1) mod 2;
+    if v = 0 then writeln;
+    p := L;
+    L := L^.next;
+    dispose(p);
+  end;
+
+  // Usuwamy pozostałe struktury dynamiczne
+
+  for i := 0 to n - 1 do
+  begin
+    p := A[i];
+    while p &lt;&gt; nil do
+    begin
+      r := p;
+      p := p^.next;
+      dispose(r);
+    end;
+  end;
+
+  SetLength(A,0);
+  SetLength(VU,0);
+end.</pre></td>
+		</tr>
+		<tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Code::Blocks</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="cpp"><pre><span class="c">// Wyszukiwanie mostów w grafie nieskierowanym</span>
+<span class="c">// Data: 27.12.2013</span>
+<span class="c">// (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">//--------------------------------------------</span>
+
+<span class="pp">#include &lt;iostream&gt;</span>
+
+<span class="i">using</span> <span class="i">namespace</span> <span class="v">std</span>;
+
+<span class="c">// Typy dla dynamicznej tablicy list sąsiedztwa, stosu i listy mostów</span>
+
+<span class="i">struct</span> <span class="v">slistEl</span>
+{
+  <span class="v">slistEl</span> * <span class="v">next</span>;
+  <span class="i">int</span> <span class="v">v</span>;
+};
+
+<span class="i">class</span> <span class="v">stack</span>
+{
+  <span class="i">private</span>:
+    <span class="v">slistEl</span> * <span class="v">S</span>;   <span class="c">// lista przechowująca stos</span>
+
+  <span class="i">public</span>:
+    <span class="v">stack</span>();       <span class="c">// konstruktor</span>
+    ~<span class="v">stack</span>();      <span class="c">// destruktor</span>
+    <span class="i">bool</span> <span class="v">empty</span>(<span class="i">void</span>);
+    <span class="i">int</span>  <span class="v">top</span>(<span class="i">void</span>);
+    <span class="i">void</span> <span class="v">push</span>(<span class="i">int</span> <span class="v">v</span>);
+    <span class="i">void</span> <span class="v">pop</span>(<span class="i">void</span>);
+};
+
+<span class="c">//---------------------</span>
+<span class="c">// Metody obiektu stack</span>
+<span class="c">//---------------------</span>
+
+<span class="c">// Konstruktor</span>
+<span class="c">//------------</span>
+<span class="v">stack</span>::<span class="v">stack</span>()
+{
+  <span class="v">S</span> = <span class="v">NULL</span>;
+}
+
+<span class="c">// Destruktor - zwalnia tablicę dynamiczną</span>
+<span class="c">//----------------------------------------</span>
+<span class="v">stack</span>::~<span class="v">stack</span>()
+{
+  <span class="i">while</span>(<span class="v">S</span>) <span class="v">pop</span>();
+}
+
+<span class="c">// Sprawdza, czy stos jest pusty</span>
+<span class="c">//------------------------------</span>
+<span class="i">bool</span> <span class="v">stack</span>::<span class="v">empty</span>(<span class="i">void</span>)
+{
+  <span class="i">return</span> !<span class="v">S</span>;
+}
+
+<span class="c">// Zwraca szczyt stosu</span>
+<span class="c">//--------------------</span>
+<span class="i">int</span> <span class="v">stack</span>::<span class="v">top</span>(<span class="i">void</span>)
+{
+  <span class="i">return</span> <span class="v">S</span>-&gt;<span class="v">v</span>;
+}
+
+<span class="c">// Zapisuje na stos</span>
+<span class="c">//-----------------</span>
+<span class="i">void</span> <span class="v">stack</span>::<span class="v">push</span>(<span class="i">int</span> <span class="v">v</span>)
+{
+  <span class="v">slistEl</span> * <span class="v">e</span> = <span class="i">new</span> <span class="v">slistEl</span>;
+  <span class="v">e</span>-&gt;<span class="v">v</span>    = <span class="v">v</span>;
+  <span class="v">e</span>-&gt;<span class="v">next</span> = <span class="v">S</span>;
+  <span class="v">S</span> = <span class="v">e</span>;
+}
+
+<span class="c">// Usuwa ze stosu</span>
+<span class="c">//---------------</span>
+<span class="i">void</span> <span class="v">stack</span>::<span class="v">pop</span>(<span class="i">void</span>)
+{
+  <span class="i">if</span>(<span class="v">S</span>)
+  {
+    <span class="v">slistEl</span> * <span class="v">e</span> = <span class="v">S</span>;
+    <span class="v">S</span> = <span class="v">S</span>-&gt;<span class="v">next</span>;
+    <span class="i">delete</span> <span class="v">e</span>;
+  }
+}
+
+<span class="c">// Funkcja oblicza liczbę spójnych składowych w grafie</span>
+<span class="c">// n    - liczba wierzchołków w grafie</span>
+<span class="c">// graf - tablica list sąsiedztwa</span>
+<span class="c">// VU   - tablica dostępności krawędzi grafu</span>
+<span class="c">//----------------------------------------------------</span>
+<span class="i">int</span> <span class="v">ccn</span>(<span class="i">int</span> <span class="v">n</span>, <span class="v">slistEl</span> ** <span class="v">graf</span>, <span class="i">bool</span> * <span class="v">VU</span>)
+{
+  <span class="i">int</span> * <span class="v">C</span>,<span class="v">cc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span>;
+  <span class="v">stack</span> <span class="v">S</span>;
+  <span class="v">slistEl</span> * <span class="v">p</span>;
+
+  <span class="v">C</span> = <span class="i">new</span> <span class="i">int</span>[<span class="v">n</span>];            <span class="c">// Tworzymy tablicę spójnych składowych</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++) <span class="v">C</span>[<span class="v">i</span>] = <span class="n">0</span>; <span class="c">// Zerujemy tablicę spójnych składowych</span>
+
+  <span class="v">cc</span> = <span class="n">0</span>;                    <span class="c">// Zerujemy licznik spójnych składowych</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+    <span class="i">if</span>(!<span class="v">C</span>[<span class="v">i</span>])                <span class="c">// Szukamy nieodwiedzonego jeszcze wierzchołka</span>
+    {
+      <span class="v">cc</span>++;                  <span class="c">// Zwiększamy licznik składowych</span>
+      <span class="v">S</span>.<span class="v">push</span>(<span class="v">i</span>);             <span class="c">// Na stosie umieszczamy numer bieżącego węzła</span>
+      <span class="v">C</span>[<span class="v">i</span>] = <span class="v">cc</span>;             <span class="c">// Wierzchołek numerujemy i oznaczamy jako odwiedzony</span>
+      <span class="i">while</span>(!<span class="v">S</span>.<span class="v">empty</span>())      <span class="c">// Przechodzimy graf algorytmem DFS</span>
+      {
+        <span class="v">v</span> = <span class="v">S</span>.<span class="v">top</span>();         <span class="c">// Pobieramy wierzchołek</span>
+        <span class="v">S</span>.<span class="v">pop</span>();             <span class="c">// Usuwamy go ze stosu</span>
+        <span class="i">for</span>(<span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]; <span class="v">p</span>; <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>) <span class="c">// Przeglądamy sąsiadów wierzchołka v</span>
+        {
+          <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>;
+          <span class="i">if</span>((<span class="v">VU</span>[<span class="v">v</span>] || <span class="v">VU</span>[<span class="v">u</span>]) &amp;&amp; !<span class="v">C</span>[<span class="v">u</span>])
+          {
+            <span class="v">S</span>.<span class="v">push</span>(<span class="v">p</span>-&gt;<span class="v">v</span>);   <span class="c">// Na stos idą sąsiedzi nieodwiedzeni</span>
+            <span class="v">C</span>[<span class="v">u</span>] = <span class="v">cc</span>;      <span class="c">// i ponumerowani</span>
+          }
+        }
+      }
+    }
+
+  <span class="i">delete</span> [] <span class="v">C</span>;               <span class="c">// Usuwamy tablicę C</span>
+  <span class="i">return</span> <span class="v">cc</span>;                 <span class="c">// Zwracamy wynik</span>
+}
+
+<span class="c">// **********************</span>
+<span class="c">// *** PROGRAM GŁÓWNY ***</span>
+<span class="c">// **********************</span>
+
+<span class="i">int</span> <span class="v">main</span>()
+{
+  <span class="i">int</span> <span class="v">n</span>,<span class="v">m</span>;                   <span class="c">// Liczba wierzchołków i krawędzi</span>
+  <span class="v">slistEl</span> ** <span class="v">A</span>;              <span class="c">// Tablica list sąsiedztwa</span>
+  <span class="i">int</span> <span class="v">nc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span>;
+  <span class="v">slistEl</span> * <span class="v">L</span>,* <span class="v">p</span>,* <span class="v">r</span>;
+  <span class="i">bool</span> * <span class="v">VU</span>;
+
+  <span class="v">cin</span> &gt;&gt; <span class="v">n</span> &gt;&gt; <span class="v">m</span>;             <span class="c">// Czytamy liczbę wierzchołków i krawędzi</span>
+
+  <span class="c">// Tworzymy zmienne dynamiczne</span>
+
+  <span class="v">VU</span> = <span class="i">new</span> <span class="i">bool</span>[<span class="v">n</span>];          <span class="c">// Krawędzie aktywne</span>
+  <span class="v">A</span>  = <span class="i">new</span> <span class="v">slistEl</span> * [<span class="v">n</span>];    <span class="c">// Tablica list sąsiedztwa</span>
+
+  <span class="c">// Tablicę wypełniamy pustymi listami</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+  {
+    <span class="v">A</span>[<span class="v">i</span>] = <span class="v">NULL</span>;
+    <span class="v">VU</span>[<span class="v">i</span>] = <span class="i">true</span>;
+  }
+
+  <span class="c">// Odczytujemy kolejne definicje krawędzi</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">m</span>; <span class="v">i</span>++)
+  {
+    <span class="v">cin</span> &gt;&gt; <span class="v">v</span> &gt;&gt; <span class="v">u</span>;
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">u</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">A</span>[<span class="v">v</span>];
+    <span class="v">A</span>[<span class="v">v</span>] = <span class="v">p</span>;
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">A</span>[<span class="v">u</span>];
+    <span class="v">A</span>[<span class="v">u</span>] = <span class="v">p</span>;
+  }
+
+  <span class="c">// Algorytm znajdowania mostów</span>
+
+  <span class="v">L</span> = <span class="v">NULL</span>;                  <span class="c">// Pusta lista mostów</span>
+
+  <span class="v">nc</span> = <span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>);          <span class="c">// Zapamiętujemy liczbę spójnych składowych</span>
+
+  <span class="i">for</span>(<span class="v">v</span> = <span class="n">0</span>; <span class="v">v</span> &lt; <span class="v">n</span>; <span class="v">v</span>++)     <span class="c">// Przechodzimy przez kolejne wierzchołki grafu</span>
+  {
+    <span class="v">p</span> = <span class="v">A</span>[<span class="v">v</span>];                <span class="c">// Przeglądamy listę sąsiedztwa wierzchołka v</span>
+    <span class="i">while</span>(<span class="v">p</span>)
+    {
+      <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>;              <span class="c">// u - numer wierzchołka sąsiedniego w grafie</span>
+      <span class="i">if</span>(<span class="v">u</span> &gt; <span class="v">v</span>)              <span class="c">// Interesują nas tylko krawędzie w jedną stronę</span>
+      {
+        <span class="v">VU</span>[<span class="v">v</span>] = <span class="v">VU</span>[<span class="v">u</span>] = <span class="i">false</span>; <span class="c">// Zaznaczamy krawędź v-u jako usuniętą</span>
+        <span class="i">if</span>(<span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>) &gt; <span class="v">nc</span>)
+        {
+          <span class="v">r</span> = <span class="i">new</span> <span class="v">slistEl</span>;   <span class="c">// Znaleziony most dodajemy do listy L</span>
+          <span class="v">r</span>-&gt;<span class="v">v</span> = <span class="v">u</span>;
+          <span class="v">r</span>-&gt;<span class="v">next</span> = <span class="v">L</span>;
+          <span class="v">L</span> = <span class="v">r</span>;
+          <span class="v">r</span> = <span class="i">new</span> <span class="v">slistEl</span>;
+          <span class="v">r</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+          <span class="v">r</span>-&gt;<span class="v">next</span> = <span class="v">L</span>;
+          <span class="v">L</span> = <span class="v">r</span>;
+        }
+        <span class="v">VU</span>[<span class="v">v</span>] = <span class="v">VU</span>[<span class="v">u</span>] = <span class="i">true</span>; <span class="c">// Kasujemy zaznaczenie krawędzi jako usuniętej</span>
+      }
+      <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>;
+    }
+  }
+
+  <span class="v">cout</span> &lt;&lt; <span class="v">endl</span>;
+
+  <span class="c">// Wypisujemy znalezione mosty, jednocześnie usuwając listę L</span>
+
+  <span class="v">v</span> = <span class="n">0</span>;
+
+  <span class="i">while</span>(<span class="v">L</span>)
+  {
+    <span class="v">cout</span> &lt;&lt; <span class="v">L</span>-&gt;<span class="v">v</span> &lt;&lt; <span class="t">" "</span>;
+    <span class="v">v</span> ^= <span class="n">1</span>;
+    <span class="i">if</span>(!<span class="v">v</span>) <span class="v">cout</span> &lt;&lt; <span class="v">endl</span>;
+    <span class="v">p</span> = <span class="v">L</span>;
+    <span class="v">L</span> = <span class="v">L</span>-&gt;<span class="v">next</span>;
+    <span class="i">delete</span> [] <span class="v">p</span>;
+  }
+
+  <span class="c">// Usuwamy dynamiczne struktury danych</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+  {
+    <span class="v">p</span> = <span class="v">A</span>[<span class="v">i</span>];
+    <span class="i">while</span>(<span class="v">p</span>)
+    {
+      <span class="v">r</span> = <span class="v">p</span>;
+      <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>;
+      <span class="i">delete</span> <span class="v">r</span>;
+    }
+  }
+
+  <span class="i">delete</span> [] <span class="v">A</span>;
+  <span class="i">delete</span> [] <span class="v">VU</span>;
+
+  <span class="i">return</span> <span class="n">0</span>;
+} </pre></pre></td>
+		</tr>
+		<tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Free Basic</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="bas"><pre><span class="c">' Wyszukiwanie mostów w grafie nieskierowanym</span>
+<span class="c">' Data: 27.12.2013</span>
+<span class="c">' (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">'--------------------------------------------</span>
+
+<span class="c">' Typy dla dynamicznej tablicy list sąsiedztwa, stosu i listy mostów</span>
+
+<span class="i">Type</span> <span class="v">slistEl</span>
+  <span class="i">Next</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>
+  <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>
+<span class="i">End</span> <span class="i">Type</span>
+
+<span class="i">Type</span> <span class="v">stack</span>
+  <span class="i">Private</span>:
+    <span class="v">S</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>  <span class="c">' lista zawierająca stos</span>
+  <span class="i">Public</span>:
+    <span class="i">Declare</span> <span class="i">Constructor</span>()
+    <span class="i">Declare</span> <span class="i">Destructor</span>()
+    <span class="i">Declare</span> <span class="i">Function</span> <span class="v">empty</span>() <span class="i">As</span> <span class="i">Integer</span>
+    <span class="i">Declare</span> <span class="i">Function</span> <span class="v">top</span> <span class="i">As</span> <span class="i">Integer</span>
+    <span class="i">Declare</span> <span class="i">Sub</span> <span class="v">push</span>(<span class="i">Byval</span> <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>)
+    <span class="i">Declare</span> <span class="i">Sub</span> <span class="v">pop</span>()
+<span class="i">End</span> <span class="i">Type</span>
+
+<span class="c">'---------------------</span>
+<span class="c">' Metody obiektu stack</span>
+<span class="c">'---------------------</span>
+
+<span class="c">' Konstruktor</span>
+<span class="c">'------------</span>
+<span class="i">Constructor</span> <span class="v">stack</span>()
+  <span class="v">S</span> = <span class="n">0</span>
+<span class="i">End</span> <span class="i">Constructor</span>
+
+<span class="c">' Destruktor</span>
+<span class="c">'-----------</span>
+<span class="i">Destructor</span> <span class="v">stack</span>()
+  <span class="i">While</span> <span class="v">S</span>
+    <span class="v">pop</span>()
+  <span class="i">Wend</span>
+<span class="i">End</span> <span class="i">Destructor</span>
+
+<span class="c">' Sprawdza, czy stos jest pusty</span>
+<span class="c">'------------------------------</span>
+<span class="i">Function</span> <span class="v">stack</span>.<span class="v">empty</span>() <span class="i">As</span> <span class="i">Integer</span>
+  <span class="i">If</span> <span class="v">S</span> = <span class="n">0</span> <span class="i">Then</span> <span class="i">Return</span> <span class="n">1</span>
+  <span class="i">Return</span> <span class="n">0</span>
+<span class="i">End</span> <span class="i">Function</span>
+
+<span class="c">' Zwraca szczyt stosu.</span>
+<span class="c">'------------------------------</span>
+<span class="i">Function</span> <span class="v">stack</span>.<span class="v">top</span>() <span class="i">As</span> <span class="i">Integer</span>
+  <span class="v">top</span> = <span class="v">S</span>-&gt;<span class="v">v</span>
+<span class="i">End</span> <span class="i">Function</span>
+
+<span class="c">' Zapisuje na stos</span>
+<span class="c">'-----------------</span>
+<span class="i">Sub</span> <span class="v">stack</span>.<span class="v">push</span>(<span class="i">Byval</span> <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>)
+  <span class="i">Dim</span> <span class="v">e</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>
+  <span class="v">e</span> = <span class="i">New</span> <span class="v">slistEl</span>
+  <span class="v">e</span>-&gt;<span class="v">v</span>    = <span class="v">v</span>
+  <span class="v">e</span>-&gt;<span class="i">Next</span> = <span class="v">S</span>
+  <span class="v">S</span> = <span class="v">e</span>
+<span class="i">End</span> <span class="i">Sub</span>
+
+<span class="c">' Usuwa ze stosu</span>
+<span class="c">'---------------</span>
+<span class="i">Sub</span> <span class="v">stack</span>.<span class="v">pop</span>()
+  <span class="i">Dim</span> <span class="v">e</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>
+  <span class="i">If</span> <span class="v">S</span> <span class="i">Then</span>
+    <span class="v">e</span> = <span class="v">S</span>
+    <span class="v">S</span> = <span class="v">S</span>-&gt;<span class="i">Next</span>
+    <span class="i">Delete</span> <span class="v">e</span>
+  <span class="i">End</span> <span class="i">If</span>
+<span class="i">End</span> <span class="i">Sub</span>
+
+<span class="c">' Funkcja oblicza liczbę spójnych składowych w grafie</span>
+<span class="c">' n    - liczba wierzchołków w grafie</span>
+<span class="c">' graf - tablica list sąsiedztwa</span>
+<span class="c">' VU   - tablica dostępności krawędzi grafu</span>
+<span class="c">'----------------------------------------------------</span>
+<span class="i">Function</span> <span class="v">ccn</span>(<span class="i">Byval</span> <span class="v">n</span> <span class="i">As</span> <span class="i">Integer</span>, <span class="i">Byval</span> <span class="v">graf</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="i">Ptr</span>, <span class="i">Byval</span> <span class="v">VU</span> <span class="i">As</span> <span class="i">Byte</span> <span class="i">Ptr</span>) <span class="i">As</span> <span class="i">Integer</span>
+
+  <span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="i">Ptr</span> <span class="v">C</span>
+  <span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">cc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span>
+  <span class="i">Dim</span> <span class="i">As</span> <span class="v">stack</span> <span class="v">S</span>
+  <span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">p</span>
+
+  <span class="v">C</span> = <span class="i">New</span> <span class="i">Integer</span> [<span class="v">n</span>]        <span class="c">' Tworzymy tablicę spójnych składowych</span>
+
+  <span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+    <span class="v">C</span>[<span class="v">i</span>] = <span class="n">0</span>                 <span class="c">' Zerujemy tablicę spójnych składowych</span>
+  <span class="i">Next</span>
+
+  <span class="v">cc</span> = <span class="n">0</span>                     <span class="c">' Zerujemy licznik spójnych składowych</span>
+
+  <span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+    <span class="i">If</span> <span class="v">C</span>[<span class="v">i</span>] = <span class="n">0</span> <span class="i">Then</span>         <span class="c">' Szukamy nieodwiedzonego jeszcze wierzchołka</span>
+      <span class="v">cc</span> += <span class="n">1</span>                <span class="c">' Zwiększamy licznik składowych</span>
+      <span class="v">S</span>.<span class="v">push</span>(<span class="v">i</span>)              <span class="c">' Na stosie umieszczamy numer bieżącego węzła</span>
+      <span class="v">C</span>[<span class="v">i</span>] = <span class="v">cc</span>              <span class="c">' Wierzchołek numerujemy i oznaczamy jako odwiedzony      </span>
+      <span class="i">While</span> <span class="v">S</span>.<span class="v">empty</span>() = <span class="n">0</span>    <span class="c">' Przechodzimy graf algorytmem DFS</span>
+        <span class="v">v</span> = <span class="v">S</span>.<span class="v">top</span>()          <span class="c">' Pobieramy wierzchołek</span>
+        <span class="v">S</span>.<span class="v">pop</span>()              <span class="c">' Usuwamy go ze stosu</span>
+        <span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]          <span class="c">' Przeglądamy sąsiadów wierzchołka v</span>
+        <span class="i">While</span> <span class="v">p</span>
+          <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>
+          <span class="i">If</span> ((<span class="v">VU</span>[<span class="v">v</span>] = <span class="n">1</span>) <span class="i">Orelse</span> (<span class="v">VU</span>[<span class="v">u</span>] = <span class="n">1</span>)) <span class="i">Andalso</span> (<span class="v">C</span>[<span class="v">u</span>] = <span class="n">0</span>) <span class="i">Then</span>
+            <span class="v">S</span>.<span class="v">push</span>(<span class="v">p</span>-&gt;<span class="v">v</span>)     <span class="c">' Na stos idą sąsiedzi nieodwiedzeni</span>
+            <span class="v">C</span>[<span class="v">u</span>] = <span class="v">cc</span>        <span class="c">' i ponumerowani</span>
+          <span class="i">End</span> <span class="i">If</span> 
+          <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+        <span class="i">Wend</span>
+      <span class="i">Wend</span>
+    <span class="i">End</span> <span class="i">If</span>
+  <span class="i">Next</span>
+  
+  <span class="i">Delete</span> [] <span class="v">C</span>                <span class="c">' Usuwamy tablicę C</span>
+
+  <span class="i">Return</span> <span class="v">cc</span>                  <span class="c">' Zwracamy wynik</span>
+
+<span class="i">End</span> <span class="i">Function</span>
+
+<span class="c">' **********************</span>
+<span class="c">' *** Program główny ***</span>
+<span class="c">' **********************</span>
+
+<span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">n</span>,<span class="v">m</span>,<span class="v">nc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span>
+<span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="i">Ptr</span> <span class="v">A</span>
+<span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">L</span>,<span class="v">p</span>,<span class="v">r</span>
+<span class="i">Dim</span> <span class="i">As</span> <span class="i">Byte</span> <span class="i">Ptr</span> <span class="v">VU</span>
+
+<span class="i">Open</span> <span class="i">Cons</span> <span class="i">For</span> <span class="i">Input</span> <span class="i">As</span> #<span class="n">1</span>
+
+<span class="i">Input</span> #<span class="n">1</span>,<span class="v">n</span>,<span class="v">m</span>                 <span class="c">' Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+<span class="v">A</span> = <span class="i">New</span> <span class="v">slistEl</span> <span class="i">Ptr</span> [<span class="v">n</span>]      <span class="c">' Tworzymy tablice dynamiczne</span>
+<span class="v">VU</span> = <span class="i">New</span> <span class="i">Byte</span> [<span class="v">n</span>]            <span class="c">' Krawędzie aktywne</span>
+
+<span class="c">' Tablicę A wypełniamy pustymi listami, a tablicę C wypełniamy zerami</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="v">A</span>[<span class="v">i</span>] = <span class="n">0</span>
+  <span class="v">VU</span>[<span class="v">i</span>] = <span class="n">1</span>
+<span class="i">Next</span>
+
+<span class="c">' Odczytujemy kolejne definicje krawędzi.</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">m</span> - <span class="n">1</span>
+  <span class="i">Input</span> #<span class="n">1</span>,<span class="v">v</span>,<span class="v">u</span>               <span class="c">' Wierzchołki tworzące krawędź</span>
+  <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>            <span class="c">' Tworzymy nowy element</span>
+  <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">u</span>                   <span class="c">' Numerujemy go jako u</span>
+  <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">A</span>[<span class="v">v</span>]             <span class="c">' Dodajemy go na początek listy A[v]</span>
+  <span class="v">A</span>[<span class="v">v</span>] = <span class="v">p</span>
+  <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>            <span class="c">' To samo dla krawędzi w drugą stronę</span>
+  <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+  <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">A</span>[<span class="v">u</span>]
+  <span class="v">A</span>[<span class="v">u</span>] = <span class="v">p</span>
+<span class="i">Next</span>
+
+<span class="c">' Algorytm znajdowania mostów</span>
+
+<span class="v">L</span> = <span class="n">0</span>                        <span class="c">' Pusta lista mostów</span>
+
+<span class="v">nc</span> = <span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>)             <span class="c">' Zapamiętujemy liczbę spójnych składowych</span>
+
+<span class="i">For</span> <span class="v">v</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>           <span class="c">' Przechodzimy przez kolejne wierzchołki grafu</span>
+  <span class="v">p</span> = <span class="v">A</span>[<span class="v">v</span>]                   <span class="c">' Przeglądamy listę sąsiedztwa wierzchołka v</span>
+  <span class="i">While</span> <span class="v">p</span>
+    <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>                 <span class="c">' u - numer wierzchołka sąsiedniego w grafie</span>
+    <span class="i">If</span> <span class="v">u</span> &gt; <span class="v">v</span> <span class="i">Then</span>            <span class="c">' Interesują nas tylko krawędzie w jedną stronę</span>
+      <span class="v">VU</span>[<span class="v">v</span>] = <span class="n">0</span>              <span class="c">' Zaznaczamy krawędź v-u jako usuniętą</span>
+      <span class="v">VU</span>[<span class="v">u</span>] = <span class="n">0</span>
+      <span class="i">If</span> <span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>) &gt; <span class="v">nc</span> <span class="i">Then</span>
+        <span class="v">r</span> = <span class="i">New</span> <span class="v">slistEl</span>      <span class="c">' Znaleziony most dodajemy do listy L</span>
+        <span class="v">r</span>-&gt;<span class="v">v</span> = <span class="v">u</span>
+        <span class="v">r</span>-&gt;<span class="i">Next</span> = <span class="v">L</span>
+        <span class="v">L</span> = <span class="v">r</span>
+        <span class="v">r</span> = <span class="i">New</span> <span class="v">slistEl</span>
+        <span class="v">r</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+        <span class="v">r</span>-&gt;<span class="i">Next</span> = <span class="v">L</span>
+        <span class="v">L</span> = <span class="v">r</span>
+      <span class="i">End</span> <span class="i">If</span>
+      <span class="v">VU</span>[<span class="v">v</span>] = <span class="n">1</span>              <span class="c">' Kasujemy zaznaczenie krawędzi jako usuniętej</span>
+      <span class="v">VU</span>[<span class="v">u</span>] = <span class="n">1</span>
+    <span class="i">End</span> <span class="i">If</span>
+    <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+  <span class="i">Wend</span>
+<span class="i">Next</span>
+
+<span class="i">Print</span>
+
+<span class="c">' Wypisujemy znalezione mosty, jednocześnie usuwając listę L</span>
+
+<span class="v">v</span> = <span class="n">0</span>
+
+<span class="i">While</span> <span class="v">L</span>
+  <span class="i">Print</span> <span class="v">L</span>-&gt;<span class="v">v</span>;
+  <span class="v">v</span> = (<span class="v">v</span> + <span class="n">1</span>) <span class="i">Mod</span> <span class="n">2</span>
+  <span class="i">If</span> <span class="v">v</span> = <span class="n">0</span> <span class="i">Then</span> <span class="i">Print</span>
+  <span class="v">p</span> = <span class="v">L</span>
+  <span class="v">L</span> = <span class="v">L</span>-&gt;<span class="i">Next</span>
+  <span class="i">Delete</span> [] <span class="v">p</span>
+<span class="i">Wend</span>
+
+<span class="c">' Usuwamy dynamiczne struktury danych</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="v">p</span> = <span class="v">A</span>[<span class="v">i</span>]
+  <span class="i">While</span> <span class="v">p</span>
+    <span class="v">r</span> = <span class="v">p</span>
+    <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+    <span class="i">Delete</span> <span class="v">r</span>
+  <span class="i">Wend</span>
+<span class="i">Next</span>
+
+<span class="i">Delete</span> [] <span class="v">A</span>
+<span class="i">Delete</span> [] <span class="v">VU</span>
+
+<span class="i">End</span> </pre></pre></td>
+		</tr>
+		<tr>
+			<td style="text-align: center" bgcolor="#F0F0F0" colspan="2"><b>Wynik</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" class="program">17 17<br>0 1 0 2 0 3<br>1 2 1 14<br>4 11 4 12<br>5 6 5 9<br>6 7 6 8<br>10 15<br>11 15<br>12 15<br>13 14 13 16<br>14 16<br>
+			<br>10 15<br>6 7<br>6 8<br>5 6<br>5 9<br>1 14<br>0 3</td>
+			<td style="text-align: center">
+			<img src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_01.gif" width="382" height="354"></td>
+		</tr>
+	</tbody></table>
+	</div>
+	</div>
+	<p>&nbsp;</p><h3><a name="P2"></a>Rozwiązanie nr 2</h3>
+<div class="sb1">Teraz zaprezentujemy lepszy algorytm wyszukiwania mostów w 
+	grafie nieskierowanym <span class="rem">(w literaturze nosi on nazwę 
+	algorytmu
+	<a target="_blank" href="http://pl.wikipedia.org/wiki/Robert_Tarjan">R. 
+	Tarjana</a>)</span>. Algorytm bazuje na idei <a href="https://eduinf.waw.pl/inf/alg/001_search/0130.php">drzewa rozpinającego</a> oraz 
+	wykorzystuje w specyficzny sposób przejście <a href="https://eduinf.waw.pl/inf/alg/001_search/0125.php">DFS</a>. Na początek kilka 
+	spostrzeżeń, które ten algorytm wykorzystuje.<p>&nbsp;</p>
+	<p>
+	<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_02.gif" width="254" height="228" style="float: left; margin-right: 16"></p>
+	<div class="bl1"><font color="#FF0000">Most nie może być częścią cyklu</font>. 
+		Uzasadnienie jest proste i wynika bezpośrednio z definicji mostu. Most 
+		jest krawędzią, której usunięcie dzieli składową grafu na dwie oddzielne 
+		składowe, czyli takie, dla których nie istnieje droga prowadząca od 
+		jednej składowej do drugiej. Lecz cykl w grafie nieskierowanym zawsze 
+		można przebyć w obu kierunkach, czyli pomiędzy każdymi dwoma 
+		wierzchołkami cyklu zawsze istnieją co najmniej dwie różne drogi 
+		dojścia.<p>Na rysunku obok widzimy fragment grafu. Krawędź łącząca 
+		wierzchołki A i B należy do cyklu A&#8211;B&#8211;C&#8211;D&#8211;E&#8211;A. 
+		Gdyby była mostem, to jej usunięcie spowodowałoby, iż od wierzchołka A 
+		do B przestałaby istnieć w grafie droga <span class="rem">(wierzchołki 
+		te znalazłyby się w oddzielnych składowych)</span>. Tymczasem od A do B 
+		możemy dojść idąc wzdłuż krawędzi cyklu w drugą stronę. To samo dotyczy 
+		dowolnej innej krawędzi należącej do tego cyklu.</p>
+		<p><font color="#FF0000">Most musi należeć do drzewa rozpinającego</font>. 
+		To spostrzeżenie wynika z poprzedniego oraz z własności drzew 
+		rozpinających. Drzewo rozpinające jest grafem acyklicznym. Krawędzie 
+		grafu, które nie znalazły się w drzewie rozpinającym, są krawędziami 
+		tworzącymi cykl, ponieważ prowadzą zawsze do wierzchołków, które 
+		wcześniej odwiedziła procedura przejścia grafu DFS lub BFS. Są to tzw.
+		<b>krawędzie wtórne</b> <span class="rem" lang="en">(ang. back edges)</span>. 
+		Skoro tak, to krawędzie te nie mogą być mostami, ponieważ należą do 
+		cykli. Pozostaje zatem rozważenie tylko tych krawędzi, które są zawarte 
+		w drzewie rozpinającym grafu.<br clear="all">
+		</p>
+		<div align="center">
+			<table border="0" cellpadding="4" cellspacing="0">
+				<tbody><tr>
+					<td>
+					<p style="text-align: center">Przykładowy graf<br>
+				<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130_04.gif" width="271" height="249"></p></td>
+					<td><span lang="en">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td>
+					<p style="text-align: center">Drzewo rozpinające grafu<br>
+				<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130_05.gif" width="271" height="249"></p></td>
+				</tr>
+			</tbody></table>
+			<p style="text-align: center">&nbsp;</p></div>
+		<p>Zwróć uwagę, że każda z szarych krawędzi <span class="rem">(czyli 
+		takich, które nie należą do drzewa rozpinającego)</span> tworzy cykl z 
+		krawędziami czarnymi.</p></div>
+	<p>&nbsp;</p>
+	<p>W algorytmie Tarjana wykorzystuje się <a href="https://eduinf.waw.pl/inf/alg/001_search/0109.php#P4">przejście 
+	wsteczne</a> drzewa rozpinającego grafu <span class="rem" lang="en">(ang. 
+	post-order traversal)</span>. Przejście to wykorzystuje 
+	algorytm DFS w sposób następujący:</p>
+	<div class="bl1">
+		<ol>
+			<li>Oznaczamy bieżący wierzchołek jako odwiedzony.</li>
+			<li>Przetwarzamy wszystkich nieodwiedzonych jeszcze sąsiadów 
+			bieżącego wierzchołka.</li>
+			<li>Przetwarzamy wierzchołek bieżący.</li>
+		</ol>
+	</div>
+	<p>Przejście DFS wykorzystywane jest do numerowania odwiedzanych 
+	wierzchołków oraz do wyznaczania dla każdego z nich dodatkowego 
+	parametru <nobr>Low(<i>v</i>).</nobr> Parametr <i>Low</i>(<i>v</i>) dla danego 
+	wierzchołka <i>v</i> jest najmniejszą liczbą z numeru wierzchołka <i>v</i> 
+	nadanego mu przez DFS, 
+	parametrów <i>Low</i> wszystkich jego synów na drzewie rozpinającym oraz numerów 
+	DFS 
+	wierzchołków połączonych z <i>v</i> za pomocą krawędzi wtórnych
+	<span class="rem">(czyli tych, które nie zostały umieszczone na drzewie 
+	rozpinającym)</span>. Jeśli napotkamy wierzchołek <i>v</i>, którego numer 
+	nadany przez DFS jest równy parametrowi Low(<i>v</i>) i wierzchołek ten posiada na 
+	drzewie rozpinającym ojca, to krawędź od tego ojca do wierzchołka <i>v</i> 
+	jest mostem.</p>
+	<p>Prześledźmy na prostym przykładzie kolejne kroki algorytmu Tarjana.</p>
+	<p>&nbsp;</p>
+	<table border="0" cellpadding="4" cellspacing="0" class="sb1">
+		<tbody><tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_03.gif" width="192" height="210"></td>
+			<td nowrap=""><span lang="en">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+			<td>Oto nasz przykładowy graf, w którym mamy znaleźć wszystkie 
+			mosty. Graf przejdziemy algorytmem DFS, tworząc po drodze drzewo 
+			rozpinające w głąb oraz numerując wierzchołki grafu
+			<span class="rem">(numeracja DFS nie ma nic wspólnego z numerami 
+			wierzchołków w definicji grafu &#8211; określa ona kolejność 
+			odwiedzin poszczególnych wierzchołków)</span>. Numery te posłużą 
+			później do wyznaczenia dla każdego wierzchołka parametru Low, gdy 
+			zostaną już przetworzeni wszyscy sąsiedzi.</td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_04.gif" width="192" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Przejście DFS rozpoczynamy od wierzchołka nr 0 <span class="rem">
+			(może to być dowolny inny wierzchołek grafu)</span>. Wierzchołek ten 
+			otrzymuje numer 1 <span class="rem">(numery wierzchołków nadane 
+			przez DFS będziemy oznaczać kolorem czerwonym)</span>, zostaje 
+			oznaczony jako odwiedzony, po czym rekurencyjnie algorytm DFS 
+			odwiedza wszystkich nieodwiedzonych jeszcze sąsiadów. Przejście do 
+			sąsiada tworzy gałąź w drzewie rozpinającym, którą należy zapamiętać 
+			w osobnej strukturze danych.</td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_05.gif" width="192" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Zatem z wierzchołka nr 0 przechodzimy do wierzchołka nr 2. 
+			Oznaczamy go jako odwiedzonego i numerujemy liczbą 2. Krawędź <nobr>
+			0 &#8211; 1</nobr> staje się krawędzią drzewa rozpinającego.<p>
+			Odwiedzamy rekurencyjnie wszystkich sąsiadów wierzchołka nr 1.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_06.gif" width="192" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Przechodzimy do wierzchołka nr 2. Oznaczamy go jako odwiedzonego 
+			i numerujemy liczbą 3. Krawędź 1 &#8211; 2 jest dołączana do drzewa 
+			rozpinającego.<p>Ponieważ wszyscy sąsiedzi wierzchołka nr 2 zostali 
+			już odwiedzeni, to przechodzimy do przetwarzania samego wierzchołka 
+			nr 2. Polega ono na wyznaczeniu parametru Low dla tego wierzchołka. 
+			Będzie to najmniejsza wartość z 3 i 1, czyli 1 <span class="rem">(3 &#8211; 
+			numer wierzchołka nadany przez DFS, 1 &#8211; numer wierzchołka 
+			połączonego krawędzią wtórną 2 &#8211; 0)</span>. Ponieważ Low(2) 
+			= 1 jest różne od numeru 3, który wierzchołkowi nadało DFS, zatem 
+			krawędź 1 &#8211; 2 <span class="rem">(ojciec &#8211; syn na drzewie 
+			rozpinającym)</span> nie jest mostem..</p>
+			<p>Wracamy z powrotem do wierzchołka nr 1, z którego tutaj 
+			przyszliśmy.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_07.gif" width="192" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Z wierzchołka nr 1 przechodzimy do kolejnego nieodwiedzonego 
+			sąsiada, czyli do wierzchołka nr 4.<p>Wierzchołek nr 4 oznaczamy jako 
+			odwiedzony, nadajemy mu numer 4. Krawędź 1 &#8211; 4 zostaje dodana 
+			do drzewa rozpinającego.</p>
+			<p>Wierzchołek nr 4 posiada dwóch nieodwiedzonych sąsiadów: 3 i 5.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_08.gif" width="195" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Z wierzchołka nr 4 przechodzimy do wierzchołka nr 3. Oznaczamy 
+			go jako odwiedzony i nadajemy mu numer 5. Krawędź 4 &#8211; 5 trafia 
+			do drzewa rozpinającego.<p>Wierzchołek nr 3 posiada nieodwiedzonego 
+			jeszcze sąsiada nr 5.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_09.gif" width="195" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Z wierzchołka nr 3 przechodzimy do wierzchołka nr 5. Oznaczamy 
+			go jako odwiedzony i nadajemy mu numer 6. Krawędź 3 &#8211; 5 
+			dołączamy do drzewa rozpinającego.<p>Wierzchołek nr 5 nie posiada 
+			więcej nieodwiedzonych sąsiadów. Zatem wyliczamy dla niego parametr 
+			Low jako mniejszą liczbę z 6 <span class="rem">(numer nadany 
+			wierzchołkowi 5 przez DFS)</span> i 4 <span class="rem">(numer DFS 
+			wierzchołka 4, do którego prowadzi krawędź wtórna)</span>.</p>
+			<p>Low(5) = min(6,4) = 4</p>
+			<p>Ponieważ parametr Low ma dla tego wierzchołka wartość różną od 
+			numeru nadanego przez DFS, krawędź 3 &#8211; 5 nie jest mostem.</p>
+			<p>Przetwarzanie wierzchołka nr 5 jest zakończone, wracamy do 
+			wierzchołka nr 3, z którego przyszliśmy.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_10.gif" width="207" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Jesteśmy w wierzchołku nr 3. Wszyscy sąsiedzi zostali 
+			odwiedzeni. Wyliczamy parametr Low(3) jako najmniejszą liczbę z 5
+			<span class="rem">(numer DFS wierzchołka 3)</span> i 4
+			<span class="rem">(parametr Low wierzchołka nr 6, który jest synem)</span>.<p>
+			Low(3) = min (5,4) = 4</p>
+			<p>Ponieważ Low(3) = 4 jest różne od numeru DFS równego 5 dla 
+			wierzchołka nr 3, krawędź 4 &#8211; 3 nie jest mostem.</p>
+			<p>Wracamy do wierzchołka nr 4.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_11.gif" width="207" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Jesteśmy w wierzchołku nr 4. Wszyscy sąsiedzi wierzchołka nr 4 
+			są odwiedzeni. Obliczamy Low(4) jako najmniejszą liczbę z 4
+			<span class="rem">(numer DFS wierzchołka nr 4)</span>, 4
+			<span class="rem">(parametr Low(3) = 4, ponieważ wierzchołek nr 3 
+			jest synem wierzchołka nr 4 na drzewie rozpinającym)</span> oraz 6
+			<span class="rem">(numer DFS wierzchołka nr 5, który łączy się z nim 
+			krawędzią wtórną)</span>.<p>Low(4) = min (4,4,6) = 4</p>
+			<p>Ponieważ parametr Low jest równy numerowi DFS, to krawędź 1 &#8211; 
+			4 jest mostem.</p>
+			<p>Wracamy do wierzchołka nr 1.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_12.gif" width="207" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Jesteśmy w wierzchołku nr 1. Wszyscy jego sąsiedzi są 
+			odwiedzeni. Obliczamy Low(1) jako najmniejszą liczbę z 2
+			<span class="rem">(numer DFS wierzchołka 1)</span> i 1
+			<span class="rem">(parametr Low(2) = 1, ponieważ wierzchołek nr 2 
+			jest synem na drzewie rozpinającym)</span>.<p>Low(1) = min (2,1) = 1</p>
+			<p>Parametr Low różni się od numeru DFS, zatem krawędź 0 &#8211; 1 
+			nie jest mostem.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_13.gif" width="207" height="210"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Jesteśmy w wierzchołku startowym nr 0. Wszyscy sąsiedzi zostali 
+			już odwiedzeni. Obliczamy Low(0) jako najmniejszą liczbę z 1
+			<span class="rem">(numer DFS wierzchołka 0)</span>, 1
+			<span class="rem">(parametr Low(1), ponieważ wierzchołek nr 1 jest 
+			synem na drzewie rozpinającym)</span> i 3 <span class="rem">(numer 
+			DFS wierzchołka 2, który łączy się krawędzią wtórną)</span>.<p>
+			Low(0) = min (1,1,3) = 1</p>
+			<p>Mamy równość parametru Low(0) z numerem DFS. Jednakże wierzchołek 
+			nr 0 nie posiada ojca na drzewie rozpinającym, zatem nie istnieje 
+			łącząca go z nim krawędź-most.</p>
+			<p>Cały graf został przetworzony. Algorytm Tarjana kończy się.</p>
+			</td>
+		</tr>
+	</tbody></table>
+	<p>&nbsp;</p>
+	<p>Zwróć uwagę, że wszystkie mosty w danej spójnej składowej grafu 
+			zostaną znalezione w jednym przejściu DFS. Zatem otrzymujemy 
+	algorytm działający w czasie liniowym.</p>
+	<p>&nbsp;</p>
+<h4><a name="A2"></a>Algorytm Tarjana wyszukiwania mostów w grafie 
+nieskierowanym</h4>
+<h5>Funkcja rekurencyjna DFSb(v,vf,graf,D,cv,L)</h5>
+	<h5>Wejście</h5>
+<div class="sb1">
+<table id="table259" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>v</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>wierzchołek startowy, <i>v</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>vf</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>ojciec wierzchołka <i>v </i>na drzewie rozpinającym w głąb, <i>vf</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>graf</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>zadany w dowolnie wybrany sposób, algorytm tego nie precyzuje</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>D</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>tablica numerów DFS dla poszczególnych wierzchołków</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap="">cv</td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>referencja do zmiennej zewnętrznej przechowującej numery wierzchołków. 
+	Przy pierwszym wywołaniu zmienna powinna zawierać 1. cv 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>L</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>lista mostów. Przechowuje numery wierzchołka startowego i końcowego 
+	krawędzi-mostu.</td>
+  </tr>
+  </tbody></table>
+</div>
+<h5>Wyjście:</h5>
+<div class="sb1">
+Wartość parametru <i>Low</i> dla wierzchołka <i>v</i>. Jeśli zostanie znaleziony 
+most, to będzie on dopisany do listy <i>L</i>.</div>
+<h5>Elementy pomocnicze:</h5>
+<div class="sb1">
+<table id="table261" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>Low</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>wartość parametru Low dla bieżącego wierzchołka, <i>Low</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>temp</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>chwilowo przechowuje wynik wywołania rekurencyjnego, <i>t</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  </tbody></table>
+</div>
+<h5><a href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#prezentacja">Lista kroków:</a></h5>
+<div class="bl1">
+  <table border="0" cellpadding="2" style="border-collapse: collapse" id="table262">
+    <tbody><tr>
+      <td valign="top">K01:</td>
+      <td nowrap="" valign="top"><i>D</i>[<i>v</i>] &#8592; cv</td>
+      <td class="c" valign="top">; numerujemy wierzchołek</td>
+    </tr>
+    <tr>
+      <td valign="top">K02</td>
+      <td nowrap="" valign="top"><i>Low</i> &#8592; cv</td>
+      <td class="c" valign="top">; wstępna wartość parametru </td>
+    </tr>
+    <tr>
+      <td valign="top">K03:</td>
+      <td nowrap="" valign="top">cv &#8592; cv + 1</td>
+      <td class="c" valign="top">; kolejny wierzchołek będzie miał numer o 1 
+		większy</td>
+    </tr>
+    <tr>
+      <td valign="top">K04:</td>
+      <td nowrap="" valign="top"><b>Dla</b> każdego sąsiada <i>u</i> wierzchołka <i>
+		v</i>, <b>wykonuj</b> K05...K10</td>
+      <td class="c" valign="top">; przeglądamy wszystkich sąsiadów wierzchołka 
+		bieżącego</td>
+    </tr>
+    <tr>
+      <td valign="top">K05:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>u</i> = <i>vf</i>,
+		<b>to następny obieg pętli</b> K04</td>
+      <td class="c" valign="top">; pomijamy ojca na drzewie rozpinającym</td>
+    </tr>
+    <tr>
+      <td valign="top">K06:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>D</i>[<i>u</i>] 
+		= 0, <b>to idź do</b> K09</td>
+      <td class="c" valign="top">; sąsiad nieodwiedzony?</td>
+    </tr>
+    <tr>
+      <td valign="top">K07:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>D</i>[<i>u</i>] 
+		&lt; <i>Low</i>, <b>to</b> <i>Low</i> &#8592; <i>D</i>[<i>u</i>]</td>
+      <td class="c" valign="top">; odwiedzony, krawędź wtórna. Modyfikujemy 
+		parametr Low</td>
+    </tr>
+    <tr>
+      <td valign="top">K08:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Następny obieg pętli</b> K04</td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K09:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <i>temp</i> &#8592; DFSb(<i>u</i>,<i>v,graf</i>,<i>T</i>,<i>D</i>,cv,<i>L</i>)</td>
+      <td class="c" valign="top">; rekurencyjne wywołanie funkcji</td>
+    </tr>
+    <tr>
+      <td valign="top">K10:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>temp</i> &lt; <i>
+		Low</i>, <b>to</b> <i>Low</i> &#8592; <i>temp</i></td>
+      <td class="c" valign="top">; modyfikujemy parametr Low</td>
+    </tr>
+    <tr>
+      <td valign="top">K11:</td>
+      <td nowrap="" valign="top"><b>Jeśli</b> (<i>vf</i> &gt; -1)
+	<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_12.gif" width="11" height="8"> 
+		(<i>Low</i> = <i>D</i>[<i>v</i>]), <b>to</b> dodaj krawędź <i>vf</i>,<i>v</i> 
+		do listy <i>L</i></td>
+      <td class="c" valign="top">; sąsiedzi odwiedzeni. Sprawdzamy warunek mostu</td>
+    </tr>
+    <tr>
+      <td valign="top">K12:</td>
+      <td nowrap="" valign="top"><b>Zakończ z wynikiem</b> <i>Low</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    </tbody></table>
+  <p>&nbsp;</p></div>
+<h5>Algorytm główny</h5>
+	<h5>Wejście</h5>
+<div class="sb1">
+<table id="table265" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>n</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>liczba wierzchołków w grafie, <i>n</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>graf</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>zadany w dowolnie wybrany sposób, algorytm tego nie precyzuje</td>
+  </tr>
+  </tbody></table>
+</div>
+<h5>Wyjście:</h5>
+<div class="sb1">
+Lista <i>L</i> zawiera krawędzie będące mostami</div>
+<h5>Elementy pomocnicze:</h5>
+<div class="sb1">
+<table id="table266" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap="">cv</td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>przechowuje numery wierzchołków dla DFS, cv 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>D</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>dynamiczna tablica dla numerów wierzchołków nadawanych przez DFS. 
+	Elementy są liczbami całkowitymi.</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>L</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>lista par wierzchołków, które są połączone mostem</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>i</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>numery wierzchołków w grafie, <i>i</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  </tbody></table>
+</div>
+<h5><a href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#prezentacja">Lista kroków:</a></h5>
+<div class="bl1">
+  <table border="0" cellpadding="2" style="border-collapse: collapse" id="table267">
+    <tbody><tr>
+      <td valign="top">K01</td>
+      <td nowrap="" valign="top">Twórz n elementową tablicę <i>D</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K02:</td>
+      <td nowrap="" valign="top">Zeruj tablicę <i>D</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K03:</td>
+      <td nowrap="" valign="top">Twórz pustą listę <i>L</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K04:</td>
+      <td nowrap="" valign="top"><b>Dla</b> <i>i</i> = 0,1,...,<i>n</i>-1 <b>
+		wykonuj</b> K05...K07</td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K05:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>D</i>[<i>i</i>] 
+		&gt; 0, <b>to następny obieg pętli</b> K04</td>
+      <td class="c" valign="top">; szukamy nieodwiedzonych jeszcze wierzchołków</td>
+    </tr>
+    <tr>
+      <td valign="top">K06:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; cv &#8592; 1</td>
+      <td class="c" valign="top">; numer DFS pierwszego wierzchołka</td>
+    </tr>
+    <tr>
+      <td valign="top">K07:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; DFSb(<i>i</i>,-1<i>,graf</i>,<i>D</i>,cv,<i>L</i>)</td>
+      <td class="c" valign="top">; szukamy mostów</td>
+    </tr>
+    <tr>
+      <td valign="top">K08:</td>
+      <td nowrap="" valign="top"><b>Zakończ z wynikiem </b><i>L</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    </tbody></table>
+  	</div>
+	<p>&nbsp;</p>
+<h4>Program</h4> <div class="sb1"><table border="0" cellpadding="8" style="border-collapse: collapse" id="table263">
+    <tbody><tr>
+      <td class="note"><b>Ważne</b>:<br>
+ <p class="bl1">Zanim uruchomisz program, przeczytaj <a target="_blank" href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#konsola">wstęp</a> do tego artykułu, w którym wyjaśniamy 
+      funkcje tych programów oraz sposób korzystania z nich. </p></td></tr>
+  </tbody></table>
+  <p>&nbsp;</p></div>
+<div class="sb1">
+	Program odczytuje <a target="_blank" href="https://eduinf.waw.pl/inf/alg/001_search/0124.php#P1">definicję</a> grafu 
+	nieskierowanego, wyszukuje w nim wszystkie mosty i wyświetla je w oknie 
+	konsoli. Aby uprościć funkcję rekurencyjną DFSb(), większość jej parametrów 
+	została zrealizowana jako zmienne globalne.<p>&nbsp;</p>
+	<p>Przykładowe dane <span class="rem">(spójne składowe 
+	zostały pokolorowane w celach testowych)</span>:</p>
+	<table border="0" cellpadding="4" cellspacing="0">
+			<tbody><tr>
+				<td>
+				<img border="0" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0129_03.gif" width="382" height="354"></td>
+				<td><span lang="en">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+				<td>17 17<br>
+				0 1 0 2 0 3<br>
+				1 2 1 14<br>
+				4 11 4 12<br>
+				5 6 5 9<br>
+				6 7 6 8<br>
+				10 15<br>
+				11 15<br>
+				12 15<br>
+				13 14 13 16<br>
+				14 16</td>
+			</tr>
+		</tbody></table>
+	<p>&nbsp;</p>
+	<table border="1" id="table264" cellspacing="0" cellpadding="4" style="border-collapse: collapse" bordercolor="#808080">
+		<tbody><tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Lazarus</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="pas"><pre><span class="c">// Wyszukiwanie mostów w grafie nieskierowanym</span>
+<span class="c">// Data: 28.12.2013</span>
+<span class="c">// (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">//--------------------------------------------</span>
+
+<span class="i">program</span> <span class="v">bridges</span>;
+
+<span class="c">// Typy dla dynamicznej tablicy list sąsiedztwa i listy mostów</span>
+<span class="i">type</span>
+  <span class="v">PslistEl</span> = ^<span class="v">slistEl</span>;
+  <span class="v">slistEl</span> =  <span class="i">record</span>
+    <span class="v">next</span>  : <span class="v">PslistEl</span>;
+    <span class="v">v</span>     : <span class="v">integer</span>;
+  <span class="i">end</span>;
+
+<span class="v">TList</span> = <span class="i">array</span> <span class="i">of</span> <span class="v">PslistEl</span>;
+
+<span class="c">// Zmienne globalne</span>
+
+<span class="i">var</span>
+  <span class="v">n</span>,<span class="v">m</span>,<span class="v">cv</span> : <span class="v">integer</span>;           <span class="c">// Liczba wierzchołków, krawędzi, numeracja</span>
+  <span class="v">graf</span>   : <span class="v">TList</span>;             <span class="c">// Tablica list sąsiedztwa</span>
+  <span class="v">D</span>      : <span class="i">array</span> <span class="i">of</span> <span class="v">integer</span>;  <span class="c">// Numery DFS</span>
+  <span class="v">L</span>      : <span class="v">PslistEl</span>;          <span class="c">// Lista mostów</span>
+
+<span class="c">// Funkcja rekurencyjna wyszukująca mosty</span>
+<span class="c">// v  - numer bieżącego wierzchołka</span>
+<span class="c">// vf - ojciec bieżącego wierzchołka na drzewie rozpinającym</span>
+<span class="c">// Reszta parametrów to zmienne globalne</span>
+<span class="c">//----------------------------------------------------------</span>
+<span class="i">function</span> <span class="v">DFSb</span>(<span class="v">v</span>,<span class="v">vf</span> : <span class="v">integer</span>) : <span class="v">integer</span>;
+<span class="i">var</span>
+  <span class="v">Low</span>,<span class="v">temp</span>,<span class="v">u</span> : <span class="v">integer</span>;
+  <span class="v">p</span>          : <span class="v">PslistEl</span>;
+<span class="i">begin</span>
+  <span class="v">D</span>[<span class="v">v</span>] := <span class="v">cv</span>;                 <span class="c">// Numerujemy wierzchołek</span>
+  <span class="v">Low</span>  := <span class="v">cv</span>;                 <span class="c">// Wstępna wartość parametru Low</span>
+  <span class="v">inc</span>(<span class="v">cv</span>);                    <span class="c">// Następny numer wierzchołka</span>
+
+  <span class="v">p</span> := <span class="v">graf</span>[<span class="v">v</span>];               <span class="c">// Przeglądamy listę sąsiadów</span>
+  <span class="i">while</span> <span class="v">p</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">u</span> := <span class="v">p</span>^.<span class="v">v</span>;                <span class="c">// u - numer wierzchołka sąsiada</span>
+    <span class="i">if</span> <span class="v">u</span> &lt;&gt; <span class="v">vf</span> <span class="i">then</span>           <span class="c">// u nie może być ojcem v</span>
+    <span class="i">begin</span>
+      <span class="i">if</span> <span class="v">D</span>[<span class="v">u</span>] = <span class="n">0</span> <span class="i">then</span>        <span class="c">// Jeśli sąsiad u nie był odwiedzany, to</span>
+      <span class="i">begin</span>
+        <span class="v">temp</span> := <span class="v">DFSb</span>(<span class="v">u</span>,<span class="v">v</span>);    <span class="c">// rekurencyjnie odwiedzamy go</span>
+        <span class="i">if</span> <span class="v">temp</span> &lt; <span class="v">Low</span> <span class="i">then</span> <span class="v">Low</span> := <span class="v">temp</span>;
+      <span class="i">end</span>
+      <span class="i">else</span> <span class="i">if</span> <span class="v">D</span>[<span class="v">u</span>] &lt; <span class="v">Low</span> <span class="i">then</span> <span class="v">Low</span> := <span class="v">D</span>[<span class="v">u</span>];
+    <span class="i">end</span>;
+    <span class="v">p</span> := <span class="v">p</span>^.<span class="v">next</span>;             <span class="c">// Następny wierzchołek na liście</span>
+  <span class="i">end</span>;
+
+  <span class="c">// Wszyscy sąsiedzi zostali odwiedzeni. Teraz robimy test na most</span>
+
+  <span class="i">if</span> (<span class="v">vf</span> &gt; -<span class="n">1</span>) <span class="i">and</span> (<span class="v">Low</span> = <span class="v">D</span>[<span class="v">v</span>]) <span class="i">then</span>
+  <span class="i">begin</span>
+    <span class="v">new</span>(<span class="v">p</span>);                   <span class="c">// Mamy most. Dodajemy go do listy L</span>
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">v</span>;
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">L</span>;
+    <span class="v">L</span> := <span class="v">p</span>;
+    <span class="v">new</span>(<span class="v">p</span>);
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">vf</span>;
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">L</span>;
+    <span class="v">L</span> := <span class="v">p</span>;
+  <span class="i">end</span>;
+
+  <span class="v">DFSb</span> := <span class="v">Low</span>;                <span class="c">// Wynik</span>
+<span class="i">end</span>;
+
+<span class="c">// **********************</span>
+<span class="c">// *** Program główny ***</span>
+<span class="c">// **********************</span>
+
+<span class="i">var</span>
+  <span class="v">i</span>,<span class="v">u</span>,<span class="v">v</span> : <span class="v">integer</span>;           <span class="c">// Numery wierzchołków</span>
+  <span class="v">p</span>,<span class="v">r</span>   : <span class="v">PslistEl</span>;
+<span class="i">begin</span>
+  <span class="v">read</span>(<span class="v">n</span>,<span class="v">m</span>);                 <span class="c">// Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+  <span class="v">SetLength</span>(<span class="v">graf</span>,<span class="v">n</span>);        <span class="c">// Tworzymy zmienne dynamiczne</span>
+  <span class="v">SetLength</span>(<span class="v">D</span>,<span class="v">n</span>);
+  <span class="v">L</span> := <span class="v">nil</span>;
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">graf</span>[<span class="v">i</span>] := <span class="v">nil</span>;
+    <span class="v">D</span>[<span class="v">i</span>]    := <span class="n">0</span>;
+  <span class="i">end</span>;
+
+  <span class="c">// Odczytujemy kolejne definicje krawędzi</span>
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">m</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">read</span>(<span class="v">v</span>,<span class="v">u</span>);               <span class="c">// Wierzchołki tworzące krawędź</span>
+    <span class="v">new</span>(<span class="v">p</span>);                  <span class="c">// Tworzymy nowy element</span>
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">u</span>;               <span class="c">// Numerujemy go jako w</span>
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">graf</span>[<span class="v">v</span>];      <span class="c">// Dodajemy go na początek listy graf[v]</span>
+    <span class="v">graf</span>[<span class="v">v</span>] := <span class="v">p</span>;
+    <span class="v">new</span>(<span class="v">p</span>);                  <span class="c">// To samo dla krawędzi w drugą stronę</span>
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">v</span>;
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">graf</span>[<span class="v">u</span>];
+    <span class="v">graf</span>[<span class="v">u</span>] := <span class="v">p</span>;
+  <span class="i">end</span>;
+
+  <span class="c">// Szukamy mostów</span>
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+    <span class="i">if</span> <span class="v">D</span>[<span class="v">i</span>] = <span class="n">0</span> <span class="i">then</span>         <span class="c">// Szukamy nieodwiedzonego wierzchołka</span>
+    <span class="i">begin</span>
+      <span class="v">cv</span>   := <span class="n">1</span>;             <span class="c">// Początek numeracji DFS</span>
+      <span class="v">DFSb</span>(<span class="v">i</span>,-<span class="n">1</span>);            <span class="c">// Szukamy mostów</span>
+    <span class="i">end</span>;
+
+  <span class="v">writeln</span>;
+
+  <span class="c">// Wypisujemy znalezione mosty</span>
+
+  <span class="v">v</span> := <span class="n">0</span>;
+
+  <span class="i">while</span> <span class="v">L</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">write</span>(<span class="v">L</span>^.<span class="v">v</span>,<span class="t">' '</span>);
+    <span class="v">v</span> := (<span class="v">v</span> + <span class="n">1</span>) <span class="i">mod</span> <span class="n">2</span>;
+    <span class="i">if</span> <span class="v">v</span> = <span class="n">0</span> <span class="i">then</span> <span class="v">writeln</span>;
+    <span class="v">p</span> := <span class="v">L</span>;
+    <span class="v">L</span> := <span class="v">L</span>^.<span class="v">next</span>;
+    <span class="v">dispose</span>(<span class="v">p</span>);
+  <span class="i">end</span>;
+
+  <span class="c">// Usuwamy struktury dynamiczne</span>
+
+  <span class="v">SetLength</span>(<span class="v">D</span>,<span class="n">0</span>);
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">p</span> := <span class="v">graf</span>[<span class="v">i</span>];
+    <span class="i">while</span> <span class="v">p</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+    <span class="i">begin</span>
+      <span class="v">r</span> := <span class="v">p</span>;
+      <span class="v">p</span> := <span class="v">p</span>^.<span class="v">next</span>;
+      <span class="v">dispose</span>(<span class="v">r</span>);
+    <span class="i">end</span>;
+  <span class="i">end</span>;
+
+  <span class="v">SetLength</span>(<span class="v">graf</span>,<span class="n">0</span>);
+<span class="i">end</span>. </pre></pre></td>
+		</tr>
+		<tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Code::Blocks</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="cpp"><pre><span class="c">// Wyszukiwanie mostów w grafie nieskierowanym</span>
+<span class="c">// Data: 28.12.2013</span>
+<span class="c">// (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">//--------------------------------------------</span>
+
+<span class="pp">#include &lt;iostream&gt;</span>
+
+<span class="i">using</span> <span class="i">namespace</span> <span class="v">std</span>;
+
+<span class="c">// Typy dla dynamicznej tablicy list sąsiedztwa i listy mostów</span>
+
+<span class="i">struct</span> <span class="v">slistEl</span>
+{
+  <span class="v">slistEl</span> * <span class="v">next</span>;
+  <span class="i">int</span> <span class="v">v</span>;
+};
+
+<span class="c">// Zmienne globalne</span>
+
+<span class="i">int</span> <span class="v">n</span>,<span class="v">m</span>,<span class="v">cv</span>;                   <span class="c">// Liczba wierzchołków, krawędzi, numeracja</span>
+<span class="v">slistEl</span> ** <span class="v">graf</span>;              <span class="c">// Tablica list sąsiedztwa</span>
+<span class="i">int</span> *<span class="v">D</span>;                       <span class="c">// Numery DFS</span>
+<span class="v">slistEl</span> * <span class="v">L</span>;                  <span class="c">// Lista mostów</span>
+
+<span class="c">// Funkcja rekurencyjna wyszukująca mosty</span>
+<span class="c">// v  - numer bieżącego wierzchołka</span>
+<span class="c">// vf - ojciec bieżącego wierzchołka na drzewie rozpinającym</span>
+<span class="c">// Reszta parametrów to zmienne globalne</span>
+<span class="c">//----------------------------------------------------------</span>
+<span class="i">int</span> <span class="v">DFSb</span>(<span class="i">int</span> <span class="v">v</span>, <span class="i">int</span> <span class="v">vf</span>)
+{
+  <span class="i">int</span> <span class="v">Low</span>,<span class="v">temp</span>,<span class="v">u</span>;
+  <span class="v">slistEl</span> * <span class="v">p</span>;
+
+  <span class="c">// Numerujemy wierzchołek, ustalamy wstępną wartość Low oraz zwiększamy numerację</span>
+
+  <span class="v">D</span>[<span class="v">v</span>] = <span class="v">Low</span> = <span class="v">cv</span>++;
+
+  <span class="i">for</span>(<span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]; <span class="v">p</span>; <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>) <span class="c">// Przeglądamy listę sąsiadów</span>
+  {
+    <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>;                 <span class="c">// u - numer wierzchołka sąsiada</span>
+    <span class="i">if</span>(<span class="v">u</span> != <span class="v">vf</span>)               <span class="c">// u nie może być ojcem v</span>
+    {
+      <span class="i">if</span>(!<span class="v">D</span>[<span class="v">u</span>])               <span class="c">// Jeśli sąsiad u nie był odwiedzany, to</span>
+      {
+        <span class="v">temp</span> = <span class="v">DFSb</span>(<span class="v">u</span>,<span class="v">v</span>);     <span class="c">// rekurencyjnie odwiedzamy go</span>
+        <span class="i">if</span>(<span class="v">temp</span> &lt; <span class="v">Low</span>) <span class="v">Low</span> = <span class="v">temp</span>;
+      }
+      <span class="i">else</span> <span class="i">if</span>(<span class="v">D</span>[<span class="v">u</span>] &lt; <span class="v">Low</span>) <span class="v">Low</span> = <span class="v">D</span>[<span class="v">u</span>];
+    }
+  }
+
+  <span class="c">// Wszyscy sąsiedzi zostali odwiedzeni. Teraz robimy test na most</span>
+
+  <span class="i">if</span>((<span class="v">vf</span> &gt; -<span class="n">1</span>) &amp;&amp; (<span class="v">Low</span> == <span class="v">D</span>[<span class="v">v</span>]))
+  {
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;         <span class="c">// Mamy most. Dodajemy go do listy L</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">L</span>;
+    <span class="v">L</span> = <span class="v">p</span>;
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">vf</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">L</span>;
+    <span class="v">L</span> = <span class="v">p</span>;
+  }
+
+  <span class="i">return</span> <span class="v">Low</span>;                <span class="c">// Wynik</span>
+}
+
+<span class="c">// **********************</span>
+<span class="c">// *** Program główny ***</span>
+<span class="c">// **********************</span>
+
+<span class="i">int</span> <span class="v">main</span>()
+{
+  <span class="i">int</span> <span class="v">i</span>,<span class="v">u</span>,<span class="v">v</span>;                 <span class="c">// Numery wierzchołków</span>
+  <span class="v">slistEl</span> *<span class="v">p</span>,*<span class="v">r</span>;
+
+  <span class="v">cin</span> &gt;&gt; <span class="v">n</span> &gt;&gt; <span class="v">m</span>;             <span class="c">// Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+  <span class="v">graf</span> = <span class="i">new</span> <span class="v">slistEl</span> * [<span class="v">n</span>]; <span class="c">// Tworzymy zmienne dynamiczne</span>
+  <span class="v">D</span> = <span class="i">new</span> <span class="i">int</span>[<span class="v">n</span>];
+  <span class="v">L</span> = <span class="v">NULL</span>;
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+  {
+    <span class="v">graf</span>[<span class="v">i</span>] = <span class="v">NULL</span>;
+    <span class="v">D</span>[<span class="v">i</span>]    = <span class="n">0</span>;
+  }
+
+  <span class="c">// Odczytujemy kolejne definicje krawędzi</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">m</span>; <span class="v">i</span>++)
+  {
+    <span class="v">cin</span> &gt;&gt; <span class="v">v</span> &gt;&gt; <span class="v">u</span>;           <span class="c">// Wierzchołki tworzące krawędź</span>
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;         <span class="c">// Tworzymy nowy element</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">u</span>;                <span class="c">// Numerujemy go jako w</span>
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">graf</span>[<span class="v">v</span>];       <span class="c">// Dodajemy go na początek listy graf[v]</span>
+    <span class="v">graf</span>[<span class="v">v</span>] = <span class="v">p</span>;
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;         <span class="c">// To samo dla krawędzi w drugą stronę</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">graf</span>[<span class="v">u</span>];
+    <span class="v">graf</span>[<span class="v">u</span>] = <span class="v">p</span>;
+  }
+
+  <span class="c">// Szukamy mostów</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+    <span class="i">if</span>(!<span class="v">D</span>[<span class="v">i</span>])               <span class="c">// Szukamy nieodwiedzonego wierzchołka</span>
+    {
+      <span class="v">cv</span>   = <span class="n">1</span>;             <span class="c">// Początek numeracji DFS</span>
+      <span class="v">DFSb</span>(<span class="v">i</span>,-<span class="n">1</span>);           <span class="c">// Szukamy mostów</span>
+    }
+
+  <span class="v">cout</span> &lt;&lt; <span class="v">endl</span>;
+
+  <span class="c">// Wypisujemy znalezione mosty</span>
+
+  <span class="v">v</span> = <span class="n">0</span>;
+
+  <span class="i">while</span>(<span class="v">L</span>)
+  {
+    <span class="v">cout</span> &lt;&lt; <span class="v">L</span>-&gt;<span class="v">v</span> &lt;&lt; <span class="t">" "</span>;
+    <span class="v">v</span> ^= <span class="n">1</span>;
+    <span class="i">if</span>(!<span class="v">v</span>) <span class="v">cout</span> &lt;&lt; <span class="v">endl</span>;
+    <span class="v">p</span> = <span class="v">L</span>;
+    <span class="v">L</span> = <span class="v">L</span>-&gt;<span class="v">next</span>;
+    <span class="i">delete</span> <span class="v">p</span>;
+  }
+
+  <span class="c">// Usuwamy struktury dynamiczne</span>
+
+  <span class="i">delete</span> [] <span class="v">D</span>;
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+  {
+    <span class="v">p</span> = <span class="v">graf</span>[<span class="v">i</span>];
+    <span class="i">while</span>(<span class="v">p</span>)
+    {
+      <span class="v">r</span> = <span class="v">p</span>;
+      <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>;
+      <span class="i">delete</span> <span class="v">r</span>;
+    }
+  }
+
+  <span class="i">delete</span> <span class="v">graf</span>;
+
+  <span class="i">return</span> <span class="n">0</span>;
+} </pre></pre></td>
+		</tr>
+		<tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Free Basic</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="bas"><pre><span class="c">' Wyszukiwanie mostów w grafie nieskierowanym</span>
+<span class="c">' Data: 28.12.2013</span>
+<span class="c">' (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">'--------------------------------------------</span>
+
+<span class="c">' Typy dla dynamicznej tablicy list sąsiedztwa i listy mostów</span>
+
+<span class="i">Type</span> <span class="v">slistEl</span>
+  <span class="i">Next</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>
+  <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>
+<span class="i">End</span> <span class="i">Type</span>
+
+<span class="c">' Zmienne globalne</span>
+
+<span class="i">Dim</span> <span class="i">Shared</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">n</span>,<span class="v">m</span>,<span class="v">cv</span>        <span class="c">' Liczba wierzchołków, krawędzi, numeracja</span>
+<span class="i">Dim</span> <span class="i">Shared</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="i">Ptr</span> <span class="v">graf</span>  <span class="c">' Tablica list sąsiedztwa</span>
+<span class="i">Dim</span> <span class="i">Shared</span> <span class="i">As</span> <span class="i">Integer</span> <span class="i">Ptr</span> <span class="v">D</span>         <span class="c">' Numery DFS</span>
+<span class="i">Dim</span> <span class="i">Shared</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">L</span>         <span class="c">' Lista mostów</span>
+
+<span class="c">' Funkcja rekurencyjna wyszukująca mosty</span>
+<span class="c">' v  - numer bieżącego wierzchołka</span>
+<span class="c">' vf - ojciec bieżącego wierzchołka na drzewie rozpinającym</span>
+<span class="c">' Reszta parametrów to zmienne globalne</span>
+<span class="c">'---------------------------------------</span>
+<span class="i">Function</span> <span class="v">DFSb</span>(<span class="i">Byval</span> <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>, <span class="i">Byval</span> <span class="v">vf</span> <span class="i">As</span> <span class="i">Integer</span>) <span class="i">As</span> <span class="i">Integer</span>
+
+  <span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">Low</span>,<span class="v">temp</span>,<span class="v">u</span>
+  <span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">p</span>
+
+  <span class="c">' Numerujemy wierzchołek, ustalamy wstępną wartość Low oraz zwiększamy numerację</span>
+
+  <span class="v">D</span>[<span class="v">v</span>] = <span class="v">cv</span>: <span class="v">Low</span> = <span class="v">cv</span>: <span class="v">cv</span> += <span class="n">1</span>
+
+  <span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]
+  <span class="i">While</span> <span class="v">p</span>                     <span class="c">' Przeglądamy listę sąsiadów</span>
+    <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>                  <span class="c">' u - numer wierzchołka sąsiada</span>
+    <span class="i">If</span> <span class="v">u</span> &lt;&gt; <span class="v">vf</span> <span class="i">Then</span>           <span class="c">' u nie może być ojcem v</span>
+      <span class="i">If</span> <span class="v">D</span>[<span class="v">u</span>] = <span class="n">0</span> <span class="i">Then</span>        <span class="c">' Jeśli sąsiad u nie był odwiedzany, to</span>
+        <span class="v">temp</span> = <span class="v">DFSb</span>(<span class="v">u</span>,<span class="v">v</span>)      <span class="c">' rekurencyjnie odwiedzamy go</span>
+        <span class="i">If</span> <span class="v">temp</span> &lt; <span class="v">Low</span> <span class="i">Then</span> <span class="v">Low</span> = <span class="v">temp</span>
+      <span class="i">Else</span>
+        <span class="i">If</span> <span class="v">D</span>[<span class="v">u</span>] &lt; <span class="v">Low</span> <span class="i">Then</span> <span class="v">Low</span> = <span class="v">D</span>[<span class="v">u</span>]
+      <span class="i">End</span> <span class="i">If</span>
+    <span class="i">End</span> <span class="i">If</span> 
+    <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+  <span class="i">Wend</span>
+
+  <span class="c">' Wszyscy sąsiedzi zostali odwiedzeni. Teraz robimy test na most</span>
+
+  <span class="i">If</span> (<span class="v">vf</span> &gt; -<span class="n">1</span>) <span class="i">Andalso</span> (<span class="v">Low</span> = <span class="v">D</span>[<span class="v">v</span>]) <span class="i">Then</span>
+    <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>          <span class="c">' Mamy most. Dodajemy go do listy L</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+    <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">L</span>
+    <span class="v">L</span> = <span class="v">p</span>
+    <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">vf</span>
+    <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">L</span>
+    <span class="v">L</span> = <span class="v">p</span>
+  <span class="i">End</span> <span class="i">If</span>
+
+  <span class="i">Return</span> <span class="v">Low</span>                 <span class="c">' Wynik</span>
+<span class="i">End</span> <span class="i">Function</span>
+
+<span class="c">' **********************</span>
+<span class="c">' *** Program główny ***</span>
+<span class="c">' **********************</span>
+
+<span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">i</span>,<span class="v">u</span>,<span class="v">v</span>         <span class="c">' Numery wierzchołków</span>
+<span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">p</span>,<span class="v">r</span>
+
+<span class="i">Open</span> <span class="i">Cons</span> <span class="i">For</span> <span class="i">Input</span> <span class="i">As</span> #<span class="n">1</span>
+
+<span class="i">Input</span> #<span class="n">1</span>,<span class="v">n</span>,<span class="v">m</span>                 <span class="c">' Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+<span class="v">graf</span> = <span class="i">New</span> <span class="v">slistEl</span> <span class="i">Ptr</span> [<span class="v">n</span>]   <span class="c">' Tworzymy zmienne dynamiczne</span>
+<span class="v">D</span>    = <span class="i">New</span> <span class="i">Integer</span> [<span class="v">n</span>]
+<span class="v">L</span>    = <span class="n">0</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="v">graf</span>[<span class="v">i</span>] = <span class="n">0</span>
+  <span class="v">D</span>[<span class="v">i</span>]    = <span class="n">0</span>
+<span class="i">Next</span>
+
+<span class="c">' Odczytujemy kolejne definicje krawędzi</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">m</span> - <span class="n">1</span>
+  <span class="i">Input</span> #<span class="n">1</span>,<span class="v">v</span>,<span class="v">u</span>               <span class="c">' Wierzchołki tworzące krawędź</span>
+  <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>            <span class="c">' Tworzymy nowy element</span>
+  <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">u</span>                   <span class="c">' Numerujemy go jako u</span>
+  <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">graf</span>[<span class="v">v</span>]          <span class="c">' Dodajemy go na początek listy graf[v]</span>
+  <span class="v">graf</span>[<span class="v">v</span>] = <span class="v">p</span>
+  <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>            <span class="c">' To samo dla krawędzi w drugą stronę</span>
+  <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+  <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">graf</span>[<span class="v">u</span>]
+  <span class="v">graf</span>[<span class="v">u</span>] = <span class="v">p</span>
+<span class="i">Next</span>
+
+<span class="i">Close</span> #<span class="n">1</span>
+
+<span class="c">' Szukamy mostów</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="i">If</span> <span class="v">D</span>[<span class="v">i</span>] = <span class="n">0</span> <span class="i">Then</span>          <span class="c">' Szukamy nieodwiedzonego wierzchołka</span>
+    <span class="v">cv</span>   =  <span class="n">1</span>               <span class="c">' Początek numeracji DFS</span>
+    <span class="v">DFSb</span>(<span class="v">i</span>,-<span class="n">1</span>)              <span class="c">' Szukamy mostów</span>
+  <span class="i">End</span> <span class="i">If</span>
+<span class="i">Next</span>
+
+<span class="i">Print</span> 
+
+<span class="c">' Wypisujemy znalezione mosty, jednocześnie usuwając listę L</span>
+
+<span class="v">v</span> = <span class="n">0</span>
+
+<span class="i">While</span> <span class="v">L</span>
+  <span class="i">Print</span> <span class="v">L</span>-&gt;<span class="v">v</span>;
+  <span class="v">v</span> = (<span class="v">v</span> + <span class="n">1</span>) <span class="i">Mod</span> <span class="n">2</span>
+  <span class="i">If</span> <span class="v">v</span> = <span class="n">0</span> <span class="i">Then</span> <span class="i">Print</span>
+  <span class="v">p</span> = <span class="v">L</span>
+  <span class="v">L</span> = <span class="v">L</span>-&gt;<span class="i">Next</span>
+  <span class="i">Delete</span> [] <span class="v">p</span>
+<span class="i">Wend</span>
+
+<span class="c">' Usuwamy dynamiczne struktury danych</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="v">p</span> = <span class="v">graf</span>[<span class="v">i</span>]
+  <span class="i">While</span> <span class="v">p</span>
+    <span class="v">r</span> = <span class="v">p</span>
+    <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+    <span class="i">Delete</span> <span class="v">r</span>
+  <span class="i">Wend</span>
+<span class="i">Next</span>
+
+<span class="i">Delete</span> [] <span class="v">D</span>
+<span class="i">Delete</span> [] <span class="v">graf</span>
+
+<span class="i">End</span> </pre></pre></td>
+		</tr>
+		<tr>
+			<td style="text-align: center" bgcolor="#F0F0F0" colspan="2"><b>Wynik</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" class="program">17 17<br>0 1 0 2 0 3<br>1 2 1 14<br>4 11 4 12<br>5 6 5 9<br>6 7 6 8<br>10 15<br>11 15<br>12 15<br>13 14 13 16<br>14 16<br>
+			<br>5 6<br>6 7<br>6 8<br>5 9<br>15 10<br>1 14<br>0 3</td>
+			<td style="text-align: center">
+			<img src="./Algorytmy i Struktury Danych - Mosty w grafie_files/0130a_01.gif" width="382" height="354"></td>
+		</tr>
+	</tbody></table>
+	</div>
+	</div>
+<p>&nbsp;</p></div>
+<div class="bl1">
+  
+<p>&nbsp;</p>
+<hr color="#C0C0C0" size="1">
+<div align="left">
+  <table style="float: right; BORDER-COLLAPSE: collapse; padding-left:8px; padding-right:8px; padding-top:1px; padding-bottom:1px; cellPadding=" 4"="" border="0">
+    <tbody><tr>
+      <td><img src="./Algorytmy i Struktury Danych - Mosty w grafie_files/i-lo_budynek.jpg"></td><td valign="top"><p align="center" style="text-align: center">&nbsp;&nbsp;&nbsp;I Liceum Ogólnokształcące&nbsp;&nbsp;&nbsp;<br><span class="small">im. Kazimierza Brodzińskiego<br> w Tarnowie</span><br><span class="small">&#169;2018 mgr Jerzy Wałaszek</span></p></td>
+    </tr>
+  </tbody></table>
+</div>
+<span class="small">Dokument ten rozpowszechniany jest zgodnie z zasadami licencji<br>
+<b>GNU Free Documentation License</b>.</span><p>Pytania proszę przesyłać na adres email: <a href="mailto:i-lo@eduinf.waw.pl">i-lo@eduinf.waw.pl</a>
+</p>
+<p><span class="small">W artykułach serwisu są używane cookies. Jeśli nie chcesz ich otrzymywać,<br>
+zablokuj je w swojej przeglądarce.<br>
+<a target="_blank" href="https://policies.google.com/technologies/partner-sites?hl=pl">
+Informacje dodatkowe</a></span></p>
+
+</div>
+
+<script type="text/javascript">pcba()</script>
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:NaNpx;margin:0;padding:0;position:relative;visibility:visible;width:NaNpx;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:NaNpx;margin:0;padding:0;position:relative;visibility:visible;width:NaNpx;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:NaNpx;height:NaNpx;" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/saved_resource(1).html"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_3922246429973" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Algorytmy i Struktury Danych - Mosty w grafie_files/saved_resource(2).html"></iframe></body></html>

@@ -1,0 +1,2 @@
+Dlaczego w zadaniu "Skierowanie" algorytm oparty o DFS mi nie dzia³a³ poprawnie,
+natomiast algorytm oparty o BFS ju¿ tak (odpowiednie kody s¹ na Szkopule) ?

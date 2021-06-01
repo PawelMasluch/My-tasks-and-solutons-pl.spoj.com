@@ -1,0 +1,2012 @@
+
+<!-- saved from url=(0050)https://eduinf.waw.pl/inf/alg/001_search/0130b.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+
+<meta http-equiv="Content-Language" content="pl">
+<title>Algorytmy i Struktury Danych - Punkty artykulacji w grafie</title>
+<meta name="description" content="Artykuł opisuje różne algorytmy wyszukujące informacje w zbiorach danych takich jak przedziały liczbowe, tablice, macierze, wektory, listy, drzewa, grafy, teksty itp.">
+<meta name="keywords" content="wyszukiwanie, algorytm, programowanie, c++, pascal, basic, informatyka, liceum, matura, olimpiada, matematyka">
+<link rel="stylesheet" type="text/css" href="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/001.css">
+<script src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/f(6).txt"></script><script src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/ca-pub-2048408300128807.js.pobrane"></script><script type="text/javascript" language="javascript" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/h.js.pobrane"></script>
+<!--<base target="_top">--><base href="." target="_top">
+        <script async="" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/f(7).txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2048408300128807",
+    enable_page_level_ads: true
+  });
+</script>
+<link rel="preload" href="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/f(8).txt" as="script"><script type="text/javascript" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/f(8).txt"></script><link rel="preload" href="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/f(9).txt" as="script"><script type="text/javascript" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/f(9).txt"></script></head>
+
+<body><table border="0" width="100%" cellpadding="0" style="border-collapse: collapse">
+  <tbody><tr>
+    <td width="164" style="text-align: left" valign="top" class="menu_l"><a href="http://www.i-lo.tarnow.pl/"><img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/i-lo_logo.gif" width="164" height="170" style="margin-top: 12px" alt="Do strony głównej I LO w Tarnowie"></a></td>
+    <td style="text-align: center" valign="top" class="menu_m" nowrap="">
+    <a class="exit" href="https://eduinf.waw.pl/inf/index.php"><span>Wyjście </span></a><a class="cont" href="https://eduinf.waw.pl/inf/alg/001_search/index.php"><span>Spis treści </span></a><a class="prev" href="https://eduinf.waw.pl/inf/alg/001_search/0130a.php"><span>Poprzedni </span></a><a class="next" href="https://eduinf.waw.pl/inf/alg/001_search/0131.php"><span>Następny </span></a>
+<p><img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_title.jpg" width="511" height="195" alt="tytuł"></p>
+    <span class="small">Prezentowane materiały są przeznaczone dla uczniów szkół ponadgimnazjalnych</span>.<br>
+    Autor artykułu: mgr Jerzy Wałaszek,&nbsp; wersja 2.0</td>
+    <td style="padding:8px; text-align: center" valign="top" class="menu_r" nowrap="" width="200">
+    <p class="small" style="line-height: 100%; margin-bottom: 0">&nbsp;&#169;2014 mgr Jerzy Wałaszek<br>
+    I LO w Tarnowie</p>
+    <p><img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_logo.gif" width="134" height="102" alt="logo"></p>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center" colspan="3" height="10">
+<script async="" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/f(7).txt"></script>
+<!-- normal_page -->
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-client="ca-pub-2048408300128807" data-ad-slot="9328341371" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display: inline-table; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 1200px; background-color: transparent;"><ins id="aswift_1_anchor" style="display: block; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 1200px; background-color: transparent; overflow: hidden; transition: opacity 1s cubic-bezier(0.4, 0, 1, 1) 0s, width 0.2s cubic-bezier(0.4, 0, 1, 1) 0.3s, height 0.5s cubic-bezier(0.4, 0, 1, 1) 0s; opacity: 0;"><iframe width="1200" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:1200px;height:90px;" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/saved_resource(2).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+  </tr>
+  </tbody></table>
+<h1 class="sb1">Znajdowanie punktów artykulacji w grafie</h1>
+<hr color="#336699" size="1">
+<table border="0" cellspacing="0" cellpadding="4" style="border-collapse: collapse" class="sb1" id="table248">
+	<tbody><tr>
+		<td bgcolor="#CCCCCC"><b>Tematy pokrewne</b></td>
+<td bgcolor="#CCCCCC">&nbsp;</td>
+<td bgcolor="#CCCCCC"><b>Podrozdziały</b></td>
+</tr>
+	<tr>
+		<td valign="top"><b><a href="https://eduinf.waw.pl/inf/alg/001_search/0122.php">Grafy</a></b><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0123.php">Podstawowe pojęcia dotyczące grafów</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0124.php">Reprezentacja grafów w komputerze</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0125.php">Przechodzenie grafów w głąb &#8211; DFS</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126.php">Przechodzenie grafów wszerz &#8211; BFS</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126a.php">Transpozycja grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126b.php">Kwadrat grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126c.php">Graf krawędziowy</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0126d.php">Stopień grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0127.php">Znajdowanie ścieżki w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0128.php">Znajdowanie drogi w labiryncie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0128a.php">Spójność grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0129.php">Znajdowanie spójnych składowych w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0129a.php">Znajdowanie silnie spójnych 
+					składowych w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0130.php">Drzewa rozpinające grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0130a.php">Znajdowanie mostów w grafie</a><br>
+		<font color="#FF0000"><b>Znajdowanie punktów artykulacji w grafie</b></font><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0131.php">Grafy dwudzielne</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0131a.php">Kojarzenie małżeństw</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0132.php">Cykliczność grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0133.php">Znajdowanie cykli w grafie</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0134.php">Istnienie cyklu lub ścieżki Eulera</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0135.php">Znajdowanie cyklu lub ścieżki Eulera</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0136.php">Znajdowanie cyklu lub ścieżki 
+					Hamiltona</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0137.php">Sortowanie topologiczne grafu 
+					skierowanego</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0138.php">Najkrótsza ścieżka w grafie ważonym &#8211; 
+					algorytm Dijkstry</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0138a.php">Najkrótsza ścieżka w grafie ważonym &#8211; 
+					algorytm Bellmana-Forda</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0138b.php">Najkrótsze ścieżki pomiędzy 
+					wszystkimi parami wierzchołków w grafie ważonym</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0139.php">Problem chińskiego listonosza</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0140.php">Problem komiwojażera</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0141.php">Minimalne drzewo rozpinające</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0142.php">Kolorowanie grafu</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0143.php">Znajdowanie klik w grafie</a></td>
+		<td valign="top">&nbsp;</td>
+		<td valign="top"><a href="https://eduinf.waw.pl/inf/alg/001_search/0130b.php#P1">Rozwiązanie nr 1</a><br>
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0130b.php#P2">Rozwiązanie nr 2</a></td>
+	</tr>
+</tbody></table>
+<div class="bl2">
+  <p class="mlink">&nbsp;</p></div>
+<div class="bl1">
+<h3>Problem</h3>
+<p class="bl2">Dla danego grafu nieskierowanego wyznaczyć wszystkie punkty 
+artykulacji.</p>
+<div class="sb1">
+	<p style="text-align: center"><br>
+<br>
+	<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_01.gif" width="402" height="148"></p>
+	<p style="text-align: center">&nbsp;</p>
+	<p><b>Punktem artykulacji</b> <span class="rem" lang="en">(ang. articulation 
+	point lub cut vertex)</span> jest wierzchołek, którego usunięcie z grafu 
+	spowoduje zwiększenie liczby spójnych składowych. Na powyższym rysunku 
+	punktem artykulacji jest wierzchołek nr 0.</p>
+	<p>&nbsp;</p>
+</div>
+<h3><a name="P1"></a>Rozwiązanie nr 1
+</h3>
+<div class="sb1">
+	<p>&nbsp;</p>
+	<p>Naiwny sposób rozwiązania tego problemu jest następujący:</p>
+	<p>&nbsp;</p><div class="google-auto-placed" style="text-align: center; width: 100%; height: auto; clear: both;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2048408300128807" data-adsbygoogle-status="done" style="display: block; margin: 10px auto 6px; background-color: transparent; height: 90px;"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><iframe width="1200" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;width:1200px;height:90px;" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/saved_resource(3).html"></iframe></ins></ins></ins></div><div class="bl1">Obliczamy wstępnie liczbę spójnych składowych 
+		w grafie <span class="rem">(możemy tutaj wykorzystać algorytm opisany w
+		<a href="https://eduinf.waw.pl/inf/alg/001_search/0129.php#A">rozdziale o spójnych składowych</a>)</span> i 
+		zapamiętujemy ją. Następnie przechodzimy przez kolejne wierzchołki 
+		grafu. Każdy bieżący wierzchołek usuwamy wraz ze wszystkimi incydentnymi 
+		z nim krawędziami i ponownie obliczamy liczbę spójnych składowych. Jeśli 
+		jest ona większa od zapamiętanej, to usunięty wierzchołek jest punktem 
+		artykulacji i zapamiętujemy go na liście. Wierzchołek wstawiamy z 
+		powrotem wraz ze wszystkimi usuniętymi poprzednio krawędziami i 
+		przechodzimy do następnego wierzchołka. Gdy algorytm zakończy działanie, 
+		lista będzie zawierała wszystkie punkty artykulacji grafu</div>
+	<p>&nbsp;</p>
+<h4><a name="A1"></a>Algorytm naiwny wyszukiwania punktów artykulacji w grafie nieskierowanym</h4>
+<h5>Wejście</h5>
+<div class="sb1">
+<table id="table252" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>n</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>liczba wierzchołków w grafie, <i>n</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>graf</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>zadany w dowolnie wybrany sposób, algorytm tego nie precyzuje</td>
+  </tr>
+  </tbody></table>
+</div>
+<h5>Wyjście:</h5>
+<div class="sb1">
+<table id="table258" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>L</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>lista par wierzchołków, które tworzą krawędzie-mosty.</td>
+  </tr>
+  </tbody></table>
+	</div>
+<h5>Elementy pomocnicze:</h5>
+<div class="sb1">
+<table id="table254" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap="">ccn(<i>n</i>,<i>graf</i>)</td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>funkcja zwracająca liczbę spójnych składowych w grafie</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>nc</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>liczba spójnych składowych grafu,&nbsp; <i>nc</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>v</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>numery wierzchołka grafu,&nbsp; <i>v</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  </tbody></table>
+</div>
+<h5><a href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#prezentacja">Lista kroków:</a></h5>
+<div class="bl1">
+  <table border="0" cellpadding="2" style="border-collapse: collapse" id="table255">
+    <tbody><tr>
+      <td valign="top">K01:</td>
+      <td nowrap="" valign="top">Utwórz pustą listę <i>L</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K02:</td>
+      <td nowrap="" valign="top"><i>nc</i> &#8592; ccn(<i>n</i>,<i>graf</i>)</td>
+      <td class="c" valign="top">; zapamiętujemy liczbę spójnych składowych</td>
+    </tr>
+    <tr>
+      <td valign="top">K03:</td>
+      <td nowrap="" valign="top"><b>Dla</b> <i>v</i> = 0,1,...,<i>n</i>-1, <b>
+		wykonuj</b> K04...K06</td>
+      <td class="c" valign="top">; przechodzimy przez kolejne wierzchołki grafu</td>
+    </tr>
+    <tr>
+      <td valign="top">K04:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; Usuń wierzchołek <i>v</i> z <i>
+		grafu</i> wraz z jego krawędziami</td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K05:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>
+		Jeśli</b> ccn(<i>v</i>,<i>graf</i>) &gt; <i>nc</i>, <b>to</b> dodaj <i>v</i> 
+		do <i>L</i></td>
+      <td class="c" valign="top">; jeśli v jest punktem artykulacji, to zapamiętujemy 
+		go w L</td>
+    </tr>
+    <tr>
+      <td valign="top">K06:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; Odtwórz wierzchołek <i>v</i> w
+		<i>grafie</i> wraz z jego krawędziami</td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K07:</td>
+      <td nowrap="" valign="top"><b>Zakończ</b></td>
+      <td class="c" valign="top">; punkty artykulacji w L</td>
+    </tr>
+    </tbody></table>
+  <p>&nbsp;</p></div>
+<h4>Program</h4> <div class="sb1"><table border="0" cellpadding="8" style="border-collapse: collapse">
+    <tbody><tr>
+      <td class="note"><b>Ważne</b>:<br>
+ <p class="bl1">Zanim uruchomisz program, przeczytaj <a target="_blank" href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#konsola">wstęp</a> do tego artykułu, w którym wyjaśniamy 
+      funkcje tych programów oraz sposób korzystania z nich. </p></td></tr>
+  </tbody></table>
+  <p>&nbsp;</p>
+</div><div class="sb1">
+	Program odczytuje <a target="_blank" href="https://eduinf.waw.pl/inf/alg/001_search/0124.php#P1">definicję</a> grafu 
+	nieskierowanego, wyszukuje w nim wszystkie punkty artykulacji i wypisuje je 
+	w oknie konsoli. Ponieważ usuwanie i odtwarzanie wierzchołka grafu może być 
+	kłopotliwe, zastosowaliśmy dodatkową tablicę logiczną VU. Elementy tej 
+	tablicy odpowiadają wierzchołkom grafu. Wierzchołek obecny w grafie ma w tej 
+	tablicy wartość true. Wierzchołek usunięty ma wartość false.<p>&nbsp;</p>
+	<p>Przykładowe dane:</p>
+	<table border="0" cellpadding="4" cellspacing="0">
+			<tbody><tr>
+				<td>
+				<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_02.gif" width="243" height="148"></td>
+				<td><span lang="en">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+				<td>8 11<br>
+				0 1 0 2 0 3 0 5<br>
+				1 4 1 5<br>
+				2 3<br>
+				3 6 3 7<br>
+				4 5<br>
+				6 7</td>
+			</tr>
+		</tbody></table>
+	<p>&nbsp;</p>
+	<table border="1" id="table257" cellspacing="0" cellpadding="4" style="border-collapse: collapse" bordercolor="#808080">
+		<tbody><tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Lazarus</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="pas"><pre><span class="c">// Wyszukiwanie punktów artykulacji w grafie nieskierowanym</span>
+<span class="c">// Data: 29.12.2013</span>
+<span class="c">// (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">//---------------------------------------------------------</span>
+
+<span class="i">program</span> <span class="v">artpnts</span>;
+
+<span class="c">// Typy dla dynamicznej tablicy list sąsiedztwa, stosu i listy punktów artykulacji</span>
+
+<span class="i">type</span>
+  <span class="v">PslistEl</span> = ^<span class="v">slistEl</span>;
+  <span class="v">slistEl</span> =  <span class="i">record</span>
+    <span class="v">next</span>  : <span class="v">PslistEl</span>;
+    <span class="v">v</span>     : <span class="v">integer</span>;
+  <span class="i">end</span>;
+
+<span class="v">TList</span> = <span class="i">array</span> <span class="i">of</span> <span class="v">PslistEl</span>;
+
+<span class="c">// Definicja typu obiektowego stack</span>
+<span class="c">//---------------------------------</span>
+
+<span class="v">stack</span> = <span class="i">object</span>
+  <span class="v">private</span>
+    <span class="v">S</span> : <span class="v">PslistEl</span>;  <span class="c">// lista przechowująca stos</span>
+
+  <span class="v">public</span>
+    <span class="i">constructor</span> <span class="v">init</span>;
+    <span class="i">destructor</span> <span class="v">destroy</span>;
+    <span class="i">function</span>   <span class="v">empty</span> : <span class="v">boolean</span>;
+    <span class="i">function</span>   <span class="v">top</span> : <span class="v">integer</span>;
+    <span class="i">procedure</span>  <span class="v">push</span>(<span class="v">v</span> : <span class="v">integer</span>);
+    <span class="i">procedure</span>  <span class="v">pop</span>;
+<span class="i">end</span>;
+
+<span class="c">// Konstruktor</span>
+<span class="c">//------------</span>
+<span class="i">constructor</span> <span class="v">stack</span>.<span class="v">init</span>;
+<span class="i">begin</span>
+  <span class="v">S</span> := <span class="v">nil</span>;
+<span class="i">end</span>;
+
+<span class="c">// Destruktor</span>
+<span class="c">//-----------</span>
+
+<span class="i">destructor</span> <span class="v">stack</span>.<span class="v">destroy</span>;
+<span class="i">begin</span>
+  <span class="i">while</span> <span class="v">S</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span> <span class="v">pop</span>;
+<span class="i">end</span>;
+
+<span class="c">// Sprawdza, czy stos jest pusty</span>
+<span class="c">//------------------------------</span>
+<span class="i">function</span> <span class="v">stack</span>.<span class="v">empty</span> : <span class="v">boolean</span>;
+<span class="i">begin</span>
+  <span class="i">if</span> <span class="v">S</span> = <span class="v">nil</span> <span class="i">then</span> <span class="v">empty</span> := <span class="v">true</span> <span class="i">else</span> <span class="v">empty</span> := <span class="v">false</span>;
+<span class="i">end</span>;
+
+<span class="c">// Zwraca liczbę ze szczytu stosu</span>
+<span class="c">//----------------------------------</span>
+<span class="i">function</span> <span class="v">stack</span>.<span class="v">top</span> : <span class="v">integer</span>;
+<span class="i">begin</span>
+  <span class="v">top</span> := <span class="v">S</span>^.<span class="v">v</span>;
+<span class="i">end</span>;
+
+<span class="c">// Umieszcza dane na stosie</span>
+<span class="c">//-------------------------</span>
+<span class="i">procedure</span> <span class="v">stack</span>.<span class="v">push</span>(<span class="v">v</span> : <span class="v">integer</span>);
+<span class="i">var</span>
+  <span class="v">e</span> : <span class="v">PslistEl</span>;
+<span class="i">begin</span>
+  <span class="v">new</span>(<span class="v">e</span>);
+  <span class="v">e</span>^.<span class="v">v</span> := <span class="v">v</span>;
+  <span class="v">e</span>^.<span class="v">next</span> := <span class="v">S</span>;
+  <span class="v">S</span> := <span class="v">e</span>;
+<span class="i">end</span>;
+
+<span class="c">// Usuwa dane ze stosu</span>
+<span class="c">//--------------------</span>
+<span class="i">procedure</span> <span class="v">stack</span>.<span class="v">pop</span>;
+<span class="i">var</span>
+  <span class="v">e</span> :<span class="v">PslistEl</span>;
+<span class="i">begin</span>
+  <span class="i">if</span> <span class="v">S</span> &lt;&gt; <span class="v">NIL</span> <span class="i">then</span>
+  <span class="i">begin</span>
+    <span class="v">e</span> := <span class="v">S</span>;
+    <span class="v">S</span> := <span class="v">S</span>^.<span class="v">next</span>;
+    <span class="v">dispose</span>(<span class="v">e</span>);
+  <span class="i">end</span>;
+<span class="i">end</span>;
+
+<span class="c">// Funkcja oblicza liczbę spójnych składowych w grafie</span>
+<span class="c">// n    - liczba wierzchołków w grafie</span>
+<span class="c">// graf - tablica list sąsiedztwa</span>
+<span class="c">// VU   - tablica dostępności krawędzi grafu</span>
+<span class="c">//----------------------------------------------------</span>
+<span class="i">function</span> <span class="v">ccn</span>(<span class="v">n</span> : <span class="v">integer</span>; <span class="i">var</span> <span class="v">graf</span> : <span class="v">TList</span>; <span class="v">VU</span> : <span class="i">array</span> <span class="i">of</span> <span class="v">boolean</span>) : <span class="v">integer</span>;
+<span class="i">var</span>
+  <span class="v">C</span>        : <span class="i">array</span> <span class="i">of</span> <span class="v">integer</span>;
+  <span class="v">S</span>        : <span class="v">stack</span>;
+  <span class="v">cc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span> : <span class="v">integer</span>;
+  <span class="v">p</span>        : <span class="v">PslistEl</span>;
+
+<span class="i">begin</span>
+  <span class="v">S</span>.<span class="v">init</span>;                    <span class="c">// Tworzymy pusty stos</span>
+  <span class="v">SetLength</span>(<span class="v">C</span>,<span class="v">n</span>);            <span class="c">// Tworzymy tablicę spójnych składowych</span>
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+    <span class="v">C</span>[<span class="v">i</span>] := <span class="n">0</span>;               <span class="c">// Zerujemy tablicę spójnych składowych</span>
+
+  <span class="v">cc</span> := <span class="n">0</span>;                   <span class="c">// Zerujemy licznik spójnych składowych</span>
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+    <span class="i">if</span> <span class="v">VU</span>[<span class="v">i</span>] <span class="i">and</span> (<span class="v">C</span>[<span class="v">i</span>] = <span class="n">0</span>) <span class="i">then</span> <span class="c">// Szukamy nieodwiedzonego jeszcze wierzchołka</span>
+    <span class="i">begin</span>
+      <span class="v">inc</span>(<span class="v">cc</span>);               <span class="c">// Zwiększamy licznik składowych</span>
+      <span class="v">S</span>.<span class="v">push</span>(<span class="v">i</span>);             <span class="c">// Na stosie umieszczamy numer bieżącego węzła</span>
+      <span class="v">C</span>[<span class="v">i</span>] := <span class="v">cc</span>;            <span class="c">// Wierzchołek numerujemy i oznaczamy jako odwiedzony</span>
+      <span class="i">while</span> <span class="i">not</span> <span class="v">S</span>.<span class="v">empty</span> <span class="i">do</span>   <span class="c">// Przechodzimy graf algorytmem DFS</span>
+      <span class="i">begin</span>
+        <span class="v">v</span> := <span class="v">S</span>.<span class="v">top</span>();        <span class="c">// Pobieramy wierzchołek</span>
+        <span class="v">S</span>.<span class="v">pop</span>();             <span class="c">// Usuwamy go ze stosu</span>
+        <span class="v">p</span> := <span class="v">graf</span>[<span class="v">v</span>];        <span class="c">// Przeglądamy sąsiadów wierzchołka v</span>
+        <span class="i">while</span> <span class="v">p</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+        <span class="i">begin</span>
+          <span class="v">u</span> := <span class="v">p</span>^.<span class="v">v</span>;
+          <span class="i">if</span> <span class="v">VU</span>[<span class="v">u</span>] <span class="i">and</span> (<span class="v">C</span>[<span class="v">u</span>] = <span class="n">0</span>) <span class="i">then</span>
+          <span class="i">begin</span>
+            <span class="v">S</span>.<span class="v">push</span>(<span class="v">u</span>);       <span class="c">// Na stos idą sąsiedzi nieodwiedzeni</span>
+            <span class="v">C</span>[<span class="v">u</span>] := <span class="v">cc</span>       <span class="c">// i ponumerowani</span>
+          <span class="i">end</span>;
+          <span class="v">p</span> := <span class="v">p</span>^.<span class="v">next</span>;
+        <span class="i">end</span>;
+      <span class="i">end</span>;
+    <span class="i">end</span>;
+
+  <span class="v">SetLength</span>(<span class="v">C</span>,<span class="n">0</span>);           <span class="c">// Usuwamy tablicę C</span>
+  <span class="v">S</span>.<span class="v">destroy</span>;                <span class="c">// Usuwamy stos</span>
+  <span class="v">ccn</span> := <span class="v">cc</span>;                <span class="c">// Zwracamy wynik</span>
+<span class="i">end</span>;
+
+<span class="c">// **********************</span>
+<span class="c">// *** Program główny ***</span>
+<span class="c">// **********************</span>
+
+<span class="i">var</span>
+  <span class="v">n</span>,<span class="v">m</span>      : <span class="v">integer</span>;       <span class="c">// Liczba wierzchołków i krawędzi</span>
+  <span class="v">A</span>        : <span class="v">TList</span>;         <span class="c">// Tablica list sąsiedztwa</span>
+  <span class="v">nc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span> : <span class="v">integer</span>;
+  <span class="v">L</span>,<span class="v">p</span>,<span class="v">r</span>    : <span class="v">PslistEl</span>;
+  <span class="v">VU</span>       : <span class="i">array</span> <span class="i">of</span> <span class="v">boolean</span>;
+
+<span class="i">begin</span>
+  <span class="v">read</span>(<span class="v">n</span>,<span class="v">m</span>);                 <span class="c">// Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+  <span class="v">SetLength</span>(<span class="v">A</span>,<span class="v">n</span>);            <span class="c">// Tworzymy tablice dynamiczne</span>
+  <span class="v">SetLength</span>(<span class="v">VU</span>,<span class="v">n</span>);
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">A</span>[<span class="v">i</span>]  := <span class="v">nil</span>;
+    <span class="v">VU</span>[<span class="v">i</span>] := <span class="v">true</span>;
+  <span class="i">end</span>;
+
+  <span class="c">// Odczytujemy kolejne definicje krawędzi</span>
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">m</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">read</span>(<span class="v">v</span>,<span class="v">u</span>);               <span class="c">// Wierzchołki tworzące krawędź</span>
+    <span class="v">new</span>(<span class="v">p</span>);                  <span class="c">// Tworzymy nowy element</span>
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">u</span>;               <span class="c">// Numerujemy go jako w</span>
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">A</span>[<span class="v">v</span>];         <span class="c">// Dodajemy go na początek listy A[v]</span>
+    <span class="v">A</span>[<span class="v">v</span>] := <span class="v">p</span>;
+    <span class="v">new</span>(<span class="v">p</span>);                  <span class="c">// To samo dla krawędzi w drugą stronę</span>
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">v</span>;
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">A</span>[<span class="v">u</span>];
+    <span class="v">A</span>[<span class="v">u</span>] := <span class="v">p</span>;
+  <span class="i">end</span>;
+
+  <span class="c">// Algorytm znajdowania punktów artykulacji</span>
+
+  <span class="v">L</span> := <span class="v">nil</span>;                  <span class="c">// Pusta lista punktów artykulacji</span>
+
+  <span class="v">nc</span> := <span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>);         <span class="c">// Zapamiętujemy liczbę spójnych składowych</span>
+
+  <span class="i">for</span> <span class="v">v</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>     <span class="c">// Przechodzimy przez kolejne wierzchołki grafu</span>
+  <span class="i">begin</span>
+    <span class="v">VU</span>[<span class="v">v</span>] := <span class="v">false</span>;          <span class="c">// Zaznaczamy wierzchołek v jako usunięty</span>
+    <span class="i">if</span> <span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>) &gt; <span class="v">nc</span> <span class="i">then</span> <span class="c">// Sprawdzamy, czy v jest punktem artykulacji</span>
+    <span class="i">begin</span>
+      <span class="v">new</span>(<span class="v">p</span>);                <span class="c">// Jeśli tak, dołączamy go do listy</span>
+      <span class="v">p</span>^.<span class="v">v</span> := <span class="v">v</span>;
+      <span class="v">p</span>^.<span class="v">next</span> := <span class="v">L</span>;
+      <span class="v">L</span> := <span class="v">p</span>;
+    <span class="i">end</span>;
+    <span class="v">VU</span>[<span class="v">v</span>] := <span class="v">true</span>;           <span class="c">// Odtwarzamy wierzchołek</span>
+  <span class="i">end</span>;
+
+  <span class="v">writeln</span>;
+
+  <span class="c">// Wypisujemy znalezione punkty artykulacji, jednocześnie usuwając listę L</span>
+
+  <span class="i">while</span> <span class="v">L</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">write</span>(<span class="v">L</span>^.<span class="v">v</span>,<span class="t">' '</span>);
+    <span class="v">p</span> := <span class="v">L</span>;
+    <span class="v">L</span> := <span class="v">L</span>^.<span class="v">next</span>;
+    <span class="v">dispose</span>(<span class="v">p</span>);
+  <span class="i">end</span>;
+
+  <span class="v">writeln</span>;
+
+  <span class="c">// Usuwamy pozostałe struktury dynamiczne</span>
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">p</span> := <span class="v">A</span>[<span class="v">i</span>];
+    <span class="i">while</span> <span class="v">p</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+    <span class="i">begin</span>
+      <span class="v">r</span> := <span class="v">p</span>;
+      <span class="v">p</span> := <span class="v">p</span>^.<span class="v">next</span>;
+      <span class="v">dispose</span>(<span class="v">r</span>);
+    <span class="i">end</span>;
+  <span class="i">end</span>;
+
+  <span class="v">SetLength</span>(<span class="v">A</span>,<span class="n">0</span>);
+  <span class="v">SetLength</span>(<span class="v">VU</span>,<span class="n">0</span>);
+
+<span class="i">end</span>. </pre></pre></td>
+		</tr>
+		<tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Code::Blocks</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="cpp"><pre><span class="c">// Wyszukiwanie punktów artykulacji w grafie nieskierowanym</span>
+<span class="c">// Data: 29.12.2013</span>
+<span class="c">// (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">//---------------------------------------------------------</span>
+
+<span class="pp">#include &lt;iostream&gt;</span>
+
+<span class="i">using</span> <span class="i">namespace</span> <span class="v">std</span>;
+
+<span class="c">// Typy dla dynamicznej tablicy list sąsiedztwa, stosu i listy punktów artykulacji</span>
+
+<span class="i">struct</span> <span class="v">slistEl</span>
+{
+  <span class="v">slistEl</span> * <span class="v">next</span>;
+  <span class="i">int</span> <span class="v">v</span>;
+};
+
+<span class="i">class</span> <span class="v">stack</span>
+{
+  <span class="i">private</span>:
+    <span class="v">slistEl</span> * <span class="v">S</span>;   <span class="c">// lista przechowująca stos</span>
+
+  <span class="i">public</span>:
+    <span class="v">stack</span>();       <span class="c">// konstruktor</span>
+    ~<span class="v">stack</span>();      <span class="c">// destruktor</span>
+    <span class="i">bool</span> <span class="v">empty</span>(<span class="i">void</span>);
+    <span class="i">int</span>  <span class="v">top</span>(<span class="i">void</span>);
+    <span class="i">void</span> <span class="v">push</span>(<span class="i">int</span> <span class="v">v</span>);
+    <span class="i">void</span> <span class="v">pop</span>(<span class="i">void</span>);
+};
+
+<span class="c">//---------------------</span>
+<span class="c">// Metody obiektu stack</span>
+<span class="c">//---------------------</span>
+
+<span class="c">// Konstruktor</span>
+<span class="c">//------------</span>
+<span class="v">stack</span>::<span class="v">stack</span>()
+{
+  <span class="v">S</span> = <span class="v">NULL</span>;
+}
+
+<span class="c">// Destruktor - zwalnia tablicę dynamiczną</span>
+<span class="c">//----------------------------------------</span>
+<span class="v">stack</span>::~<span class="v">stack</span>()
+{
+  <span class="i">while</span>(<span class="v">S</span>) <span class="v">pop</span>();
+}
+
+<span class="c">// Sprawdza, czy stos jest pusty</span>
+<span class="c">//------------------------------</span>
+<span class="i">bool</span> <span class="v">stack</span>::<span class="v">empty</span>(<span class="i">void</span>)
+{
+  <span class="i">return</span> !<span class="v">S</span>;
+}
+
+<span class="c">// Zwraca szczyt stosu</span>
+<span class="c">//--------------------</span>
+<span class="i">int</span> <span class="v">stack</span>::<span class="v">top</span>(<span class="i">void</span>)
+{
+  <span class="i">return</span> <span class="v">S</span>-&gt;<span class="v">v</span>;
+}
+
+<span class="c">// Zapisuje na stos</span>
+<span class="c">//-----------------</span>
+<span class="i">void</span> <span class="v">stack</span>::<span class="v">push</span>(<span class="i">int</span> <span class="v">v</span>)
+{
+  <span class="v">slistEl</span> * <span class="v">e</span> = <span class="i">new</span> <span class="v">slistEl</span>;
+  <span class="v">e</span>-&gt;<span class="v">v</span>    = <span class="v">v</span>;
+  <span class="v">e</span>-&gt;<span class="v">next</span> = <span class="v">S</span>;
+  <span class="v">S</span> = <span class="v">e</span>;
+}
+
+<span class="c">// Usuwa ze stosu</span>
+<span class="c">//---------------</span>
+<span class="i">void</span> <span class="v">stack</span>::<span class="v">pop</span>(<span class="i">void</span>)
+{
+  <span class="i">if</span>(<span class="v">S</span>)
+  {
+    <span class="v">slistEl</span> * <span class="v">e</span> = <span class="v">S</span>;
+    <span class="v">S</span> = <span class="v">S</span>-&gt;<span class="v">next</span>;
+    <span class="i">delete</span> <span class="v">e</span>;
+  }
+}
+
+<span class="c">// Funkcja oblicza liczbę spójnych składowych w grafie</span>
+<span class="c">// n    - liczba wierzchołków w grafie</span>
+<span class="c">// graf - tablica list sąsiedztwa</span>
+<span class="c">// VU   - tablica dostępności krawędzi grafu</span>
+<span class="c">//----------------------------------------------------</span>
+<span class="i">int</span> <span class="v">ccn</span>(<span class="i">int</span> <span class="v">n</span>, <span class="v">slistEl</span> ** <span class="v">graf</span>, <span class="i">bool</span> * <span class="v">VU</span>)
+{
+  <span class="i">int</span> * <span class="v">C</span>,<span class="v">cc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span>;
+  <span class="v">stack</span> <span class="v">S</span>;
+  <span class="v">slistEl</span> * <span class="v">p</span>;
+
+  <span class="v">C</span> = <span class="i">new</span> <span class="i">int</span>[<span class="v">n</span>];            <span class="c">// Tworzymy tablicę spójnych składowych</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++) <span class="v">C</span>[<span class="v">i</span>] = <span class="n">0</span>; <span class="c">// Zerujemy tablicę spójnych składowych</span>
+
+  <span class="v">cc</span> = <span class="n">0</span>;                    <span class="c">// Zerujemy licznik spójnych składowych</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+    <span class="i">if</span>(<span class="v">VU</span>[<span class="v">i</span>] &amp;&amp; !<span class="v">C</span>[<span class="v">i</span>])       <span class="c">// Szukamy nieodwiedzonego jeszcze wierzchołka</span>
+    {
+      <span class="v">cc</span>++;                  <span class="c">// Zwiększamy licznik składowych</span>
+      <span class="v">S</span>.<span class="v">push</span>(<span class="v">i</span>);             <span class="c">// Na stosie umieszczamy numer bieżącego węzła</span>
+      <span class="v">C</span>[<span class="v">i</span>] = <span class="v">cc</span>;             <span class="c">// Wierzchołek numerujemy i oznaczamy jako odwiedzony</span>
+      <span class="i">while</span>(!<span class="v">S</span>.<span class="v">empty</span>())      <span class="c">// Przechodzimy graf algorytmem DFS</span>
+      {
+        <span class="v">v</span> = <span class="v">S</span>.<span class="v">top</span>();         <span class="c">// Pobieramy wierzchołek</span>
+        <span class="v">S</span>.<span class="v">pop</span>();             <span class="c">// Usuwamy go ze stosu</span>
+        <span class="i">for</span>(<span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]; <span class="v">p</span>; <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>) <span class="c">// Przeglądamy sąsiadów wierzchołka v</span>
+        {
+          <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>;
+          <span class="i">if</span>(<span class="v">VU</span>[<span class="v">u</span>] &amp;&amp; !<span class="v">C</span>[<span class="v">u</span>])
+          {
+            <span class="v">S</span>.<span class="v">push</span>(<span class="v">u</span>);       <span class="c">// Na stos idą sąsiedzi nieodwiedzeni</span>
+            <span class="v">C</span>[<span class="v">u</span>] = <span class="v">cc</span>;       <span class="c">// i ponumerowani</span>
+          }
+        }
+      }
+    }
+
+  <span class="i">delete</span> [] <span class="v">C</span>;               <span class="c">// Usuwamy tablicę C</span>
+  <span class="i">return</span> <span class="v">cc</span>;                 <span class="c">// Zwracamy wynik</span>
+}
+
+<span class="c">// **********************</span>
+<span class="c">// *** PROGRAM GŁÓWNY ***</span>
+<span class="c">// **********************</span>
+
+<span class="i">int</span> <span class="v">main</span>()
+{
+  <span class="i">int</span> <span class="v">n</span>,<span class="v">m</span>;                   <span class="c">// Liczba wierzchołków i krawędzi</span>
+  <span class="v">slistEl</span> ** <span class="v">A</span>;              <span class="c">// Tablica list sąsiedztwa</span>
+  <span class="i">int</span> <span class="v">nc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span>;
+  <span class="v">slistEl</span> * <span class="v">L</span>,* <span class="v">p</span>,* <span class="v">r</span>;
+  <span class="i">bool</span> * <span class="v">VU</span>;
+
+  <span class="v">cin</span> &gt;&gt; <span class="v">n</span> &gt;&gt; <span class="v">m</span>;             <span class="c">// Czytamy liczbę wierzchołków i krawędzi</span>
+
+  <span class="c">// Tworzymy zmienne dynamiczne</span>
+
+  <span class="v">VU</span> = <span class="i">new</span> <span class="i">bool</span>[<span class="v">n</span>];          <span class="c">// Krawędzie aktywne</span>
+  <span class="v">A</span>  = <span class="i">new</span> <span class="v">slistEl</span> * [<span class="v">n</span>];    <span class="c">// Tablica list sąsiedztwa</span>
+
+  <span class="c">// Tablicę wypełniamy pustymi listami</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+  {
+    <span class="v">A</span>[<span class="v">i</span>] = <span class="v">NULL</span>;
+    <span class="v">VU</span>[<span class="v">i</span>] = <span class="i">true</span>;
+  }
+
+  <span class="c">// Odczytujemy kolejne definicje krawędzi</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">m</span>; <span class="v">i</span>++)
+  {
+    <span class="v">cin</span> &gt;&gt; <span class="v">v</span> &gt;&gt; <span class="v">u</span>;
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">u</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">A</span>[<span class="v">v</span>];
+    <span class="v">A</span>[<span class="v">v</span>] = <span class="v">p</span>;
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">A</span>[<span class="v">u</span>];
+    <span class="v">A</span>[<span class="v">u</span>] = <span class="v">p</span>;
+  }
+
+  <span class="c">// Algorytm znajdowania punktów artykulacji</span>
+
+  <span class="v">L</span> = <span class="v">NULL</span>;                  <span class="c">// Pusta lista punktów artykulacji</span>
+
+  <span class="v">nc</span> = <span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>);          <span class="c">// Zapamiętujemy liczbę spójnych składowych</span>
+
+  <span class="i">for</span>(<span class="v">v</span> = <span class="n">0</span>; <span class="v">v</span> &lt; <span class="v">n</span>; <span class="v">v</span>++)     <span class="c">// Przechodzimy przez kolejne wierzchołki grafu</span>
+  {
+    <span class="v">VU</span>[<span class="v">v</span>] = <span class="i">false</span>;           <span class="c">// Zaznaczamy wierzchołek v jako usunięty</span>
+    <span class="i">if</span>(<span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>) &gt; <span class="v">nc</span>)     <span class="c">// Sprawdzamy, czy v jest punktem artykulacji</span>
+    {
+      <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;       <span class="c">// Jeśli tak, dołączamy go do listy</span>
+      <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+      <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">L</span>;
+      <span class="v">L</span> = <span class="v">p</span>;
+    }
+    <span class="v">VU</span>[<span class="v">v</span>] = <span class="i">true</span>;            <span class="c">// Odtwarzamy wierzchołek</span>
+  }
+
+  <span class="v">cout</span> &lt;&lt; <span class="v">endl</span>;
+
+  <span class="c">// Wypisujemy znalezione punkty artykulacji, jednocześnie usuwając listę L</span>
+
+  <span class="i">while</span>(<span class="v">L</span>)
+  {
+    <span class="v">cout</span> &lt;&lt; <span class="v">L</span>-&gt;<span class="v">v</span> &lt;&lt; <span class="t">" "</span>;
+    <span class="v">p</span> = <span class="v">L</span>;
+    <span class="v">L</span> = <span class="v">L</span>-&gt;<span class="v">next</span>;
+    <span class="i">delete</span> [] <span class="v">p</span>;
+  }
+
+  <span class="v">cout</span> &lt;&lt; <span class="v">endl</span>;
+
+  <span class="c">// Usuwamy dynamiczne struktury danych</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+  {
+    <span class="v">p</span> = <span class="v">A</span>[<span class="v">i</span>];
+    <span class="i">while</span>(<span class="v">p</span>)
+    {
+      <span class="v">r</span> = <span class="v">p</span>;
+      <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>;
+      <span class="i">delete</span> <span class="v">r</span>;
+    }
+  }
+
+  <span class="i">delete</span> [] <span class="v">A</span>;
+  <span class="i">delete</span> [] <span class="v">VU</span>;
+
+  <span class="i">return</span> <span class="n">0</span>;
+} </pre></pre></td>
+		</tr>
+		<tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Free Basic</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="bas"><pre><span class="c">' Wyszukiwanie punktów artykulacji w grafie nieskierowanym</span>
+<span class="c">' Data: 29.12.2013</span>
+<span class="c">' (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">'---------------------------------------------------------</span>
+
+<span class="c">' Typy dla dynamicznej tablicy list sąsiedztwa, stosu i listy punktów artykulacji</span>
+
+<span class="i">Type</span> <span class="v">slistEl</span>
+  <span class="i">Next</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>
+  <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>
+<span class="i">End</span> <span class="i">Type</span>
+
+<span class="i">Type</span> <span class="v">stack</span>
+  <span class="i">Private</span>:
+    <span class="v">S</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>  <span class="c">' lista zawierająca stos</span>
+  <span class="i">Public</span>:
+    <span class="i">Declare</span> <span class="i">Constructor</span>()
+    <span class="i">Declare</span> <span class="i">Destructor</span>()
+    <span class="i">Declare</span> <span class="i">Function</span> <span class="v">empty</span>() <span class="i">As</span> <span class="i">Integer</span>
+    <span class="i">Declare</span> <span class="i">Function</span> <span class="v">top</span> <span class="i">As</span> <span class="i">Integer</span>
+    <span class="i">Declare</span> <span class="i">Sub</span> <span class="v">push</span>(<span class="i">Byval</span> <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>)
+    <span class="i">Declare</span> <span class="i">Sub</span> <span class="v">pop</span>()
+<span class="i">End</span> <span class="i">Type</span>
+
+<span class="c">'---------------------</span>
+<span class="c">' Metody obiektu stack</span>
+<span class="c">'---------------------</span>
+
+<span class="c">' Konstruktor</span>
+<span class="c">'------------</span>
+<span class="i">Constructor</span> <span class="v">stack</span>()
+  <span class="v">S</span> = <span class="n">0</span>
+<span class="i">End</span> <span class="i">Constructor</span>
+
+<span class="c">' Destruktor</span>
+<span class="c">'-----------</span>
+<span class="i">Destructor</span> <span class="v">stack</span>()
+  <span class="i">While</span> <span class="v">S</span>
+  	 <span class="v">pop</span>()
+  <span class="i">Wend</span>
+<span class="i">End</span> <span class="i">Destructor</span>
+
+<span class="c">' Sprawdza, czy stos jest pusty</span>
+<span class="c">'------------------------------</span>
+<span class="i">Function</span> <span class="v">stack</span>.<span class="v">empty</span>() <span class="i">As</span> <span class="i">Integer</span>
+  <span class="i">If</span> <span class="v">S</span> = <span class="n">0</span> <span class="i">Then</span> <span class="i">Return</span> <span class="n">1</span>
+  <span class="i">Return</span> <span class="n">0</span>
+<span class="i">End</span> <span class="i">Function</span>
+
+<span class="c">' Zwraca szczyt stosu.</span>
+<span class="c">'------------------------------</span>
+<span class="i">Function</span> <span class="v">stack</span>.<span class="v">top</span>() <span class="i">As</span> <span class="i">Integer</span>
+  <span class="v">top</span> = <span class="v">S</span>-&gt;<span class="v">v</span>
+<span class="i">End</span> <span class="i">Function</span>
+
+<span class="c">' Zapisuje na stos</span>
+<span class="c">'-----------------</span>
+<span class="i">Sub</span> <span class="v">stack</span>.<span class="v">push</span>(<span class="i">Byval</span> <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>)
+  <span class="i">Dim</span> <span class="v">e</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>
+  <span class="v">e</span> = <span class="i">New</span> <span class="v">slistEl</span>
+  <span class="v">e</span>-&gt;<span class="v">v</span>    = <span class="v">v</span>
+  <span class="v">e</span>-&gt;<span class="i">Next</span> = <span class="v">S</span>
+  <span class="v">S</span> = <span class="v">e</span>
+<span class="i">End</span> <span class="i">Sub</span>
+
+<span class="c">' Usuwa ze stosu</span>
+<span class="c">'---------------</span>
+<span class="i">Sub</span> <span class="v">stack</span>.<span class="v">pop</span>()
+  <span class="i">Dim</span> <span class="v">e</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>
+  <span class="i">If</span> <span class="v">S</span> <span class="i">Then</span>
+    <span class="v">e</span> = <span class="v">S</span>
+    <span class="v">S</span> = <span class="v">S</span>-&gt;<span class="i">Next</span>
+    <span class="i">Delete</span> <span class="v">e</span>
+  <span class="i">End</span> <span class="i">If</span>
+<span class="i">End</span> <span class="i">Sub</span>
+
+<span class="c">' Funkcja oblicza liczbę spójnych składowych w grafie</span>
+<span class="c">' n    - liczba wierzchołków w grafie</span>
+<span class="c">' graf - tablica list sąsiedztwa</span>
+<span class="c">' VU   - tablica dostępności krawędzi grafu</span>
+<span class="c">'----------------------------------------------------</span>
+<span class="i">Function</span> <span class="v">ccn</span>(<span class="i">Byval</span> <span class="v">n</span> <span class="i">As</span> <span class="i">Integer</span>, <span class="i">Byval</span> <span class="v">graf</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="i">Ptr</span>, <span class="i">Byval</span> <span class="v">VU</span> <span class="i">As</span> <span class="i">Byte</span> <span class="i">Ptr</span>) <span class="i">As</span> <span class="i">Integer</span>
+
+  <span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="i">Ptr</span> <span class="v">C</span>
+  <span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">cc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span>
+  <span class="i">Dim</span> <span class="i">As</span> <span class="v">stack</span> <span class="v">S</span>
+  <span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">p</span>
+
+  <span class="v">C</span> = <span class="i">New</span> <span class="i">Integer</span> [<span class="v">n</span>]        <span class="c">' Tworzymy tablicę spójnych składowych</span>
+
+  <span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+    <span class="v">C</span>[<span class="v">i</span>] = <span class="n">0</span>                 <span class="c">' Zerujemy tablicę spójnych składowych</span>
+  <span class="i">Next</span>
+
+  <span class="v">cc</span> = <span class="n">0</span>                     <span class="c">' Zerujemy licznik spójnych składowych</span>
+
+  <span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+    <span class="i">If</span> (<span class="v">VU</span>[<span class="v">i</span>] = <span class="n">1</span>) <span class="i">Andalso</span> (<span class="v">C</span>[<span class="v">i</span>] = <span class="n">0</span>) <span class="i">Then</span> <span class="c">' Szukamy nieodwiedzonego jeszcze wierzchołka</span>
+      <span class="v">cc</span> += <span class="n">1</span>                <span class="c">' Zwiększamy licznik składowych</span>
+      <span class="v">S</span>.<span class="v">push</span>(<span class="v">i</span>)              <span class="c">' Na stosie umieszczamy numer bieżącego węzła</span>
+      <span class="v">C</span>[<span class="v">i</span>] = <span class="v">cc</span>              <span class="c">' Wierzchołek numerujemy i oznaczamy jako odwiedzony      </span>
+      <span class="i">While</span> <span class="v">S</span>.<span class="v">empty</span>() = <span class="n">0</span>    <span class="c">' Przechodzimy graf algorytmem DFS</span>
+        <span class="v">v</span> = <span class="v">S</span>.<span class="v">top</span>()          <span class="c">' Pobieramy wierzchołek</span>
+        <span class="v">S</span>.<span class="v">pop</span>()              <span class="c">' Usuwamy go ze stosu</span>
+        <span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]          <span class="c">' Przeglądamy sąsiadów wierzchołka v</span>
+        <span class="i">While</span> <span class="v">p</span>
+          <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>
+          <span class="i">If</span> (<span class="v">VU</span>[<span class="v">u</span>] = <span class="n">1</span>) <span class="i">Andalso</span> (<span class="v">C</span>[<span class="v">u</span>] = <span class="n">0</span>) <span class="i">Then</span>
+            <span class="v">S</span>.<span class="v">push</span>(<span class="v">u</span>)        <span class="c">' Na stos idą sąsiedzi nieodwiedzeni</span>
+            <span class="v">C</span>[<span class="v">u</span>] = <span class="v">cc</span>        <span class="c">' i ponumerowani</span>
+          <span class="i">End</span> <span class="i">If</span> 
+          <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+        <span class="i">Wend</span>
+      <span class="i">Wend</span>
+    <span class="i">End</span> <span class="i">If</span>
+  <span class="i">Next</span>
+  
+  <span class="i">Delete</span> [] <span class="v">C</span>                <span class="c">' Usuwamy tablicę C</span>
+
+  <span class="i">Return</span> <span class="v">cc</span>                  <span class="c">' Zwracamy wynik</span>
+
+<span class="i">End</span> <span class="i">Function</span>
+
+<span class="c">' **********************</span>
+<span class="c">' *** Program główny ***</span>
+<span class="c">' **********************</span>
+
+<span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">n</span>,<span class="v">m</span>,<span class="v">nc</span>,<span class="v">i</span>,<span class="v">v</span>,<span class="v">u</span>
+<span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="i">Ptr</span> <span class="v">A</span>
+<span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">L</span>,<span class="v">p</span>,<span class="v">r</span>
+<span class="i">Dim</span> <span class="i">As</span> <span class="i">Byte</span> <span class="i">Ptr</span> <span class="v">VU</span>
+
+<span class="i">Open</span> <span class="i">Cons</span> <span class="i">For</span> <span class="i">Input</span> <span class="i">As</span> #<span class="n">1</span>
+
+<span class="i">Input</span> #<span class="n">1</span>,<span class="v">n</span>,<span class="v">m</span>                 <span class="c">' Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+<span class="v">A</span> = <span class="i">New</span> <span class="v">slistEl</span> <span class="i">Ptr</span> [<span class="v">n</span>]      <span class="c">' Tworzymy tablice dynamiczne</span>
+<span class="v">VU</span> = <span class="i">New</span> <span class="i">Byte</span> [<span class="v">n</span>]            <span class="c">' Krawędzie aktywne</span>
+
+<span class="c">' Tablicę A wypełniamy pustymi listami, a tablicę C wypełniamy zerami</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="v">A</span>[<span class="v">i</span>] = <span class="n">0</span>
+  <span class="v">VU</span>[<span class="v">i</span>] = <span class="n">1</span>
+<span class="i">Next</span>
+
+<span class="c">' Odczytujemy kolejne definicje krawędzi.</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">m</span> - <span class="n">1</span>
+  <span class="i">Input</span> #<span class="n">1</span>,<span class="v">v</span>,<span class="v">u</span>               <span class="c">' Wierzchołki tworzące krawędź</span>
+  <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>            <span class="c">' Tworzymy nowy element</span>
+  <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">u</span>                   <span class="c">' Numerujemy go jako u</span>
+  <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">A</span>[<span class="v">v</span>]             <span class="c">' Dodajemy go na początek listy A[v]</span>
+  <span class="v">A</span>[<span class="v">v</span>] = <span class="v">p</span>
+  <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>            <span class="c">' To samo dla krawędzi w drugą stronę</span>
+  <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+  <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">A</span>[<span class="v">u</span>]
+  <span class="v">A</span>[<span class="v">u</span>] = <span class="v">p</span>
+<span class="i">Next</span>
+
+<span class="c">' Algorytm znajdowania punktów artykulacji</span>
+
+<span class="v">L</span> = <span class="n">0</span>                        <span class="c">' Pusta lista punktów artykulacji</span>
+
+<span class="v">nc</span> = <span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>)             <span class="c">' Zapamiętujemy liczbę spójnych składowych</span>
+
+<span class="i">For</span> <span class="v">v</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>           <span class="c">' Przechodzimy przez kolejne wierzchołki grafu</span>
+  <span class="v">VU</span>[<span class="v">v</span>] = <span class="n">0</span>                  <span class="c">' Zaznaczamy wierzchołek v jako usunięty</span>
+  <span class="i">If</span> <span class="v">ccn</span>(<span class="v">n</span>,<span class="v">A</span>,<span class="v">VU</span>) &gt; <span class="v">nc</span> <span class="i">Then</span>   <span class="c">' Sprawdzamy, czy v jest punktem artykulacji</span>
+    <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>          <span class="c">' Jeśli tak, dołączamy go do listy</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+    <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">L</span>
+    <span class="v">L</span> = <span class="v">p</span>
+  <span class="i">End</span> <span class="i">If</span>
+  <span class="v">VU</span>[<span class="v">v</span>] = <span class="n">1</span>                  <span class="c">' Odtwarzamy wierzchołek</span>
+<span class="i">Next</span>
+
+<span class="i">Print</span>
+
+<span class="c">' Wypisujemy znalezione punkty artykulacji, jednocześnie usuwając listę L</span>
+
+<span class="i">While</span> <span class="v">L</span>
+  <span class="i">Print</span> <span class="v">L</span>-&gt;<span class="v">v</span>;
+  <span class="v">p</span> = <span class="v">L</span>
+  <span class="v">L</span> = <span class="v">L</span>-&gt;<span class="i">Next</span>
+  <span class="i">Delete</span> [] <span class="v">p</span>
+<span class="i">Wend</span>
+
+<span class="i">Print</span>
+
+<span class="c">' Usuwamy dynamiczne struktury danych</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="v">p</span> = <span class="v">A</span>[<span class="v">i</span>]
+  <span class="i">While</span> <span class="v">p</span>
+    <span class="v">r</span> = <span class="v">p</span>
+    <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+    <span class="i">Delete</span> <span class="v">r</span>
+  <span class="i">Wend</span>
+<span class="i">Next</span>
+
+<span class="i">Delete</span> [] <span class="v">A</span>
+<span class="i">Delete</span> [] <span class="v">VU</span>
+
+<span class="i">End</span> </pre></pre></td>
+		</tr>
+		<tr>
+			<td style="text-align: center" bgcolor="#F0F0F0" colspan="2"><b>Wynik</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" class="program">8 11<br>0 1 0 2 0 3 0 5<br>1 4 1 5<br>2 3<br>3 6 3 7<br>4 5<br>6 7<br>
+			<br>3 0</td>
+			<td style="text-align: center">
+			<img src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_03.gif" width="243" height="148"></td>
+		</tr>
+	</tbody></table>
+	</div>
+	</div>
+	<p>&nbsp;</p><h3><a name="P2"></a>Rozwiązanie nr 2</h3>
+<div class="sb1">Do szybkiego wyszukiwania punktów artykulacji wykorzystujemy 
+	podobny algorytm jak do wyszukiwania <a href="https://eduinf.waw.pl/inf/alg/001_search/0130a.php#P2">mostów</a>. Idea 
+	tego algorytmu również opiera się na drzewie rozpinającym grafu oraz na 
+	przejściu wstecznym za pomocą DFS. W algorytmie wykorzystuje się dwie 
+	własności punktów artykulacji:<p>&nbsp;</p>
+	<p>
+	<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_04.gif" width="210" height="234" style="float: left; margin-right: 16"></p>
+	<div class="bl1"><font color="#FF0000">Korzeń drzewa rozpinającego w głąb 
+		grafu jest punktem artykulacji tylko wtedy, jeśli posiada co najmniej 
+		dwóch synów</font>. Uzasadnienie tego faktu jest bardzo proste. Gdy 
+		uruchomimy przejście DFS przy tworzeniu drzewa rozpinającego, to dojdzie 
+		ono do każdego wierzchołka, do którego istnieje w grafie ścieżka od 
+		wierzchołka startowego. Zatem po uruchomieniu w korzeniu drzewa DFS 
+		odwiedzi wszystkich sąsiadów korzenia, do których w grafie istnieje 
+		ścieżka. Jeśli jakiś sąsiad zostanie nieodwiedzony przy powrocie z DFS 
+		uruchomionego dla pierwszego z synów, to znaczy, że w grafie nie było do 
+		niego innej ścieżki oprócz krawędzi bezpośrednio od korzenia do tego 
+		sąsiada. W takim przypadku powstaje kolejny syn korzenia
+		<span class="rem">(gdyż DFS musimy ponownie uruchomić dla każdego 
+		nieodwiedzonego sąsiada)</span>. Pomiędzy poprzednim synem istnieje 
+		droga tylko poprzez korzeń drzewa <span class="rem">(gdyby istniała 
+		inna, to DFS by ją znalazło i dany wierzchołek nie zostałby synem 
+		korzenia, lecz jego dalszym potomkiem)</span>. Jeśli korzeń zostanie 
+		teraz usunięty z grafu, to wszyscy jego synowie na drzewie rozpinającym 
+		znajdą się w oddzielnych spójnych składowych grafu. Liczba tych 
+		składowych wzrośnie, zatem korzeń będzie punktem artykulacji.<p>&nbsp;</p></div>
+	<p>
+	<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_05.gif" width="222" height="262" style="float: right; margin-left: 16"></p><div class="bl1">
+		<font color="#FF0000">Wierzchołek nie będący korzeniem drzewa 
+		rozpinającego w głąb jest punktem artykulacji, jeśli przynajmniej dla 
+		jednego z jego synów nie istnieje krawędź wtórna, która łączy potomka 
+		tego wierzchołka z jego przodkiem</font>. Wyjaśnienie jest również 
+		proste. Istnienie krawędzi wtórnej oznacza, że do syna można dojść 
+		również inną drogą, która nie wiedzie poprzez dany wierzchołek. Skoro 
+		tak, to jego usunięcie nie odłączy syna od reszty grafu, gdyż wciąż 
+		będzie się znajdował w tej samej spójnej składowej z uwagi na krawędź 
+		łączącą jego potomków z innym przodkiem. Zatem liczba składowych nie 
+		wzrośnie. Jeśli natomiast taka krawędź wtórna nie istnieje, to do tego 
+		syna można przejść w grafie tylko krawędzią, która łączy go z jego 
+		ojcem. Jeśli usuniemy ojca, krawędź zniknie i syn znajdzie się w oddzielnej spójnej 
+		składowej. Liczba składowych grafu wzrośnie, zatem ojciec musi być 
+		punktem artykulacji.</div>
+	<p>&nbsp;</p>
+	<p>Sprawdzenie pierwszej własności jest proste. Drugą własność sprawdzamy 
+	następująco:</p><div class="bl1">&nbsp;<p>Przechodzimy przez graf algorytmem 
+		DFS, numerując po drodze wszystkie odwiedzone wierzchołki oraz 
+		obliczając dla nich parametr Low po odwiedzeniu wszystkich sąsiadów. 
+		Przypomnijmy, parametr Low jest najmniejszą wartością z numerów nadanych 
+		przez DFS bieżącemu wierzchołkowi, wierzchołkowi połączonemu z bieżącym 
+		krawędzią wtórną oraz parametrom Low wszystkich synów na drzewie 
+		rozpinającym. Czym dokładnie jest ten parametr dla danego wierzchołka? 
+		Otóż jest to najmniejszy numer nadany przez DFS wierzchołkowi, do 
+		którego istnieje ścieżka w dół drzewa <span class="rem">(później ścieżka 
+		ta może zawracać i tworzyć cykl)</span>. Jeśli parametr Low dla jednego 
+		z synów będzie większy lub równy numerowi DFS bieżącego wierzchołka, to 
+		będzie to oznaczało, że ścieżka zawierająca wierzchołek bieżący i tego 
+		syna nie posiada krawędzi wtórnej do przodka wierzchołka bieżącego
+		<span class="rem">(w takim przypadku parametr Low syna byłby mniejszy od 
+		numeru DFS jego ojca)</span>. Skoro tak, to wierzchołek bieżący jest 
+		punktem artykulacji.</p></div>
+	<p>&nbsp;</p>
+	<p>Zobaczmy na prostym przykładzie, jak działa algorytm Tarjana:</p>
+	<p>&nbsp;</p>
+	<table border="0" cellpadding="4" cellspacing="0" class="sb1">
+		<tbody><tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_06.gif" width="121" height="196"></td>
+			<td nowrap=""><span lang="en">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+			<td>Oto nasz przykładowy graf, w którym mamy znaleźć wszystkie 
+			punkty artykulacji. Graf przejdziemy algorytmem DFS, tworząc po drodze drzewo 
+			rozpinające w głąb oraz numerując wierzchołki grafu
+			<span class="rem">(numeracja DFS nie ma nic wspólnego z numerami 
+			wierzchołków w definicji grafu &#8211; określa ona kolejność 
+			odwiedzin poszczególnych wierzchołków)</span>. Numery te posłużą 
+			później do wyznaczenia dla każdego wierzchołka parametru Low, gdy 
+			zostaną już przetworzeni wszyscy sąsiedzi.</td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_07.gif" width="121" height="196"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Rozpoczynamy od wierzchołka 0 <span class="rem">(punkt startowy nie ma wpływu na 
+			wynik pracy algorytmu)</span>. Wierzchołek zaznaczamy jako odwiedzony i 
+			nadajemy mu numer DFS 1.<p>Wierzchołek posiada trzech 
+			nieodwiedzonych jeszcze sąsiadów: 1, 2 i 3.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_08.gif" width="130" height="195"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Odwiedzamy wierzchołek nr 1. Oznaczamy go jako odwiedzony i 
+			nadajemy mu numer DFS 2. Krawędź 0 &#8211; 1 staje się krawędzią 
+			drzewa rozpinającego w głąb. Wierzchołek 0 jest korzeniem drzewa, 
+			wierzchołek 1 jest jego synem.<p>Wierzchołek posiada jednego 
+			nieodwiedzonego sąsiada: 2.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_09.gif" width="130" height="195"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Odwiedzamy wierzchołek 2. Oznaczamy go jako odwiedzony i 
+			nadajemy mu numer DFS 3. Krawędź 1 &#8211; 2 zostaje dopisana do 
+			drzewa rozpinającego <span class="rem">(1 jest ojcem, 2 jest synem)</span>.<p>
+			Wierzchołek 2 nie posiada już nieodwiedzonych sąsiadów. Wierzchołek 
+			nie ma synów, nie może być zatem punktem artykulacji. Przetwarzamy 
+			go, obliczając parametr Low jako najmniejszą liczbę z 3
+			<span class="rem">(numer DFS wierzchołka)</span> i 1
+			<span class="rem">(numer DFS wierzchołka 0, który łączy się 
+			krawędzią wtórną)</span>. Wierzchołek 2 nie posiada synów na drzewie 
+			rozpinającym.</p>
+			<p>Low(2) = min (3,1) = 1</p>
+			<p>Wracamy do wierzchołka nr 1.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_10.gif" width="141" height="196"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Jesteśmy z powrotem w wierzchołku nr 1. Wierzchołek posiada syna 
+			nr 2, lecz parametr Low(2) = 1 jest mniejszy od numeru DSF 
+			wierzchołka nr 1 równego 2 <span class="rem">a oznacza to, że 
+			istnieje krawędź wtórna łącząca potomka (2) z przodkiem (0): tutaj 
+			jest to krawędź 2 &#8211; 0)</span>. Zatem wierzchołek ten nie może 
+			być punktem artykulacji.<p>Ponieważ wszyscy sąsiedzi zostali już 
+			odwiedzeni, przetwarzamy wierzchołek, obliczając dla niego parametr 
+			Low. Będzie to najmniejsza wartość z 2 <span class="rem">(numer DFS 
+			wierzchołka)</span> i 1 <span class="rem">(parametr Low dla jego 
+			syna 2)</span>.</p>
+			<p>Low(1) = min (2,1) = 1.</p>
+			<p>Wracamy do wierzchołka 0.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_11.gif" width="141" height="196"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Odwiedzamy ostatniego sąsiada wierzchołka 0, czyli wierzchołek 
+			nr 3. Oznaczamy go jako odwiedzony i nadajemy mu numer DFS 4. 
+			Krawędź&nbsp; 0 &#8211; 3 zostaje dopisana do drzewa rozpinającego.<p>
+			Wierzchołek nr 3 ma dwóch nieodwiedzonych sąsiadów: 4 i 5.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_12.gif" width="141" height="197"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Odwiedzamy wierzchołek nr 4. Oznaczamy go jako odwiedzonego i 
+			nadajemy mu numer DFS 5. Krawędź 3 &#8211; 4 zostaje dopisana do 
+			drzewa rozpinającego.<p>Wierzchołek posiada jednego nieodwiedzonego 
+			sąsiada: 5.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_13.gif" width="143" height="196"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Odwiedzamy wierzchołek 5. Oznaczamy go jako odwiedzonego i 
+			nadajemy mu numer DFS 6. Krawędź 4 &#8211; 5 zostaje dopisana do 
+			drzewa rozpinającego.<p>Wierzchołek nr 5 nie posiada nieodwiedzonych 
+			sąsiadów. Wierzchołek nr 5 nie posiada synów, nie może być punktem 
+			artykulacji.</p>
+			<p>Wyliczamy parametr Low jako najmniejszą wartość z 6
+			<span class="rem">(numer DFS wierzchołka)</span> i 4
+			<span class="rem">(numer DFS wierzchołka 3, który łączy się 
+			krawędzią wtórną)</span>.</p>
+			<p>Low(5) = min (6,4) = 4.</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_14.gif" width="143" height="197"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Wracamy do wierzchołka nr 4. Wszyscy sąsiedzi są odwiedzeni. 
+			Wierzchołek nr 4 posiada syna 5, lecz parametr Low(5) jest mniejszy 
+			od numeru DFS wierzchołka. Zatem wierzchołek nr 4 nie jest punktem 
+			artykulacji.<p>Obliczamy parametr Low jako najmniejszą wartość z 5
+			<span class="rem">(numer DFS wierzchołka)</span> i 4
+			<span class="rem">(parametr Low jego syna 5)</span>.</p>
+			<p>Low(4) = min (5,4) = 4.</p>
+			<p>&nbsp;</p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_15.gif" width="143" height="197"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Wracamy do wierzchołka nr 3.<p>Zauważamy, iż parametr syna 
+			Low(4) = 4 spełnia kryterium punktu artykulacji <span class="rem">
+			(jest większy lub równy numerowi DFS wierzchołka)</span>. Zatem 
+			wierzchołek nr 3 jest punktem artykulacji.</p>
+			<p>Wyznaczamy parametr Low(3) jako najmniejszą wartość z 4
+			<span class="rem">(numer DFS wierzchołka)</span>, 4
+			<span class="rem">(parametr Low(4) syna na drzewie rozpinającym)</span> 
+			i 6 <span class="rem">(numer DFS wierzchołka 5 połączonego krawędzią 
+			wtórną)</span>.</p>
+			<p>Low(3) = min (4,4,6) = 4 </p></td>
+		</tr>
+		<tr>
+			<td style="text-align: left">
+			<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_16.gif" width="143" height="197"></td>
+			<td nowrap="">&nbsp;</td>
+			<td>Wracamy do wierzchołka 0. Wszyscy sąsiedzi są odwiedzeni. 
+			Ponieważ wierzchołek 0 jest korzeniem drzewa rozpinającego, to 
+			sprawdzamy dla niego pierwsze kryterium. Posiada dwóch synów na 
+			drzewie rozpinającym, zatem jest punktem artykulacji
+			<span class="rem">(parametru Low nawet nie musimy dla niego 
+			obliczać, gdyż nie będzie on już dalej potrzebny)</span>.</td>
+		</tr>
+	</tbody></table>
+	<p>&nbsp;</p>
+<h4><a name="A2"></a>Algorytm Tarjana wyszukiwania punktów artykulacji w grafie 
+nieskierowanym</h4>
+	<h5>Funkcja rekurencyjna DFSap(v,vf,graf,D,dv,L)</h5>
+	<h5>Wejście</h5>
+<div class="sb1">
+<table id="table259" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>v</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>wierzchołek startowy, <i>v</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>vf</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>ojciec wierzchołka v na drzewie rozpinającym w głąb, <i>vf</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>graf</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>zadany w dowolnie wybrany sposób, algorytm tego nie precyzuje</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>D</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>tablica numerów DFS dla poszczególnych wierzchołków</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i><span lang="en-us">dv</span></i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>referencja do zmiennej zewnętrznej przechowującej numery wierzchołków. 
+	Przy pierwszym wywołaniu zmienna powinna zawierać 2. <i>dv</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>L</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>lista punktów artykulacji.</td>
+  </tr>
+  </tbody></table>
+</div>
+<h5>Wyjście:</h5>
+<div class="sb1">
+Wartość parametru <i>Low</i> dla wierzchołka <i>v</i>. Jeśli zostanie znaleziony 
+punkt artykulacji, to będzie on dopisany do listy <i>L</i>.</div>
+<h5>Elementy pomocnicze:</h5>
+<div class="sb1">
+<table id="table261" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>Low</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>wartość parametru Low dla bieżącego wierzchołka, <i>Low</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>temp</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>chwilowo przechowuje wynik wywołania rekurencyjnego, <i>t</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap="">test</td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>zawiera wynik testu na punkt artykulacji</td>
+  </tr>
+  </tbody></table>
+</div>
+<h5><a href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#prezentacja">Lista kroków:</a></h5>
+<div class="bl1">
+  <table border="0" cellpadding="2" style="border-collapse: collapse" id="table268">
+    <tbody><tr>
+      <td valign="top">K01:</td>
+      <td nowrap="" valign="top"><i>D</i>[<i>v</i>] &#8592; <i>dv</i></td>
+      <td class="c" valign="top">; numerujemy wierzchołek</td>
+    </tr>
+    <tr>
+      <td valign="top">K02</td>
+      <td nowrap="" valign="top"><i>Low</i> &#8592; <i>dv</i></td>
+      <td class="c" valign="top">; wstępna wartość parametru </td>
+    </tr>
+    <tr>
+      <td valign="top">K03:</td>
+      <td nowrap="" valign="top"><i>dv</i> &#8592; <i>dv</i> + 1</td>
+      <td class="c" valign="top">; kolejny wierzchołek będzie miał numer o 1 
+		większy</td>
+    </tr>
+    <tr>
+      <td valign="top">K04:</td>
+      <td nowrap="" valign="top"><i>test</i> &#8592; false</td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K05:</td>
+      <td nowrap="" valign="top"><b>Dla</b> każdego sąsiada <i>u</i> wierzchołka <i>
+		v</i>, <b>wykonuj</b> K06...K12</td>
+      <td class="c" valign="top">; przeglądamy wszystkich sąsiadów wierzchołka 
+		bieżącego</td>
+    </tr>
+    <tr>
+      <td valign="top">K06:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>u</i> = <i>vf</i>,
+		<b>to następny obieg pętli</b> K05</td>
+      <td class="c" valign="top">; pomijamy ojca</td>
+    </tr>
+    <tr>
+      <td valign="top">K07:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>D</i>[<i>u</i>] 
+		= 0, <b>to idź do</b> K10</td>
+      <td class="c" valign="top">; sąsiad nieodwiedzony?</td>
+    </tr>
+    <tr>
+      <td valign="top">K08:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>D</i>[<i>u</i>] 
+		&lt; <i>Low</i>, <b>to</b> <i>Low</i> &#8592; <i>D</i>[<i>u</i>]</td>
+      <td class="c" valign="top">; odwiedzony, krawędź wtórna. Modyfikujemy 
+		parametr Low</td>
+    </tr>
+    <tr>
+      <td valign="top">K09:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Następny obieg pętli</b> K04</td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K10:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <i>temp</i> &#8592; DFSb(<i>u</i>,<i>v,graf</i>,<i>T</i>,<i>D</i>,<i>dv</i>,<i>L</i>)</td>
+      <td class="c" valign="top">; rekurencyjne wywołanie funkcji</td>
+    </tr>
+    <tr>
+      <td valign="top">K11:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>temp</i> &lt; <i>
+		Low</i>, <b>to</b> <i>Low</i> &#8592; <i>temp</i></td>
+      <td class="c" valign="top">; modyfikujemy parametr Low</td>
+    </tr>
+    <tr>
+      <td valign="top">K12:</td>
+      <td nowrap="" valign="top"><b>&nbsp;&nbsp;&nbsp; Jeśli</b> <i>temp</i> &#8805; D[v] <b>to</b> 
+		<i>test</i> &#8592; true</td>
+      <td class="c" valign="top">; robimy test na punkt artykulacji</td>
+    </tr>
+    <tr>
+      <td valign="top">K13:</td>
+      <td nowrap="" valign="top"><b>Jeśli</b> <i>test</i> = true, <b>to </b>dodaj
+		<i>v</i> do <i>L</i></td>
+      <td class="c" valign="top">; jeśli va jest punktem artykulacji, to 
+		dodajemy go do listy L</td>
+    </tr>
+    <tr>
+      <td valign="top">K14:</td>
+      <td nowrap="" valign="top"><b>Zakończ z wynikiem</b> <i>Low</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    </tbody></table>
+  	</div>
+	<h5>Algorytm główny</h5>
+	<h5>Wejście</h5>
+<div class="sb1">
+<table id="table265" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>n</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>liczba wierzchołków w grafie, <i>n</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>graf</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>zadany w dowolnie wybrany sposób, algorytm tego nie precyzuje</td>
+  </tr>
+  </tbody></table>
+</div>
+<h5>Wyjście:</h5>
+<div class="sb1">
+<table id="table266" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>L</i></td>
+    <td valign="top">&nbsp;&#8211;<span lang="en">&nbsp;</span></td>
+    <td>lista numerów wierzchołków, które są punktami artykulacji</td>
+  </tr>
+  </tbody></table>
+	</div>
+<h5>Elementy pomocnicze:</h5>
+<div class="sb1">
+<table id="table267" style="BORDER-COLLAPSE: collapse" cellpadding="2" border="0">
+  <tbody><tr>
+    <td valign="top" nowrap=""><i>dv</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>przechowuje numery wierzchołków dla DFS, <i>dv</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>D</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>dynamiczna tablica dla numerów wierzchołków nadawanych przez DFS. 
+	Elementy są liczbami całkowitymi.</td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>v,u</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>numery wierzchołków w grafie, <i>v,u</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  <tr>
+    <td valign="top" nowrap=""><i>nc</i></td>
+    <td valign="top"><span lang="en">&nbsp;</span>&#8211;<span lang="en">&nbsp;</span></td>
+    <td>liczba synów na drzewie rozpinającym dla korzenia, <i>nc</i> 
+<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/000_symbol_05.gif" width="8" height="8">
+	<span class="f">C</span></td>
+  </tr>
+  </tbody></table>
+</div>
+<h5><a href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#prezentacja">Lista kroków:</a></h5>
+<div class="bl1">
+  <table border="0" cellpadding="2" style="border-collapse: collapse" id="table262">
+    <tbody><tr>
+      <td valign="top">K01:</td>
+      <td nowrap="" valign="top">Twórz <i>n</i> elementową tablicę <i>D</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K02:</td>
+      <td nowrap="" valign="top">Zeruj tablicę <i>D</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K03:</td>
+      <td nowrap="" valign="top">Twórz pustą listę <i>L</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top">K04:</td>
+      <td nowrap="" valign="top"><b>Dla</b> <i>v</i> = 0,1,...,<i>n</i>-1: <b>
+		wykonuj</b> K05...K13</td>
+      <td class="c" valign="top">; przechodzimy przez kolejne wierzchołki grafu</td>
+    </tr>
+    <tr>
+      <td valign="top">K05:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>D</i>[<i>v</i>] 
+		&gt; 0, <b>to następny obieg pętli</b> K04</td>
+      <td class="c" valign="top">; szukamy nieodwiedzonego wierzchołka</td>
+    </tr>
+    <tr>
+      <td valign="top">K06:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <i>dv</i> &#8592; 2</td>
+      <td class="c" valign="top">; początek numeracji DFS dla synów</td>
+    </tr>
+    <tr>
+      <td valign="top">K07:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <i>nc</i>&nbsp; &#8592; 0</td>
+      <td class="c" valign="top">; liczba synów na drzewie rozpinającym w głąb</td>
+    </tr>
+    <tr>
+      <td valign="top">K08:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <i>D</i>[<i>v</i>]&nbsp; &#8592; 
+		1</td>
+      <td class="c" valign="top">; korzeń ma zawsze numer DFS równy 1</td>
+    </tr>
+    <tr>
+      <td valign="top">K09:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Dla</b> każdego sąsiada <i>u</i> 
+		wierzchołka <i>v</i> <b>wykonuj</b> K10...K12</td>
+      <td class="c" valign="top">; przeglądamy sąsiadów</td>
+    </tr>
+    <tr>
+      <td valign="top">K10</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>
+		Jeśli</b> <i>D</i>[<i>u</i>] &gt; 0, <b>to następny obieg pętli</b> K09</td>
+      <td class="c" valign="top">; szukamy nieodwiedzonego sąsiada</td>
+    </tr>
+    <tr>
+      <td valign="top">K11:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>nc</i> &#8592;
+		<i>nc</i> + 1</td>
+      <td class="c" valign="top">; znaleźliśmy syna, zwiększamy licznik synów</td>
+    </tr>
+    <tr>
+      <td valign="top">K12:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DFSap(<i>u</i>,<i>v,graf</i>,<i>D</i>,<i>dv</i>,<i>L</i>)</td>
+      <td class="c" valign="top">; wywołujemy przejście DFS</td>
+    </tr>
+    <tr>
+      <td valign="top">K13:</td>
+      <td nowrap="" valign="top">&nbsp;&nbsp;&nbsp; <b>Jeśli</b> <i>nc</i> &gt; 1, <b>
+		to</b> dodaj <i>v</i> do <i>L</i></td>
+      <td class="c" valign="top">; korzeń ma co najmniej dwóch synów - jest 
+		punktem artykulacji</td>
+    </tr>
+    <tr>
+      <td valign="top">K14:</td>
+      <td nowrap="" valign="top"><b>Zakończ z wynikiem</b> <i>L</i></td>
+      <td class="c" valign="top">&nbsp;</td>
+    </tr>
+    </tbody></table>
+  	</div>
+	<p>&nbsp;</p>
+<h4>Program</h4> <div class="sb1"><table border="0" cellpadding="8" style="border-collapse: collapse" id="table263">
+    <tbody><tr>
+      <td class="note"><b>Ważne</b>:<br>
+ <p class="bl1">Zanim uruchomisz program, przeczytaj <a target="_blank" href="https://eduinf.waw.pl/inf/alg/001_search/0001.php#konsola">wstęp</a> do tego artykułu, w którym wyjaśniamy 
+      funkcje tych programów oraz sposób korzystania z nich. </p></td></tr>
+  </tbody></table>
+  <p>&nbsp;</p></div>
+<div class="sb1">
+	Program odczytuje <a target="_blank" href="https://eduinf.waw.pl/inf/alg/001_search/0124.php#P1">definicję</a> grafu 
+	nieskierowanego, wyszukuje w nim wszystkie punkty artykulacji i wyświetla je w oknie 
+	konsoli. Aby uprościć funkcję rekurencyjną DFSap(), większość jej parametrów 
+	została zrealizowana jako zmienne globalne.<p>&nbsp;</p>
+	<p>Przykładowe dane:</p>
+	<table border="0" cellpadding="4" cellspacing="0">
+			<tbody><tr>
+				<td>
+				<img border="0" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_02.gif" width="243" height="148"></td>
+				<td><span lang="en">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+				<td>8 11<br>
+				0 1 0 2 0 3 0 5<br>
+				1 4 1 5<br>
+				2 3<br>
+				3 6 3 7<br>
+				4 5<br>
+				6 7</td>
+			</tr>
+		</tbody></table>
+	<table border="1" id="table264" cellspacing="0" cellpadding="4" style="border-collapse: collapse" bordercolor="#808080">
+		<tbody><tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Lazarus</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="pas"><pre><span class="c">// Wyszukiwanie punktów artykulacji w grafie nieskierowanym</span>
+<span class="c">// Data: 30.12.2013</span>
+<span class="c">// (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">//---------------------------------------------------------</span>
+
+<span class="i">program</span> <span class="v">bridges</span>;
+
+<span class="c">// Typy dla dynamicznej tablicy list sąsiedztwa i listy punktów artykulacji</span>
+<span class="i">type</span>
+  <span class="v">PslistEl</span> = ^<span class="v">slistEl</span>;
+  <span class="v">slistEl</span> =  <span class="i">record</span>
+    <span class="v">next</span>  : <span class="v">PslistEl</span>;
+    <span class="v">v</span>     : <span class="v">integer</span>;
+  <span class="i">end</span>;
+
+<span class="v">TList</span> = <span class="i">array</span> <span class="i">of</span> <span class="v">PslistEl</span>;
+
+<span class="c">// Zmienne globalne</span>
+
+<span class="i">var</span>
+  <span class="v">n</span>,<span class="v">m</span>,<span class="v">dv</span> : <span class="v">integer</span>;           <span class="c">// Liczba wierzchołków, krawędzi, numeracja</span>
+  <span class="v">graf</span>   : <span class="v">TList</span>;             <span class="c">// Tablica list sąsiedztwa</span>
+  <span class="v">D</span>      : <span class="i">array</span> <span class="i">of</span> <span class="v">integer</span>;  <span class="c">// Numery DFS</span>
+  <span class="v">L</span>      : <span class="v">PslistEl</span>;          <span class="c">// Lista mostów</span>
+
+<span class="c">// Funkcja rekurencyjna wyszukująca punkty artykulacji</span>
+<span class="c">// v  - numer bieżącego wierzchołka</span>
+<span class="c">// vf - ojciec bieżącego wierzchołka na drzewie rozpinającym</span>
+<span class="c">// Reszta parametrów to zmienne globalne</span>
+<span class="c">//----------------------------------------------------------</span>
+<span class="i">function</span> <span class="v">DFSap</span>(<span class="v">v</span>,<span class="v">vf</span> : <span class="v">integer</span>) : <span class="v">integer</span>;
+<span class="i">var</span>
+  <span class="v">Low</span>,<span class="v">temp</span>,<span class="v">u</span> : <span class="v">integer</span>;
+  <span class="v">test</span>       : <span class="v">boolean</span>;
+  <span class="v">p</span>          : <span class="v">PslistEl</span>;
+<span class="i">begin</span>
+  <span class="v">D</span>[<span class="v">v</span>] := <span class="v">dv</span>;                 <span class="c">// Numerujemy wierzchołek</span>
+  <span class="v">Low</span>  := <span class="v">dv</span>;                 <span class="c">// Wstępna wartość parametru Low</span>
+  <span class="v">inc</span>(<span class="v">dv</span>);                    <span class="c">// Następny numer wierzchołka</span>
+  <span class="v">test</span> := <span class="v">false</span>;
+  <span class="v">p</span> := <span class="v">graf</span>[<span class="v">v</span>];               <span class="c">// Przeglądamy listę sąsiadów</span>
+  <span class="i">while</span> <span class="v">p</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">u</span> := <span class="v">p</span>^.<span class="v">v</span>;                <span class="c">// u - numer wierzchołka sąsiada</span>
+    <span class="i">if</span> <span class="v">u</span> &lt;&gt; <span class="v">vf</span> <span class="i">then</span>           <span class="c">// u nie może być ojcem v</span>
+    <span class="i">begin</span>
+      <span class="i">if</span> <span class="v">D</span>[<span class="v">u</span>] = <span class="n">0</span> <span class="i">then</span>        <span class="c">// Jeśli sąsiad u nie był odwiedzany, to</span>
+      <span class="i">begin</span>
+        <span class="v">temp</span> := <span class="v">DFSap</span>(<span class="v">u</span>,<span class="v">v</span>);   <span class="c">// rekurencyjnie odwiedzamy go</span>
+        <span class="i">if</span> <span class="v">temp</span> &lt; <span class="v">Low</span> <span class="i">then</span> <span class="v">Low</span> := <span class="v">temp</span>;
+        <span class="i">if</span> <span class="v">temp</span> &gt;= <span class="v">D</span>[<span class="v">v</span>] <span class="i">then</span> <span class="v">test</span> := <span class="v">true</span>; <span class="c">// Test na punkt artykulacji</span>
+      <span class="i">end</span>
+      <span class="i">else</span> <span class="i">if</span> <span class="v">D</span>[<span class="v">u</span>] &lt; <span class="v">Low</span> <span class="i">then</span> <span class="v">Low</span> := <span class="v">D</span>[<span class="v">u</span>];
+    <span class="i">end</span>;
+    <span class="v">p</span> := <span class="v">p</span>^.<span class="v">next</span>;             <span class="c">// Następny wierzchołek na liście</span>
+  <span class="i">end</span>;
+
+  <span class="c">// Wszyscy sąsiedzi zostali odwiedzeni, sprawdzamy wynik testu</span>
+
+  <span class="i">if</span> <span class="v">test</span> <span class="i">then</span>
+  <span class="i">begin</span>
+    <span class="v">new</span>(<span class="v">p</span>);                   <span class="c">// Mamy nowy punkt artykulacji</span>
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">v</span>;
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">L</span>;
+    <span class="v">L</span> := <span class="v">p</span>;
+  <span class="i">end</span>;
+
+  <span class="v">DFSap</span> := <span class="v">Low</span>;                <span class="c">// Wynik</span>
+<span class="i">end</span>;
+
+<span class="c">// **********************</span>
+<span class="c">// *** Program główny ***</span>
+<span class="c">// **********************</span>
+
+<span class="i">var</span>
+  <span class="v">i</span>,<span class="v">u</span>,<span class="v">v</span>,<span class="v">nc</span> : <span class="v">integer</span>;        <span class="c">// Numery wierzchołków, licznik synów korzenia</span>
+  <span class="v">p</span>,<span class="v">r</span>      : <span class="v">PslistEl</span>;
+<span class="i">begin</span>
+  <span class="v">read</span>(<span class="v">n</span>,<span class="v">m</span>);                 <span class="c">// Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+  <span class="v">SetLength</span>(<span class="v">graf</span>,<span class="v">n</span>);         <span class="c">// Tworzymy zmienne dynamiczne</span>
+  <span class="v">SetLength</span>(<span class="v">D</span>,<span class="v">n</span>);
+  <span class="v">L</span> := <span class="v">nil</span>;
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">graf</span>[<span class="v">i</span>] := <span class="v">nil</span>;
+    <span class="v">D</span>[<span class="v">i</span>]    := <span class="n">0</span>;
+  <span class="i">end</span>;
+
+  <span class="c">// Odczytujemy kolejne definicje krawędzi</span>
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">m</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">read</span>(<span class="v">v</span>,<span class="v">u</span>);               <span class="c">// Wierzchołki tworzące krawędź</span>
+    <span class="v">new</span>(<span class="v">p</span>);                  <span class="c">// Tworzymy nowy element</span>
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">u</span>;               <span class="c">// Numerujemy go jako w</span>
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">graf</span>[<span class="v">v</span>];      <span class="c">// Dodajemy go na początek listy graf[v]</span>
+    <span class="v">graf</span>[<span class="v">v</span>] := <span class="v">p</span>;
+    <span class="v">new</span>(<span class="v">p</span>);                  <span class="c">// To samo dla krawędzi w drugą stronę</span>
+    <span class="v">p</span>^.<span class="v">v</span> := <span class="v">v</span>;
+    <span class="v">p</span>^.<span class="v">next</span> := <span class="v">graf</span>[<span class="v">u</span>];
+    <span class="v">graf</span>[<span class="v">u</span>] := <span class="v">p</span>;
+  <span class="i">end</span>;
+
+  <span class="c">// Szukamy punktów artykulacji</span>
+
+  <span class="i">for</span> <span class="v">v</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+    <span class="i">if</span> <span class="v">D</span>[<span class="v">v</span>] = <span class="n">0</span> <span class="i">then</span>        <span class="c">// Szukamy nieodwiedzonego wierzchołka</span>
+    <span class="i">begin</span>
+      <span class="v">dv</span>   := <span class="n">2</span>;            <span class="c">// Numer DFS dla pierwszego syna</span>
+      <span class="v">nc</span>   := <span class="n">0</span>;            <span class="c">// Zerujemy licznik synów</span>
+      <span class="v">D</span>[<span class="v">v</span>] := <span class="n">1</span>;            <span class="c">// Korzeń zawsze ma numer DFS 1</span>
+      <span class="v">p</span> := <span class="v">graf</span>[<span class="v">v</span>];         <span class="c">// Przeglądamy sąsiadów v</span>
+      <span class="i">while</span> <span class="v">p</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+      <span class="i">begin</span>
+        <span class="v">u</span> := <span class="v">p</span>^.<span class="v">v</span>;          <span class="c">// Numer wierzchołka sąsiedniego</span>
+        <span class="i">if</span> <span class="v">D</span>[<span class="v">u</span>] = <span class="n">0</span> <span class="i">then</span>    <span class="c">// Szukamy nieodwiedzonego sąsiada</span>
+        <span class="i">begin</span>
+          <span class="v">inc</span>(<span class="v">nc</span>);          <span class="c">// Zwiększamy licznik synów</span>
+          <span class="v">DFSap</span>(<span class="v">u</span>,<span class="v">v</span>);       <span class="c">// Szukamy punktów artykulacji w grafie</span>
+        <span class="i">end</span>;
+        <span class="v">p</span> := <span class="v">p</span>^.<span class="v">next</span>;
+      <span class="i">end</span>;
+      <span class="i">if</span> <span class="v">nc</span> &gt; <span class="n">1</span> <span class="i">then</span>        <span class="c">// Czy korzeń jest punktem artykulacji?</span>
+      <span class="i">begin</span>
+        <span class="v">new</span>(<span class="v">p</span>);             <span class="c">// Tak, dodajemy go do listy</span>
+        <span class="v">p</span>^.<span class="v">v</span> := <span class="v">v</span>;
+        <span class="v">p</span>^.<span class="v">next</span> := <span class="v">L</span>;
+        <span class="v">L</span> := <span class="v">p</span>;
+      <span class="i">end</span>;
+    <span class="i">end</span>;
+
+  <span class="v">writeln</span>;
+
+  <span class="c">// Wypisujemy znalezione punkty artykulacji</span>
+
+  <span class="i">while</span> <span class="v">L</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">write</span>(<span class="v">L</span>^.<span class="v">v</span>,<span class="t">' '</span>);
+    <span class="v">p</span> := <span class="v">L</span>;
+    <span class="v">L</span> := <span class="v">L</span>^.<span class="v">next</span>;
+    <span class="v">dispose</span>(<span class="v">p</span>);
+  <span class="i">end</span>;
+
+  <span class="v">writeln</span>;
+
+  <span class="c">// Usuwamy struktury dynamiczne</span>
+
+  <span class="v">SetLength</span>(<span class="v">D</span>,<span class="n">0</span>);
+
+  <span class="i">for</span> <span class="v">i</span> := <span class="n">0</span> <span class="i">to</span> <span class="v">n</span> - <span class="n">1</span> <span class="i">do</span>
+  <span class="i">begin</span>
+    <span class="v">p</span> := <span class="v">graf</span>[<span class="v">i</span>];
+    <span class="i">while</span> <span class="v">p</span> &lt;&gt; <span class="v">nil</span> <span class="i">do</span>
+    <span class="i">begin</span>
+      <span class="v">r</span> := <span class="v">p</span>;
+      <span class="v">p</span> := <span class="v">p</span>^.<span class="v">next</span>;
+      <span class="v">dispose</span>(<span class="v">r</span>);
+    <span class="i">end</span>;
+  <span class="i">end</span>;
+
+  <span class="v">SetLength</span>(<span class="v">graf</span>,<span class="n">0</span>);
+<span class="i">end</span>. </pre></pre></td>
+		</tr>
+		<tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Code::Blocks</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="cpp"><pre><span class="c">// Wyszukiwanie punktów artykulacji w grafie nieskierowanym</span>
+<span class="c">// Data: 30.12.2013</span>
+<span class="c">// (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">//---------------------------------------------------------</span>
+
+<span class="pp">#include &lt;iostream&gt;</span>
+
+<span class="i">using</span> <span class="i">namespace</span> <span class="v">std</span>;
+
+<span class="c">// Typy dla dynamicznej tablicy list sąsiedztwa i listy punktów artykulacji</span>
+
+<span class="i">struct</span> <span class="v">slistEl</span>
+{
+  <span class="v">slistEl</span> * <span class="v">next</span>;
+  <span class="i">int</span> <span class="v">v</span>;
+};
+
+<span class="c">// Zmienne globalne</span>
+
+<span class="i">int</span> <span class="v">n</span>,<span class="v">m</span>,<span class="v">dv</span>;                   <span class="c">// Liczba wierzchołków, krawędzi, numeracja</span>
+<span class="v">slistEl</span> ** <span class="v">graf</span>;              <span class="c">// Tablica list sąsiedztwa</span>
+<span class="i">int</span> *<span class="v">D</span>;                       <span class="c">// Numery DFS</span>
+<span class="v">slistEl</span> * <span class="v">L</span>;                  <span class="c">// Lista mostów</span>
+
+<span class="c">// Funkcja rekurencyjna wyszukująca punkty artykulacji</span>
+<span class="c">// v  - numer bieżącego wierzchołka</span>
+<span class="c">// vf - ojciec bieżącego wierzchołka na drzewie rozpinającym</span>
+<span class="c">// Reszta parametrów to zmienne globalne</span>
+<span class="c">//----------------------------------------------------------</span>
+<span class="i">int</span> <span class="v">DFSap</span>(<span class="i">int</span> <span class="v">v</span>, <span class="i">int</span> <span class="v">vf</span>)
+{
+  <span class="i">int</span> <span class="v">Low</span>,<span class="v">temp</span>,<span class="v">u</span>;
+  <span class="i">bool</span> <span class="v">test</span>;
+  <span class="v">slistEl</span> * <span class="v">p</span>;
+
+  <span class="v">D</span>[<span class="v">v</span>] = <span class="v">Low</span> = <span class="v">dv</span>++;
+
+  <span class="v">test</span> = <span class="i">false</span>;
+
+  <span class="i">for</span>(<span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]; <span class="v">p</span>; <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>) <span class="c">// Przeglądamy listę sąsiadów</span>
+  {
+    <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>;                 <span class="c">// u - numer wierzchołka sąsiada</span>
+    <span class="i">if</span>(<span class="v">u</span> != <span class="v">vf</span>)               <span class="c">// u nie może być ojcem v</span>
+    {
+      <span class="i">if</span>(!<span class="v">D</span>[<span class="v">u</span>])               <span class="c">// Jeśli sąsiad u nie był odwiedzany, to</span>
+      {
+        <span class="v">temp</span> = <span class="v">DFSap</span>(<span class="v">u</span>,<span class="v">v</span>);    <span class="c">// rekurencyjnie odwiedzamy go</span>
+        <span class="i">if</span>(<span class="v">temp</span> &lt; <span class="v">Low</span>) <span class="v">Low</span> = <span class="v">temp</span>;
+        <span class="i">if</span>(<span class="v">temp</span> &gt;= <span class="v">D</span>[<span class="v">v</span>]) <span class="v">test</span> = <span class="i">true</span>; <span class="c">// Test na punkt artykulacji</span>
+      }
+      <span class="i">else</span> <span class="i">if</span>(<span class="v">D</span>[<span class="v">u</span>] &lt; <span class="v">Low</span>) <span class="v">Low</span> = <span class="v">D</span>[<span class="v">u</span>];
+    }
+  }
+
+  <span class="c">// Wszyscy sąsiedzi zostali odwiedzeni, sprawdzamy wynik testu</span>
+
+  <span class="i">if</span>(<span class="v">test</span>)
+  {
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;          <span class="c">// Mamy nowy punkt artykulacji</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">L</span>;
+    <span class="v">L</span> = <span class="v">p</span>;
+  }
+
+  <span class="i">return</span> <span class="v">Low</span>;                <span class="c">// Wynik</span>
+}
+
+<span class="c">// **********************</span>
+<span class="c">// *** Program główny ***</span>
+<span class="c">// **********************</span>
+
+<span class="i">int</span> <span class="v">main</span>()
+{
+  <span class="i">int</span> <span class="v">i</span>,<span class="v">u</span>,<span class="v">v</span>,<span class="v">nc</span>;              <span class="c">// Numery wierzchołków, licznik synów korzenia</span>
+  <span class="v">slistEl</span> *<span class="v">p</span>,*<span class="v">r</span>;
+
+  <span class="v">cin</span> &gt;&gt; <span class="v">n</span> &gt;&gt; <span class="v">m</span>;             <span class="c">// Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+  <span class="v">graf</span> = <span class="i">new</span> <span class="v">slistEl</span> * [<span class="v">n</span>];  <span class="c">// Tworzymy zmienne dynamiczne</span>
+  <span class="v">D</span> = <span class="i">new</span> <span class="i">int</span>[<span class="v">n</span>];
+  <span class="v">L</span> = <span class="v">NULL</span>;
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+  {
+    <span class="v">graf</span>[<span class="v">i</span>] = <span class="v">NULL</span>;
+    <span class="v">D</span>[<span class="v">i</span>]    = <span class="n">0</span>;
+  }
+
+  <span class="c">// Odczytujemy kolejne definicje krawędzi</span>
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">m</span>; <span class="v">i</span>++)
+  {
+    <span class="v">cin</span> &gt;&gt; <span class="v">v</span> &gt;&gt; <span class="v">u</span>;           <span class="c">// Wierzchołki tworzące krawędź</span>
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;         <span class="c">// Tworzymy nowy element</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">u</span>;                <span class="c">// Numerujemy go jako w</span>
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">graf</span>[<span class="v">v</span>];       <span class="c">// Dodajemy go na początek listy graf[v]</span>
+    <span class="v">graf</span>[<span class="v">v</span>] = <span class="v">p</span>;
+    <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;         <span class="c">// To samo dla krawędzi w drugą stronę</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+    <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">graf</span>[<span class="v">u</span>];
+    <span class="v">graf</span>[<span class="v">u</span>] = <span class="v">p</span>;
+  }
+
+  <span class="c">// Szukamy punktów artykulacji</span>
+
+  <span class="i">for</span>(<span class="v">v</span> = <span class="n">0</span>; <span class="v">v</span> &lt; <span class="v">n</span>; <span class="v">v</span>++)
+    <span class="i">if</span>(!<span class="v">D</span>[<span class="v">v</span>])               <span class="c">// Szukamy nieodwiedzonego wierzchołka</span>
+    {
+      <span class="v">dv</span>   = <span class="n">2</span>;             <span class="c">// Numer DFS dla pierwszego syna</span>
+      <span class="v">nc</span>   = <span class="n">0</span>;             <span class="c">// Zerujemy licznik synów</span>
+      <span class="v">D</span>[<span class="v">v</span>] = <span class="n">1</span>;             <span class="c">// Korzeń zawsze ma numer DFS 1</span>
+      <span class="i">for</span>(<span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]; <span class="v">p</span>; <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>) <span class="c">// Przeglądamy sąsiadów v</span>
+      {
+        <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>;           <span class="c">// Numer wierzchołka sąsiedniego</span>
+        <span class="i">if</span>(!<span class="v">D</span>[<span class="v">u</span>])           <span class="c">// Szukamy nieodwiedzonego sąsiada</span>
+        {
+          <span class="v">nc</span>++;             <span class="c">// Zwiększamy licznik synów</span>
+          <span class="v">DFSap</span>(<span class="v">u</span>,<span class="v">v</span>);       <span class="c">// Szukamy punktów artykulacji w grafie</span>
+        }
+      }
+
+      <span class="i">if</span>(<span class="v">nc</span> &gt; <span class="n">1</span>)            <span class="c">// Czy korzeń jest punktem artykulacji?</span>
+      {
+        <span class="v">p</span> = <span class="i">new</span> <span class="v">slistEl</span>;    <span class="c">// Tak, dodajemy go do listy</span>
+        <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>;
+        <span class="v">p</span>-&gt;<span class="v">next</span> = <span class="v">L</span>;
+        <span class="v">L</span> = <span class="v">p</span>;
+      }
+    }
+
+  <span class="v">cout</span> &lt;&lt; <span class="v">endl</span>;
+
+  <span class="c">// Wypisujemy znalezione punkty artykulacji</span>
+
+  <span class="i">while</span>(<span class="v">L</span>)
+  {
+    <span class="v">cout</span> &lt;&lt; <span class="v">L</span>-&gt;<span class="v">v</span> &lt;&lt; <span class="t">" "</span>;
+    <span class="v">p</span> = <span class="v">L</span>;
+    <span class="v">L</span> = <span class="v">L</span>-&gt;<span class="v">next</span>;
+    <span class="i">delete</span> <span class="v">p</span>;
+  }
+
+  <span class="v">cout</span> &lt;&lt; <span class="v">endl</span>;
+
+  <span class="c">// Usuwamy struktury dynamiczne</span>
+
+  <span class="i">delete</span> [] <span class="v">D</span>;
+
+  <span class="i">for</span>(<span class="v">i</span> = <span class="n">0</span>; <span class="v">i</span> &lt; <span class="v">n</span>; <span class="v">i</span>++)
+  {
+    <span class="v">p</span> = <span class="v">graf</span>[<span class="v">i</span>];
+    <span class="i">while</span>(<span class="v">p</span>)
+    {
+      <span class="v">r</span> = <span class="v">p</span>;
+      <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="v">next</span>;
+      <span class="i">delete</span> <span class="v">r</span>;
+    }
+  }
+
+  <span class="i">delete</span> <span class="v">graf</span>;
+
+  <span class="i">return</span> <span class="n">0</span>;
+} </pre></pre></td>
+		</tr>
+		<tr>
+			<td bgcolor="#F0F0F0" style="text-align: center" colspan="2"><b>Free Basic</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" colspan="2">
+			<pre id="bas"><pre><span class="c">' Wyszukiwanie punktów artykulacji w grafie nieskierowanym</span>
+<span class="c">' Data: 30.12.2013</span>
+<span class="c">' (C)2013 mgr Jerzy Wałaszek</span>
+<span class="c">'---------------------------------------------------------</span>
+
+<span class="c">' Typy dla dynamicznej tablicy list sąsiedztwa i listy punktów artykulacji</span>
+
+<span class="i">Type</span> <span class="v">slistEl</span>
+  <span class="i">Next</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span>
+  <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>
+<span class="i">End</span> <span class="i">Type</span>
+
+<span class="c">' Zmienne globalne</span>
+
+<span class="i">Dim</span> <span class="i">Shared</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">n</span>,<span class="v">m</span>,<span class="v">dv</span>        <span class="c">' Liczba wierzchołków, krawędzi, numeracja</span>
+<span class="i">Dim</span> <span class="i">Shared</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="i">Ptr</span> <span class="v">graf</span>  <span class="c">' Tablica list sąsiedztwa</span>
+<span class="i">Dim</span> <span class="i">Shared</span> <span class="i">As</span> <span class="i">Integer</span> <span class="i">Ptr</span> <span class="v">D</span>         <span class="c">' Numery DFS</span>
+<span class="i">Dim</span> <span class="i">Shared</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">L</span>         <span class="c">' Lista mostów</span>
+
+<span class="c">' Funkcja rekurencyjna wyszukująca punkty artykulacji</span>
+<span class="c">' v  - numer bieżącego wierzchołka</span>
+<span class="c">' vf - ojciec bieżącego wierzchołka na drzewie rozpinającym</span>
+<span class="c">' Reszta parametrów to zmienne globalne</span>
+<span class="c">'----------------------------------------------------------</span>
+<span class="i">Function</span> <span class="v">DFSap</span>(<span class="i">Byval</span> <span class="v">v</span> <span class="i">As</span> <span class="i">Integer</span>, <span class="i">Byval</span> <span class="v">vf</span> <span class="i">As</span> <span class="i">Integer</span>) <span class="i">As</span> <span class="i">Integer</span>
+
+  <span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">Low</span>,<span class="v">temp</span>,<span class="v">u</span>,<span class="v">test</span>
+  <span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">p</span>
+
+  <span class="v">D</span>[<span class="v">v</span>] = <span class="v">dv</span>: <span class="v">Low</span> = <span class="v">dv</span>: <span class="v">dv</span> += <span class="n">1</span>
+
+  <span class="v">test</span> = <span class="n">0</span>
+
+  <span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]                 <span class="c">' Przeglądamy listę sąsiadów</span>
+  <span class="i">While</span> <span class="v">p</span>
+    <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>                  <span class="c">' u - numer wierzchołka sąsiada</span>
+    <span class="i">If</span> <span class="v">u</span> &lt;&gt; <span class="v">vf</span> <span class="i">Then</span>           <span class="c">' u nie może być ojcem v</span>
+      <span class="i">If</span> <span class="v">D</span>[<span class="v">u</span>] = <span class="n">0</span> <span class="i">Then</span>        <span class="c">' Jeśli sąsiad u nie był odwiedzany, to</span>
+        <span class="v">temp</span> = <span class="v">DFSap</span>(<span class="v">u</span>,<span class="v">v</span>)     <span class="c">' rekurencyjnie odwiedzamy go</span>
+        <span class="i">If</span> <span class="v">temp</span> &lt; <span class="v">Low</span> <span class="i">Then</span> <span class="v">Low</span> = <span class="v">temp</span>
+        <span class="i">If</span> <span class="v">temp</span> &gt;= <span class="v">D</span>[<span class="v">v</span>] <span class="i">Then</span> <span class="v">test</span> = <span class="n">1</span> <span class="c">' Test na punkt artykulacji</span>
+      <span class="i">Else</span>
+        <span class="i">If</span>(<span class="v">D</span>[<span class="v">u</span>] &lt; <span class="v">Low</span>) <span class="i">Then</span> <span class="v">Low</span> = <span class="v">D</span>[<span class="v">u</span>]
+      <span class="i">End</span> <span class="i">If</span>
+    <span class="i">End</span> <span class="i">If</span>
+    <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+  <span class="i">Wend</span>
+
+  <span class="c">' Wszyscy sąsiedzi zostali odwiedzeni, sprawdzamy wynik testu</span>
+
+  <span class="i">If</span> <span class="v">test</span> = <span class="n">1</span> <span class="i">Then</span>
+    <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>           <span class="c">' Mamy nowy punkt artykulacji</span>
+    <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+    <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">L</span>
+    <span class="v">L</span> = <span class="v">p</span>
+  <span class="i">End</span> <span class="i">If</span>
+
+  <span class="i">Return</span> <span class="v">Low</span>                 <span class="c">' Wynik</span>
+<span class="i">End</span> <span class="i">Function</span>
+
+<span class="c">' **********************</span>
+<span class="c">' *** Program główny ***</span>
+<span class="c">' **********************</span>
+
+<span class="i">Dim</span> <span class="i">As</span> <span class="i">Integer</span> <span class="v">i</span>,<span class="v">u</span>,<span class="v">v</span>,<span class="v">nc</span>      <span class="c">' Numery wierzchołków, licznik synów korzenia</span>
+<span class="i">Dim</span> <span class="i">As</span> <span class="v">slistEl</span> <span class="i">Ptr</span> <span class="v">p</span>,<span class="v">r</span>
+
+<span class="i">Open</span> <span class="i">Cons</span> <span class="i">For</span> <span class="i">Input</span> <span class="i">As</span> #<span class="n">1</span>
+
+<span class="i">Input</span> #<span class="n">1</span>,<span class="v">n</span>,<span class="v">m</span>                 <span class="c">' Odczytujemy liczbę wierzchołków i krawędzi</span>
+
+<span class="v">graf</span> = <span class="i">New</span> <span class="v">slistEl</span> <span class="i">Ptr</span> [<span class="v">n</span>]   <span class="c">' Tworzymy zmienne dynamiczne</span>
+<span class="v">D</span>    = <span class="i">New</span> <span class="i">Integer</span> [<span class="v">n</span>]
+<span class="v">L</span>    = <span class="n">0</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="v">graf</span>[<span class="v">i</span>] = <span class="n">0</span>
+  <span class="v">D</span>[<span class="v">i</span>]    = <span class="n">0</span>
+<span class="i">Next</span>
+
+<span class="c">' Odczytujemy kolejne definicje krawędzi</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">m</span> - <span class="n">1</span>
+  <span class="i">Input</span> #<span class="n">1</span>,<span class="v">v</span>,<span class="v">u</span>               <span class="c">' Wierzchołki tworzące krawędź</span>
+  <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>            <span class="c">' Tworzymy nowy element</span>
+  <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">u</span>                   <span class="c">' Numerujemy go jako u</span>
+  <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">graf</span>[<span class="v">v</span>]          <span class="c">' Dodajemy go na początek listy graf[v]</span>
+  <span class="v">graf</span>[<span class="v">v</span>] = <span class="v">p</span>
+  <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>            <span class="c">' To samo dla krawędzi w drugą stronę</span>
+  <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+  <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">graf</span>[<span class="v">u</span>]
+  <span class="v">graf</span>[<span class="v">u</span>] = <span class="v">p</span>
+<span class="i">Next</span>
+
+<span class="i">Close</span> #<span class="n">1</span>
+
+<span class="c">' Szukamy punktów artykulacji</span>
+
+<span class="i">For</span> <span class="v">v</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="i">If</span> <span class="v">D</span>[<span class="v">v</span>] = <span class="n">0</span> <span class="i">Then</span>          <span class="c">' Szukamy nieodwiedzonego wierzchołka</span>
+    <span class="v">dv</span>   = <span class="n">2</span>                <span class="c">' Numer DFS dla pierwszego syna</span>
+    <span class="v">nc</span>   = <span class="n">0</span>                <span class="c">' Zerujemy licznik synów</span>
+    <span class="v">D</span>[<span class="v">v</span>] = <span class="n">1</span>                <span class="c">' Korzeń zawsze ma numer DFS 1</span>
+
+    <span class="v">p</span> = <span class="v">graf</span>[<span class="v">v</span>]             <span class="c">' Przeglądamy sąsiadów v</span>
+    <span class="i">While</span> <span class="v">p</span>
+      <span class="v">u</span> = <span class="v">p</span>-&gt;<span class="v">v</span>              <span class="c">' Numer wierzchołka sąsiedniego</span>
+      <span class="i">If</span> <span class="v">D</span>[<span class="v">u</span>] = <span class="n">0</span> <span class="i">Then</span>      <span class="c">' Szukamy nieodwiedzonego sąsiada</span>
+        <span class="v">nc</span> += <span class="n">1</span>             <span class="c">' Zwiększamy licznik synów</span>
+        <span class="v">DFSap</span>(<span class="v">u</span>,<span class="v">v</span>)          <span class="c">' Szukamy punktów artykulacji w grafie</span>
+      <span class="i">End</span> <span class="i">If</span>
+      <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+    <span class="i">Wend</span>
+    
+    <span class="i">If</span> <span class="v">nc</span> &gt; <span class="n">1</span> <span class="i">Then</span>          <span class="c">' Czy korzeń jest punktem artykulacji?</span>
+      <span class="v">p</span> = <span class="i">New</span> <span class="v">slistEl</span>       <span class="c">' Tak, dodajemy go do listy</span>
+      <span class="v">p</span>-&gt;<span class="v">v</span> = <span class="v">v</span>
+      <span class="v">p</span>-&gt;<span class="i">Next</span> = <span class="v">L</span>
+      <span class="v">L</span> = <span class="v">p</span>
+    <span class="i">End</span> <span class="i">If</span> 
+  <span class="i">End</span> <span class="i">If</span>
+<span class="i">Next</span>
+
+<span class="i">Print</span>
+
+<span class="c">' Wypisujemy znalezione punkty artykulacji</span>
+
+<span class="i">While</span> <span class="v">L</span>
+  <span class="i">Print</span> <span class="v">L</span>-&gt;<span class="v">v</span>;
+  <span class="v">p</span> = <span class="v">L</span>
+  <span class="v">L</span> = <span class="v">L</span>-&gt;<span class="i">Next</span>
+  <span class="i">Delete</span> <span class="v">p</span>
+<span class="i">Wend</span>
+
+<span class="i">Print</span>
+
+<span class="c">' Usuwamy dynamiczne struktury danych</span>
+
+<span class="i">For</span> <span class="v">i</span> = <span class="n">0</span> <span class="i">To</span> <span class="v">n</span> - <span class="n">1</span>
+  <span class="v">p</span> = <span class="v">graf</span>[<span class="v">i</span>]
+  <span class="i">While</span> <span class="v">p</span>
+    <span class="v">r</span> = <span class="v">p</span>
+    <span class="v">p</span> = <span class="v">p</span>-&gt;<span class="i">Next</span>
+    <span class="i">Delete</span> <span class="v">r</span>
+  <span class="i">Wend</span>
+<span class="i">Next</span>
+
+<span class="i">Delete</span> [] <span class="v">D</span>
+<span class="i">Delete</span> [] <span class="v">graf</span>
+
+<span class="i">End</span> </pre></pre></td>
+		</tr>
+		<tr>
+			<td style="text-align: center" bgcolor="#F0F0F0" colspan="2"><b>Wynik</b></td>
+		</tr>
+		<tr>
+			<td style="text-align: left" class="program">8 11<br>0 1 0 2 0 3 0 5<br>1 4 1 5<br>2 3<br>3 6 3 7<br>4 5<br>6 7<br>
+			<br>0 3</td>
+			<td style="text-align: center">
+			<img src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/0130b_03.gif" width="243" height="148"></td>
+		</tr>
+	</tbody></table>
+	</div>
+	</div>
+<p>&nbsp;</p></div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:NaNpx;margin:0;padding:0;position:relative;visibility:visible;width:NaNpx;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:NaNpx;margin:0;padding:0;position:relative;visibility:visible;width:NaNpx;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:NaNpx;height:NaNpx;" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/saved_resource(4).html"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_8828509123526" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/saved_resource(5).html"></iframe>
+<div class="bl1">
+  
+<p>&nbsp;</p>
+<hr color="#C0C0C0" size="1">
+<div align="left">
+  <table style="float: right; BORDER-COLLAPSE: collapse; padding-left:8px; padding-right:8px; padding-top:1px; padding-bottom:1px; cellPadding=" 4"="" border="0">
+    <tbody><tr>
+      <td><img src="./Algorytmy i Struktury Danych - Punkty artykulacji w grafie_files/i-lo_budynek.jpg"></td><td valign="top"><p align="center" style="text-align: center">&nbsp;&nbsp;&nbsp;I Liceum Ogólnokształcące&nbsp;&nbsp;&nbsp;<br><span class="small">im. Kazimierza Brodzińskiego<br> w Tarnowie</span><br><span class="small">&#169;2018 mgr Jerzy Wałaszek</span></p></td>
+    </tr>
+  </tbody></table>
+</div>
+<span class="small">Dokument ten rozpowszechniany jest zgodnie z zasadami licencji<br>
+<b>GNU Free Documentation License</b>.</span><p>Pytania proszę przesyłać na adres email: <a href="mailto:i-lo@eduinf.waw.pl">i-lo@eduinf.waw.pl</a>
+</p>
+<p><span class="small">W artykułach serwisu są używane cookies. Jeśli nie chcesz ich otrzymywać,<br>
+zablokuj je w swojej przeglądarce.<br>
+<a target="_blank" href="https://policies.google.com/technologies/partner-sites?hl=pl">
+Informacje dodatkowe</a></span></p>
+
+</div>
+
+<script type="text/javascript">pcba()</script>
+
+</body></html>

@@ -1,0 +1,53 @@
+Cykl hamiltona:
+http://opss.assecobs.pl/?menu=comp&sub=prob&comp=0&prob=1088
+
+Wypisywanie podzbiorów:
+http://ki.staszic.waw.pl/task.php?name=podzbiory
+
+Najdłuższy wspólny podciąg:
+http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=7&page=show_problem&problem=472
+
+Odległość redakcyjna:
+http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=7&page=show_problem&problem=467
+
+Gra w sumowanie liczb:
+http://ki.staszic.waw.pl/task.php?name=gra
+
+Zapalanie żarówek:
+http://acmicpc-live-archive.uva.es/nuevoportal/data/problem.php?p=2722
+
+Szyfr:  (meet in the middle)
+http://www.oi.edu.pl/php/show.php?ac=p181011&module=show&file=zadania/oi9/szy
+
+Czy istnieje permutacja cyfr, zeby liczba byla podzielna przez 17:
+- testow nie ma, ale to zadanie jest troche podobne do 
+  zadania http://opss.assecobs.pl/?menu=comp&sub=prob&comp=0&prob=1070
+
+Pracownicy na przyjeciu, nie moze byc szef z podwladnym:
+- serwis z tym zadaniem przestal istniec ;-)
+
+Zadanie z drzewem i minimalna roznica miedzy lisciami:
+- testow nie ma i nie bedzie :(
+
+ZADANIE DOMOWE DLA CHĘTNYCH:
+
+Nie zdążyliśmy przerobić na kółku, a bardzo warto zrobić:
+(wszystkie poniższe zadania są na KI)
+- Stolarz 
+- CosmoSkoczek
+- Krasnale
+- Nawiasy kwadratowe
+
+oraz klasyczny problem plecakowy:
+http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=13&page=show_problem&problem=1071
+
+ZADANIE DOMOWE DLA TWARDZIELI:
+- Żarłoczni Fizycy  (na KI)
+
+ZADANIE DOMOWE DLA MEGAPAKERÓW: ;-)
+- Zachłanny Wąż  (na KI)
+
+
+uff...miłej zabawy :)  
+
+-Karol

@@ -1,0 +1,349 @@
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	line-height: 130%;
+	min-width:600px;
+	color: #000000;
+	background-color: #FFFFFF;
+	background-image: url(back.png);
+	background-repeat: repeat-y;
+	
+	margin: 0px;
+}
+
+/* saddam */
+.tasks table {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	line-height: 120%;
+  width: 85%;
+}
+table {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	line-height: 150%;	
+}
+
+table tr.first {
+	background: #EAE6D4;
+	font-weight: bold;
+}
+
+.submits td.score {
+	width: 50px;
+	text-align: right;
+}
+
+.submits tr.first td.score {
+	width: 50px;
+	text-align: left;
+}
+
+.submits td.login {
+	width: 80px;
+}
+
+.submits td.name {
+	width: 150px;
+}
+
+.submits td.task {
+	width: 95px;
+}
+
+.submits td.date {
+	width: 155px;
+}
+
+
+a {
+	color: Navy;
+	text-decoration:none;	
+}
+a:hover {
+	color: Navy;
+	text-decoration:underline;
+}
+
+h1 {
+ 	font-family: "Times New Roman", Times, serif;
+	font-size: 23pt;
+	font-style: italic;
+	font-weight: normal;
+  
+	color: Navy;
+  
+	margin-top: 0px;
+	margin-bottom: 32px;
+}
+
+#body h2 {
+	font-size: 10pt;
+	font-weight: bold;
+	
+	margin-top: 32px;
+	margin-bottom: 12px;
+	
+	background: #EAE6D4;
+	width: 210px;
+}
+
+span.sub_h {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+p {
+	text-align: justify;
+  
+	margin-top: 0px;
+	margin-bottom: 16px;
+	
+	max-width: 600px;
+}
+
+ul {
+	max-width: 600px;
+	list-style-type: square;
+}
+
+#foot {
+	margin-top: 60px;
+	border-top: 1px Navy solid; 	
+}
+
+#foot .clock {
+	float: right ;
+	font-size: 8pt;
+}
+
+#adv{
+	border-top: 1px Navy solid;
+	font-size: 8pt;
+}
+
+.label {
+	width: 120px;
+	float: left ;
+}
+
+
+.label2 {
+	width: 160px;
+	float: left ;
+}
+
+.label3 {
+	width: 160px;
+	float: left ;
+}
+
+form {
+	margin-bottom: 24px;
+}
+
+form input.field {
+	width: 200px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+form input.field2 {
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+form select.field {
+	width: 200px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+#body {
+	margin-left: 191px;	
+	padding: 24px;
+}
+
+#menu {
+	position: absolute;
+	left: 16px;
+	top: 16px;
+	width: 158px;
+	padding: 0px;
+	line-height: 150%;
+	font-size: 9pt;
+}
+
+
+#menu h2 {
+	font-size: 10pt;
+	margin-bottom: 24px;
+}
+
+#menu #login {
+	margin-left: 1.2em;
+	font-weight: 700;
+}
+
+pre {
+	line-height: 100%;
+  font-size: 13px;
+}
+
+.results {
+  border-collapse: collapse;
+	margin-top: 16px;
+	margin-bottom: 32px;
+}
+.results tr.spacer
+{
+  border-top: 1px solid  gray;
+}
+.results tr.nexts td.test {
+	width: 50px;
+	text-align: left;
+}
+.results tr.nexts td.result_ok {
+        background: Lime;
+	width: 200px;
+	text-align: left;
+}
+.results tr.nexts td.result_almostok {
+  background: LimeGreen;
+	width: 200px;
+	text-align: left;
+}
+
+.results tr.nexts td.result_wrong {
+        background: DarkOrange;
+	width: 200px;
+	text-align: left;
+}
+.results tr.nexts td.result_group {
+  background: PaleGreen;
+	width: 200px;
+	text-align: center;
+}
+.results tr.nexts td.time {
+	width: 80px;
+	text-align: right;
+}
+.results tr.nexts td.score {
+	width: 80px;
+	text-align: right;
+}
+
+p.comments {
+	margin-top: 8px;
+	font-size: 8pt;
+}
+
+.rank
+{
+    font-size: 10px;
+}
+
+.rank td.place {
+	width: 20px;
+	text-align: right;
+}
+
+.rank td.name {
+	width: 150px;
+}
+
+.rank tr.nexts td.task {
+	width: 50px;
+	text-align: right;
+}
+
+.rank tr.nexts td.sum {
+	width: 50px;
+	text-align: right;
+	font-weight: 600;
+}
+
+.rank tr.odd
+{
+	background-color: #FFFFBF;
+}
+/* Matrach */
+div.news
+{
+/*    font-size: 8px;*/
+}
+div.newBody:hover
+{
+    background-color: #F0F0E0;
+}
+div.tasks tr.line .tnr
+{
+  padding-right: 2px;
+  font-style: italic;
+  text-align: right;
+}
+div.tasks tr.line .points
+{
+/*  padding: 0 7px ;*/
+/*  padding-right: 15px;*/
+  font-weight: bold;
+  text-align: center;
+}
+div.tasks .done
+{
+  color: green;
+}
+div.tasks tr.line .conte
+{
+  font-size: 70%;
+}
+div#taskFilter
+{
+  width: 80%;
+  margin-top: 25px;
+  text-align: right;
+}
+div#taskFilter select, div#taskFilter input
+{
+  font-size: 0.9em;
+}
+#subLink
+{
+  font-weight: 800;
+  margin-top:50px;
+}
+/*Prezentacyjne - wiem, ze zle*/
+.textcenter
+{
+  text-align: center;
+}
+
+/* Matrach - stats */
+
+.trhead
+{
+  border-bottom: 2px black solid;
+  margin-bottom: 10px;
+}
+
+.trhead td
+{
+  border-bottom: 2px black solid;
+  font-size: 9pt;
+  line-height: 120%;
+}
+
+.stats, tr.trhead .tnr
+{
+  text-align: right;
+}
+
+.sort_curr a
+{
+  font-weight: 800;
+}
+
+.old_admins a
+{
+  color: #2C2C53;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0049)https://ki.staszic.waw.pl/task.php?name=1610-ciag -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Konkurs 16.10.10 - Ciąg - Kolko Informatyczne</title>
+  
+  <link rel="stylesheet" href="./[154] - Konkurs 16.10.10 - Ciąg - Kolko Informatyczne_files/style.css" type="text/css">
+        
+</head>
+
+<body>
+
+<div id="menu">
+<h2>Kółko informatyczne</h2>
+<a href="https://ki.staszic.waw.pl/index.php">Aktualności</a><br>
+<a href="https://ki.staszic.waw.pl/about.php">O kółku</a><br>
+<a href="https://ki.staszic.waw.pl/materialy.php">Materiały</a><br>
+<br>
+<strong><a href="https://sio2.staszic.waw.pl/c/">Staszicowe SIO2</a></strong><br>
+<br>
+<strong><a href="https://ki.staszic.waw.pl/forum">Forum</a></strong><br>
+<br>
+<a href="https://ki.staszic.waw.pl/tasks.php">Zadania</a><br>
+
+<br>
+<a href="https://ki.staszic.waw.pl/submit.php">Wysyłanie rozwiązań</a><br>
+<a href="https://ki.staszic.waw.pl/submits.php">Moje zgłoszenia</a><br>
+<br><a href="https://ki.staszic.waw.pl/newrank.php">Ranking</a><br>
+<br>
+<!--<a href="tech.php">Ustalenia techniczne</a><br>
+<a href="public.php">Rozwiązania wzorcowe</a><br> <br>-->
+<a href="https://ki.staszic.waw.pl/user.php">Moje dane</a><br>
+<a href="https://ki.staszic.waw.pl/pass.php">Zmień hasło</a><br>
+<br>Jesteś zalogowany jako:<div id="login"><b>pm12</b><br>
+</div>
+<a href="https://ki.staszic.waw.pl/index.php?logout=1">Wyloguj</a><br>
+
+<br><br><div id="adv"> <a href="http://www.staszic.waw.pl/">XIV LO im. S. Staszica</a>
+<div class="clock">
+2021-02-21 21:06:22  
+  </div> </div>
+</div>
+
+<div id="body">
+
+
+<h1>Konkurs 16.10.10 - Ciąg</h1>
+
+<div align="justify"> 
+<br><b>Treść</b> 
+<br>Dany jest ciąg <i>a</i><sub><i>i</i></sub> liczb naturalnych.
+      Wyrazy tego ciągu można policzyć z
+      następującego ogólnego wzoru:
+                        <table align="center"> 
+          <tbody><tr> 
+            <td><i>a</i><sub>1</sub>=<i>b</i><sub>1</sub></td> 
+          </tr><tr> 
+            <td><i>a</i><sub>2</sub>=<i>b</i><sub>2</sub></td> 
+          </tr><tr> 
+            <td>…</td> 
+          </tr><tr> 
+            <td><i>a</i><sub><i>k</i></sub>=<i>b</i><sub><i>k</i></sub></td> 
+          </tr><tr> 
+            <td><i>a</i><sub><i>i</i></sub>=<i>c</i><sub>1</sub> 
+            <i>a</i><sub><i>i</i> - 1</sub> + <i>c</i><sub>2</sub> 
+            <i>a</i><sub><i>i</i> - 2</sub> + … +
+            <i>c</i><sub><i>k</i></sub> <i>a</i><sub><i>i</i> - <i>k</i></sub> 
+            (dla <i>i</i>&gt;<i>k</i>)</td> 
+          </tr></tbody> 
+        </table> 
+       gdzie <i>b</i><sub><i>j</i></sub> i <i>c</i><sub><i>j</i></sub> 
+      (1&lt;=<i>j</i>&lt;=<i>k</i>) są podanymi liczbami
+      naturalnymi. Twoim zadaniem jest dla podanych
+      <i>b</i><sub><i>j</i></sub>, <i>c</i><sub><i>j</i></sub> oraz <i>n</i>,
+      obliczyć wartość <i>a</i><sub><i>n</i></sub>.
+      Ponieważ <i>a</i><sub><i>n</i></sub> może być
+      bardzo dużą liczbą, jako wynik należy
+      podać <i>a</i><sub><i>n</i></sub> modulo 10<sup>9</sup> 
+      (miliard).
+<br> 
+<br> 
+<br><b>Wejście </b> 
+<br>Dane podawane są na standardowe wejście. W pierwszym
+      wierszu podana jest liczba <i>N</i> (1&lt;=<i>N</i>&lt;=50)
+      zestawów danych. Dalej podawane są zestawy danych zgodnie
+      z poniższym opisem:
+<br><br><i>Jeden zestaw danych </i> 
+<br>Jeden zestaw danych obejmuje cztery wiersze. W pierwszym wierszu
+      znajduje się liczba całkowita <i>k</i> 
+      (1&lt;=<i>k</i>&lt;=50). W drugim wierszu znajduje się
+      <i>k</i> liczb całkowitych, oddzielonych pojedynczymi spacjami,
+      odpowiednio
+      <i>b</i><sub>1</sub>,<i>b</i><sub>2</sub>,…,<i>b</i><sub><i>k</i></sub> 
+      (0&lt;=<i>b</i><sub><i>j</i></sub>&lt;=10<sup>9</sup>). W trzecim
+      wierszu podanych jest <i>k</i> liczb całkowitych, oddzielonych
+      pojedynczymi spacjami, odpowiednio
+      <i>c</i><sub>1</sub>,<i>c</i><sub>2</sub>,…,<i>c</i><sub><i>k</i></sub> 
+      (0&lt;=<i>c</i><sub><i>j</i></sub>&lt;=10<sup>9</sup>). W
+      ostatnim, czwartym wierszu, znajduje się liczba całkowita
+      <i>n</i> (1&lt;=<i>n</i>&lt;=10<sup>9</sup>).
+<br>        
+<br><b>Wyjście </b> 
+<br>Wyniki programu powinny być wypisywane na standardowe
+      wyjście. W kolejnych wierszach należy podać
+      odpowiedzi obliczone dla kolejnych zestawów danych. Wynikiem dla
+      jednego zestawu jest obliczona wartość
+      <i>a</i><sub><i>n</i></sub> modulo 10<sup>9</sup>.
+<br>                
+<br> 
+<br><b>Przykład </b> 
+<br> 
+<br>dane wejściowe:   
+<kbd> 
+        <br>3
+        <br>3
+        <br>6 6 3 
+        <br>5 8 9 
+        <br>2
+        <br>3
+        <br>8 8 2 
+        <br>3 7 5 
+        <br>5
+        <br>3
+        <br>0 2 2 
+        <br>3 9 4 
+        <br>4
+</kbd> 
+<br> 
+<br>wynik: 
+<kbd> 
+        <br>6
+        <br>360
+        <br>24
+</kbd> <p id="subLink"><a href="https://ki.staszic.waw.pl/submit.php?task=1610-ciag" class="cButton">[Zgłoś rozwiązanie]</a> &nbsp;&nbsp;<a href="https://ki.staszic.waw.pl/submits.php?task=1610-ciag" class="cButton">[Moje zgłoszenia]</a></p>
+<div id="foot">
+
+<div class="clock">
+2021-02-21 21:06:22
+</div>
+Kółko informatyczne
+<br>
+<a href="mailto:mareksom+ki@staszic.waw.pl">Marek Sommer</a>, <a href="mailto:jsmigiel+ki@staszic.waw.pl">Joanna Śmigielska</a>,<br>
+<span class="old_admins"><a href="mailto:matrach+ki@staszic.waw.pl">Maciej Matraszek</a>, <a href="mailto:saddam+ki@staszic.waw.pl">Michał Adamczyk</a>, <a href="mailto:winemore+ki@staszic.waw.pl">Maciej Dębski</a></span>
+</div>
+
+</div>
+
+
+
+
+</div></body></html>

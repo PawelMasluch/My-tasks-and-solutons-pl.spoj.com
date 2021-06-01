@@ -1,0 +1,5 @@
+W zadaniu "Parking" wyznacza³em dla ka¿dego wierzcho³ka, jaka jest minimalna liczba
+aktywnych wierzcho³ków na jakiejœ œcie¿ce od wierzcho³ka startowego do danego wierzcho³ka.
+
+U¿y³em do tego BFS-a ze zwyk³¹ kolejk¹. Czemu to dzia³a (i czemu jest to szybkie)
+i czy mo¿e lepiej u¿yæ Dijkstry z kolejk¹ priorytetow¹ ?

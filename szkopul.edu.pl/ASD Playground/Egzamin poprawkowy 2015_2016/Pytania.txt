@@ -1,0 +1,5 @@
+Dla danego grafu wa¿onego, ile sumarycznie razy (po wszystkich wierzcho³(a!)kach)
+bêdziemy poprawiali wartoœæ najkrótszej œcie¿ki do pewnego wierzcho³ka,
+w algorytmie Dijkstry ?
+
+Czy s¹ takie grafy wa¿one, ¿e taka liczba bêdzie stosunkowo du¿a ?

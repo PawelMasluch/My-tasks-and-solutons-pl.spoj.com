@@ -1,0 +1,1 @@
+Rozwi¹zanie zadania 'Mrówki' dosta³o czêœciow¹ punktacjê.

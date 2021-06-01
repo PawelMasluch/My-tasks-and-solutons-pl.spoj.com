@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0043)https://ki.staszic.waw.pl/task.php?name=byk -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Schwytanie byka kreteńskiego - Kolko Informatyczne</title>
+  
+  <link rel="stylesheet" href="./[169] - Schwytanie byka kreteńskiego - Kolko Informatyczne_files/style.css" type="text/css">
+        
+</head>
+
+<body>
+
+<div id="menu">
+<h2>Kółko informatyczne</h2>
+<a href="https://ki.staszic.waw.pl/index.php">Aktualności</a><br>
+<a href="https://ki.staszic.waw.pl/about.php">O kółku</a><br>
+<a href="https://ki.staszic.waw.pl/materialy.php">Materiały</a><br>
+<br>
+<strong><a href="https://sio2.staszic.waw.pl/c/">Staszicowe SIO2</a></strong><br>
+<br>
+<strong><a href="https://ki.staszic.waw.pl/forum">Forum</a></strong><br>
+<br>
+<a href="https://ki.staszic.waw.pl/tasks.php">Zadania</a><br>
+
+<br>
+<a href="https://ki.staszic.waw.pl/submit.php">Wysyłanie rozwiązań</a><br>
+<a href="https://ki.staszic.waw.pl/submits.php">Moje zgłoszenia</a><br>
+<br><a href="https://ki.staszic.waw.pl/newrank.php">Ranking</a><br>
+<br>
+<!--<a href="tech.php">Ustalenia techniczne</a><br>
+<a href="public.php">Rozwiązania wzorcowe</a><br> <br>-->
+<a href="https://ki.staszic.waw.pl/user.php">Moje dane</a><br>
+<a href="https://ki.staszic.waw.pl/pass.php">Zmień hasło</a><br>
+<br>Jesteś zalogowany jako:<div id="login"><b>pm12</b><br>
+</div>
+<a href="https://ki.staszic.waw.pl/index.php?logout=1">Wyloguj</a><br>
+
+<br><br><div id="adv"> <a href="http://www.staszic.waw.pl/">XIV LO im. S. Staszica</a>
+<div class="clock">
+2021-02-21 21:06:37  
+  </div> </div>
+</div>
+
+<div id="body">
+
+
+<h1>Schwytanie byka kreteńskiego</h1>
+
+(Limit pamięci: 32MB)
+<p>
+Pewnego słonecznego ranka Bajtokles otrzymał kolejne zadanie: tym razem miał popłynąć na Kretę (wpław - a jakżeby inaczej) i schwytać tamtejszego byka, który nękał mieszkańców wyspy. Jednak zwierzę to było niezwykłe, stanowiło bowiem dzieło pana mórz, Posejdona. Nadprzyrodzone zdolności byka obejmowały buchanie ogniem z nozdrzy, niezwykłą siłę i umiejętności pływackie.
+</p><p>
+Bajtokles był świadomy, że czeka go nie lada wyzwanie, wymyślił więc podstępny plan. Podszedł do potwora od tyłu, gdy ten nieświadomy zagrożenia skubał sobie trawkę, dosiadł go i już miał obezwładnić, gdy ten ruszył z kopyta...
+</p><p>
+Z tej pamiętnej wycieczki po wielu krajach ówczesnego świata do dnia dzisiejszego przetrwały jedynie zapiski bogów, którzy skrzętnie notowali przyspieszenie byka w kolejnych odcinkach czasu, nieźle się przy tym bawiąc. Twoim zadaniem jest, na podstawie tych notatek, określić jaką prędkość miał byk w chwili zderzenia z Wielkim Murem Chińskim, które to ostatecznie zakończyło jego szaleńczy bieg (stracił przytomność, co heros szybko wykorzystał). Chcielibyśmy także poznać długość trasy jaką przebył Bajtokles na grzbiecie zwierzęcia.
+</p><p>
+</p><h2>Wejście:</h2>
+W pierwszej linii znajduje się liczba naturalna n (1&lt;=n&lt;=10^5), oznaczająca liczbę przedziałów czasowych w notatkach bogów. <br>
+W kolejnych n liniach 2 liczby całkowite: a oraz t oznaczające, że przez t sekund byk poruszał się z przyspieszeniem a metrów na sekundę [m/s^2] (-100&lt;=a&lt;=100 ; 1&lt;=t&lt;=10^6). Zakładamy, że byk porusza się po linii prostej.
+<p></p><p>
+Przedziały czasowe następowały po sobie w takiej kolejności, w jakiej występują na wejściu. <br>
+Prędkość początkowa byka wynosiła 0 m/s. <br>
+Ponadto możesz założyć, że suma wszystkich t nie przekracza 10^6 . <br>
+Uważaj jednak: niewykluczone, że prędkość byka spadnie poniżej zera na pewnych odcinkach trasy (oznacza to, że zaczął się cofać).
+</p><p>
+</p><h2>Wyjście</h2>
+W jedynym wierszu wyjścia wypisz wartość absolutną (inaczej bezwzględną) dwóch liczb:
+Vk - prędkość byka w momencie spotkania z Wielkim Murem Chińskim w m/s
+s - odległość między punktem startowym, a końcowym na trasie byka w metrach
+Wartości Vk i s wypisz z dokładnością do 2 cyfr po przecinku.
+<p></p><p>
+</p><h2>Przykłady:</h2>
+<pre>Wejście:
+4
+2 5
+0 3
+-1 6
+5 1
+
+Wyjście:
+9.00 103.50
+
+Wykres prędkości od czasu.
+<img src="./[169] - Schwytanie byka kreteńskiego - Kolko Informatyczne_files/byk.png">
+
+Wejście:
+5
+3 1
+0 8
+-1 4
+15 3
+-1 10
+
+wyjście:
+34.00 484.00
+</pre>
+<p></p><p id="subLink"><a href="https://ki.staszic.waw.pl/submit.php?task=byk" class="cButton">[Zgłoś rozwiązanie]</a> &nbsp;&nbsp;<a href="https://ki.staszic.waw.pl/submits.php?task=byk" class="cButton">[Moje zgłoszenia]</a></p>
+<div id="foot">
+
+<div class="clock">
+2021-02-21 21:06:37
+</div>
+Kółko informatyczne
+<br>
+<a href="mailto:mareksom+ki@staszic.waw.pl">Marek Sommer</a>, <a href="mailto:jsmigiel+ki@staszic.waw.pl">Joanna Śmigielska</a>,<br>
+<span class="old_admins"><a href="mailto:matrach+ki@staszic.waw.pl">Maciej Matraszek</a>, <a href="mailto:saddam+ki@staszic.waw.pl">Michał Adamczyk</a>, <a href="mailto:winemore+ki@staszic.waw.pl">Maciej Dębski</a></span>
+</div>
+
+</div>
+
+
+
+
+</body></html>

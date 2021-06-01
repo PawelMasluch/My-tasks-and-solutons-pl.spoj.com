@@ -1,0 +1,7 @@
+Dany jest graf (nieskierowany). Ile ma on cykli i przez jakie wierzcho³ki
+przechodzi ka¿dy z tych cykli ?
+
+Mamy graf mieszany (czyli trochê krawêdzi nieskierowanych, trochê krawêdzi skierowanych).
+Jak sprawdziæ, czy ma on cykl (ka¿d¹ krawêdzi¹ idziemy zgodnie z jej skierowaniem,
+ew. dopuszczamy co najwy¿ej k razy pójœcie przeciwnie do skierowania krawêdzi),
+ile jest tych cykli i przez jakie wierzcho³ki przechodzi ka¿dy z tych cykli ?

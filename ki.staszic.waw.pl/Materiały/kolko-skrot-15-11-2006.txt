@@ -1,0 +1,14 @@
+Na kolku 15 listopada 2006 omowilismy:
+1. Problem minimalnego drzewa rozpinajacego, minimalnego lasu rozpinajacego.
+2. Algorytm Prima na minimalne drzewo rozpinajace.
+3. Algorytm Cruscala na minimalne drzewo rozpinajace.
+4. Strukture find and union.
+5. Zadanie "masz graf o n<=20 wierzcholkach, w niektorych wierzcholkach
+   sa fabryki. Chcesz polaczyc fabryki siecia kolei tak, by z kazdej fabryki
+   dalo sie dojsc do kazdej innej. Masz dane, miedzy ktorymi wierzcholkami
+   mozna zbudowac kolei i ile to bedzie kosztowac. Wyznacz, jak najtaniej
+   zbudowac kolej", czyli minimalne drzewo rozpinajace, ale nie do konca 
+   "rozpinajace" - musimy zawrzec wierzcholki z fabrykami, pozostalych 
+   nie musimy (ale mozemy, jesli wyjdzie taniej).
+
+

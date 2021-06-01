@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0044)https://ki.staszic.waw.pl/task.php?name=perm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Kubki - Kolko Informatyczne</title>
+  
+  <link rel="stylesheet" href="./[178] - Kubki - Kolko Informatyczne_files/style.css" type="text/css">
+        
+</head>
+
+<body>
+
+<div id="menu">
+<h2>Kółko informatyczne</h2>
+<a href="https://ki.staszic.waw.pl/index.php">Aktualności</a><br>
+<a href="https://ki.staszic.waw.pl/about.php">O kółku</a><br>
+<a href="https://ki.staszic.waw.pl/materialy.php">Materiały</a><br>
+<br>
+<strong><a href="https://sio2.staszic.waw.pl/c/">Staszicowe SIO2</a></strong><br>
+<br>
+<strong><a href="https://ki.staszic.waw.pl/forum">Forum</a></strong><br>
+<br>
+<a href="https://ki.staszic.waw.pl/tasks.php">Zadania</a><br>
+
+<br>
+<a href="https://ki.staszic.waw.pl/submit.php">Wysyłanie rozwiązań</a><br>
+<a href="https://ki.staszic.waw.pl/submits.php">Moje zgłoszenia</a><br>
+<br><a href="https://ki.staszic.waw.pl/newrank.php">Ranking</a><br>
+<br>
+<!--<a href="tech.php">Ustalenia techniczne</a><br>
+<a href="public.php">Rozwiązania wzorcowe</a><br> <br>-->
+<a href="https://ki.staszic.waw.pl/user.php">Moje dane</a><br>
+<a href="https://ki.staszic.waw.pl/pass.php">Zmień hasło</a><br>
+<br>Jesteś zalogowany jako:<div id="login"><b>pm12</b><br>
+</div>
+<a href="https://ki.staszic.waw.pl/index.php?logout=1">Wyloguj</a><br>
+
+<br><br><div id="adv"> <a href="http://www.staszic.waw.pl/">XIV LO im. S. Staszica</a>
+<div class="clock">
+2021-02-21 21:06:45  
+  </div> </div>
+</div>
+
+<div id="body">
+
+
+<h1>Kubki</h1>
+
+<p>
+Gra w 3 kubki polega na tym, że osoba organizująca ukrywa kulkę pod jednym z kubków i potem szybko zmienia ustawienia kubków – gracze mają za zadanie odgadnąć, gdzie jest kulka.<br>
+Bajtocki Mistrz Gier postanowił tę grę utrudnić. Przede wszystkim używa N ( 1 &lt;= N &lt;= 10^6 ) kubków. Poza tym, pod każdym znajduje się kulka – każda kulka jest jedyna i wyjątkowa. W jednej turze Mistrz zmienia położenia wszystkich kubków. Masz za zadanie zatrzymać grę, gdy wszystkie kulki wrócą na swoje miejsca.
+</p>
+<p>
+Aby przygotować się do tego wyzwania, obserwowałeś przebieg gry – zauważyłeś, że w każdym ruchu Mistrz zamienia kubki w ten sam sposób. Kubki znajdują się na pozycjach ponumerowanych od 1 do N. Mistrz przesuwa kubek z pozycji i (1 &lt;= i &lt;= N) na pozycję Ki (1 &lt;= Ki &lt;= N). Znasz Ki dla każdego i od 1 do N. Oczywiście, na każdej pozycji stoi zawsze tylko jeden kubek. Napisz program, który obliczy po ilu turach wszystkie kulki w kubkach wróca na pozycję początkową.
+</p>
+<p>
+Bajtocki Mistrz Gier jest tak pewny swego zwycięstwa, że w testach wartych 60% punktów zmniejszył liczbę kubków poniżej 10000.
+</p>
+
+
+<p> 
+</p><h2>Wejście</h2>
+W pierszej słoniowej linii wejścia znajduje się jedna liczba całkowita <b>N ( 1 &lt;= N &lt;= 10^6 )</b> oznaczająca liczbę kulek (i kubków). 
+W następnej linii znajduje się N  liczb całkowitych <b>Ki (1 &lt;= Ki &lt;= N)</b>. i-ta z tych liczb oznacza, że że kubek, który przed zmianą stał na i-tej pozycji po zmianie przesunie się na pozycję Ki.
+
+<p></p><p>
+</p><h2>Wyjście</h2>
+
+W jedynej linii wyjścia podaj resztę z dzielenia liczby tur (najmniejszej, ale nie 0), po których wszystkie kulki znajdą się na swoich początkowych miejscach, przez <b>(10^9 + 9)</b>.
+
+<p></p>
+<p>
+</p><h2>Przykład</h2>
+
+<pre>
+Dla danych:
+4                                                                                                                                
+1 3 4 2
+
+Poprawnym wyjściem jest:
+3
+
+Ustawienie kubków w kolejnych turach prezentuje się tak:
+1 2 3 4
+1 4 2 3
+1 3 4 2
+1 2 3 4
+</pre>
+
+
+<p></p>
+<p id="subLink"><a href="https://ki.staszic.waw.pl/submit.php?task=perm" class="cButton">[Zgłoś rozwiązanie]</a> &nbsp;&nbsp;<a href="https://ki.staszic.waw.pl/submits.php?task=perm" class="cButton">[Moje zgłoszenia]</a></p>
+<div id="foot">
+
+<div class="clock">
+2021-02-21 21:06:45
+</div>
+Kółko informatyczne
+<br>
+<a href="mailto:mareksom+ki@staszic.waw.pl">Marek Sommer</a>, <a href="mailto:jsmigiel+ki@staszic.waw.pl">Joanna Śmigielska</a>,<br>
+<span class="old_admins"><a href="mailto:matrach+ki@staszic.waw.pl">Maciej Matraszek</a>, <a href="mailto:saddam+ki@staszic.waw.pl">Michał Adamczyk</a>, <a href="mailto:winemore+ki@staszic.waw.pl">Maciej Dębski</a></span>
+</div>
+
+</div>
+
+
+
+
+</body></html>

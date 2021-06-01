@@ -1,0 +1,1 @@
+W folderze "Inne" s¹ programy, których poprawnoœci i wydajnoœci nie by³em w stanie zweryfikowaæ.

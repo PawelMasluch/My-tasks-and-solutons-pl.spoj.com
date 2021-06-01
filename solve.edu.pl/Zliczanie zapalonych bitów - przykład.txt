@@ -1,0 +1,29 @@
+Link: https://codeforces.com/blog/entry/13134
+
+Przykład zadania na solve.edu.pl: [710] [BAK0] - Hodowla bakterii
+
+int: __builtin_popcount(x)
+long int: __builtin_popcountl(x)
+long long: __builtin_popcountll(x)
+
+
+#pragma GCC optimize("O3")
+#pragma GCC target("popcnt")
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+  ios::sync_with_stdio(!cin.tie(0));
+
+  int n;
+  ll y = 0;
+  cin >> n;
+  
+  for (int x=0; x<n; x++) {
+      y += __builtin_popcountll(x);
+  }
+  
+  cout << y << '\n';
+}

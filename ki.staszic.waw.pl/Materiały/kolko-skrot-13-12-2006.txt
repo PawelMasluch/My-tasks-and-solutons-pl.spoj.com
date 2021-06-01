@@ -1,0 +1,15 @@
+13.12 "Zadanie Drzewa"
+1. Zerowe zadanie rozgrzewkowe: zakładając, że relacja znajomości nie jest
+zwrotna (nikt nie zna siebie) i jest symetryczna (jeżeli A zna B, to B zna
+A), czy możliwe jest, że na 2006-osobowym przyjęciu każdy ma inną liczbę
+znajomych (odp: NIE).
+2. Pierwsze zadanie rozgrzewkowe (z ostatniego SRM'a na TopCoderze): mamy
+drut długości l<=10^9 i mamy możliwość wykonywać cięcia w ustalonych
+n<=10^5 punktach, możemy jednak wykonać co najwyżej c<=n cięć. Wykonać tak
+cięcia, żeby zminimalizować długość najdłuższego powstałego po cięciach
+kawałka (rozwiązanie z wyszukiwaniem binarnym i algorytmem zachłannym w
+złożoności O(nlog(n)).
+3. Omówienie rozwiązania zadania Drzewa o złożoności O(nlog(n)).
+4. Omówienie rozwiązania zadania 3 (tego o kolorowaniu krawędzi grafu) z
+poprzedniego kółka.
+

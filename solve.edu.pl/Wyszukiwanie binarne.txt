@@ -1,0 +1,7 @@
+Niestety, nie znalazłem na stronie
+solve.edu.pl treści zadania.
+
+Niemniej, chodzi o to: dla danej 
+uporządkowanej rosnąco tablicy
+chcemy odpowiadać na zapytania postaci:
+ile jest liczb mniejszych od zadanej liczby x?

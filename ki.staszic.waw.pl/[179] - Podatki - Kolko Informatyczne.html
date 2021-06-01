@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0047)https://ki.staszic.waw.pl/task.php?name=podatki -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Podatki - Kolko Informatyczne</title>
+  
+  <link rel="stylesheet" href="./[179] - Podatki - Kolko Informatyczne_files/style.css" type="text/css">
+        
+</head>
+
+<body>
+
+<div id="menu">
+<h2>Kółko informatyczne</h2>
+<a href="https://ki.staszic.waw.pl/index.php">Aktualności</a><br>
+<a href="https://ki.staszic.waw.pl/about.php">O kółku</a><br>
+<a href="https://ki.staszic.waw.pl/materialy.php">Materiały</a><br>
+<br>
+<strong><a href="https://sio2.staszic.waw.pl/c/">Staszicowe SIO2</a></strong><br>
+<br>
+<strong><a href="https://ki.staszic.waw.pl/forum">Forum</a></strong><br>
+<br>
+<a href="https://ki.staszic.waw.pl/tasks.php">Zadania</a><br>
+
+<br>
+<a href="https://ki.staszic.waw.pl/submit.php">Wysyłanie rozwiązań</a><br>
+<a href="https://ki.staszic.waw.pl/submits.php">Moje zgłoszenia</a><br>
+<br><a href="https://ki.staszic.waw.pl/newrank.php">Ranking</a><br>
+<br>
+<!--<a href="tech.php">Ustalenia techniczne</a><br>
+<a href="public.php">Rozwiązania wzorcowe</a><br> <br>-->
+<a href="https://ki.staszic.waw.pl/user.php">Moje dane</a><br>
+<a href="https://ki.staszic.waw.pl/pass.php">Zmień hasło</a><br>
+<br>Jesteś zalogowany jako:<div id="login"><b>pm12</b><br>
+</div>
+<a href="https://ki.staszic.waw.pl/index.php?logout=1">Wyloguj</a><br>
+
+<br><br><div id="adv"> <a href="http://www.staszic.waw.pl/">XIV LO im. S. Staszica</a>
+<div class="clock">
+2021-02-21 21:06:47  
+  </div> </div>
+</div>
+
+<div id="body">
+
+
+<h1>Podatki</h1>
+
+Podatki
+<p>
+	W Bajtogrodzie podatki ściągają poborcy odwiedzający domy obywateli. Jednak ostatnio autorytet władzy został osłabiony, a przestępczość wzrosła. Zdarza się więc, że w pewnych domach obywatele nie płacą pełnego podatku, a czasem nawet napadają na poborców i zabierają im pieniądze. Władze znalazły sposób na utrzymanie jak największych dochodów z podatków – zamierzają ograniczyć teren działania poborców, aby ominąć nieopłacalne domy.
+</p><p>	
+	Bajtogród ma kształt prostokąta o wymiarach N x M. W każdym punkcie o współrzędnych całkowitych znajduje się dom (czyli jest N*M domów). Wiadomo, ile pieniędzy dostanie poborca (albo ile zostanie mu zabrane) jeśli odwiedzi dany dom.
+	Poborcy są bardzo przywiązani do tradycji, dlatego zgadzają się na zmianę terenu działania tylko pod warunkiem, że będzie on prostokątem.
+	
+</p><p>
+ Znajdź maksymalną sumę pieniędzy jaką Poborca może zebrać odwiedzając domy w prostokącie dowolnie wybranym z miasta.
+	(Istnieją prostokąty dla których suma jest ujemna – załóżmy, że poborca ma przy sobie zawsze jakieś pieniądze, żeby można go było okraść.)
+
+</p><p>
+</p><h2>Wejście</h2>
+W pierszej linii wejścia znajdują się dwie liczby całkowite N i M ( 1 &lt;= N, M &lt;= 500 ) oznaczająca odpowiednio wysokość i szerokość prostokąta, jakim jest miasto. <br>
+W następnych N liniach występuje po M liczb całkowitych w (-1000 &lt;= x &lt;= 1000) oznaczających liczbę pieniędzy, które zyskuje (traci w przypadku ujemnych) poborca odwiedzając dany dom.
+<br>
+W testach wartych 50% punktów N i M będą mniejsze od 200.
+
+<p></p><p>
+</p><h2>Wyjście</h2>
+W jedynej linii wyjścia należy podać największą możliwą sumę wartości z pod-prostokąta.
+
+<p></p><p>
+</p><h2>Przykład</h2>
+<pre>Dla danych:
+5 4
+7 -9 -2 3
+1 5 3 -2
+-7 -2 -4 5
+-5 5 -3 3
+-1 -2 -3 -4
+
+Poprawnym wyjściem jest:
+10
+
+Wynik ten można osiągnąć wybierając pogrubione liczby:
+ 7 -9 -2  3
+ 1  <b>5  3 -2</b>
+-7 <b>-2 -4  5</b>
+-5  <b>5 -3  3</b>
+-1 -2 -3 -4
+
+</pre>
+<p></p>
+<p id="subLink"><a href="https://ki.staszic.waw.pl/submit.php?task=podatki" class="cButton">[Zgłoś rozwiązanie]</a> &nbsp;&nbsp;<a href="https://ki.staszic.waw.pl/submits.php?task=podatki" class="cButton">[Moje zgłoszenia]</a></p>
+<div id="foot">
+
+<div class="clock">
+2021-02-21 21:06:47
+</div>
+Kółko informatyczne
+<br>
+<a href="mailto:mareksom+ki@staszic.waw.pl">Marek Sommer</a>, <a href="mailto:jsmigiel+ki@staszic.waw.pl">Joanna Śmigielska</a>,<br>
+<span class="old_admins"><a href="mailto:matrach+ki@staszic.waw.pl">Maciej Matraszek</a>, <a href="mailto:saddam+ki@staszic.waw.pl">Michał Adamczyk</a>, <a href="mailto:winemore+ki@staszic.waw.pl">Maciej Dębski</a></span>
+</div>
+
+</div>
+
+
+
+
+</body></html>

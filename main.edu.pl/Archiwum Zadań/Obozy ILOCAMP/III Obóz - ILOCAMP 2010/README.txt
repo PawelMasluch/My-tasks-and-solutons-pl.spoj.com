@@ -1,0 +1,1 @@
+Treœci zadañ mam w ksi¹¿ce.

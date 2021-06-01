@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0043)https://ki.staszic.waw.pl/task.php?name=nal -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Naleśniki - Kolko Informatyczne</title>
+  
+  <link rel="stylesheet" href="./[128] - Naleśniki - Kolko Informatyczne_files/style.css" type="text/css">
+  <style type="text/css">
+			p.akapit {text-align: justify;}
+			table {font-size: 11pt; font-family:arial;}
+			b.title {font-size: 13pt;}
+			tr.example {text-align:center;}
+			b.blue {color:#1111FF;}
+			b.red {color:#FF1111;}
+		</style>      
+</head>
+
+<body>
+
+<div id="menu">
+<h2>Kółko informatyczne</h2>
+<a href="https://ki.staszic.waw.pl/index.php">Aktualności</a><br>
+<a href="https://ki.staszic.waw.pl/about.php">O kółku</a><br>
+<a href="https://ki.staszic.waw.pl/materialy.php">Materiały</a><br>
+<br>
+<strong><a href="https://sio2.staszic.waw.pl/c/">Staszicowe SIO2</a></strong><br>
+<br>
+<strong><a href="https://ki.staszic.waw.pl/forum">Forum</a></strong><br>
+<br>
+<a href="https://ki.staszic.waw.pl/tasks.php">Zadania</a><br>
+
+<br>
+<a href="https://ki.staszic.waw.pl/submit.php">Wysyłanie rozwiązań</a><br>
+<a href="https://ki.staszic.waw.pl/submits.php">Moje zgłoszenia</a><br>
+<br><a href="https://ki.staszic.waw.pl/newrank.php">Ranking</a><br>
+<br>
+<!--<a href="tech.php">Ustalenia techniczne</a><br>
+<a href="public.php">Rozwiązania wzorcowe</a><br> <br>-->
+<a href="https://ki.staszic.waw.pl/user.php">Moje dane</a><br>
+<a href="https://ki.staszic.waw.pl/pass.php">Zmień hasło</a><br>
+<br>Jesteś zalogowany jako:<div id="login"><b>pm12</b><br>
+</div>
+<a href="https://ki.staszic.waw.pl/index.php?logout=1">Wyloguj</a><br>
+
+<br><br><div id="adv"> <a href="http://www.staszic.waw.pl/">XIV LO im. S. Staszica</a>
+<div class="clock">
+2021-02-21 21:05:57  
+  </div> </div>
+</div>
+
+<div id="body">
+
+
+<h1>Naleśniki</h1>
+
+
+						<b>Limit pamięci: 32MB</b>
+						<p>
+						Bajtek i Bitek, bracia bliźniacy, często rywalizują ze sobą o różne rzeczy. Dzisiaj mama usmażyła im naleśniki i położyła je na dwóch talerzach.
+						Na obu talerzach naleśniki są ułożone w stos, czyli zdejmować je można wyłącznie po jednym od góry. Bracia znają smakowitość każdego z naleśników
+						na obu talerzach. Bajtek chce się dowiedzieć ile wynosi <b>maksymalna</b> suma smakowitości naleśników, które może wybrać,
+						jeśli <b>on (Bajtek) zaczyna</b> i jego brat (Bitek) będzie wybierać swoje naleśniki <b>możliwie optymalnie</b>.
+						Ustalił z bratem, że naleśniki zdejmują <b>na zmianę po jednym z góry dowolnego z talerzy</b>.
+						</p>
+						<p>
+						</p><h2>Zadanie:</h2>
+						<ul>Napisz program, który:
+							<li>wczyta opis naleśników na obu talerzach
+							</li><li>wyznaczy maksymalną sumę smakowitości naleśników, jakie Bajtek może wybrać
+							</li><li>wypisze wynik na standardowe wyjście
+						</li></ul>
+						<p></p>
+						<p>
+						</p><h2>Wejście:</h2>
+						W pierwszej linii znajdują się dwie liczby całkowite: <b>n</b> i <b>m</b> (<b>1 &lt;= n, m &lt;= 2000</b>).
+						W następnych dwóch liniach znajdują się opisy dwóch talerzy naleśników. Pierwszy składa się z <b>n</b> liczb całkowitych, a drugi z <b>m</b>.
+						Są to smakowitości poszczególnych naleśników. Smakowitości będa należeć do przedziału <b>&lt;-1000; 1000&gt;</b>.
+						Opisy zaczynają się od spodu talerza.
+						<p></p>
+
+						<p>
+						<b>Wyjście:</b><br><br>
+						Jedna liczba, będąca maksymalną sumą smakowitości naleśników, jakie Bajtek może wybrać.
+						</p>
+
+						<p>
+						<b>Przykład:</b><br>
+						<br>
+						wejście:<br>
+						3 3<br>
+						2 7 -5<br>
+						10 -2 -3<br>
+						<br>
+						wyjście:<br>
+						2<br>
+						</p>
+						<p>
+						<b>Wyjaśnienie przykładu:</b><br><br>
+						<table>
+							<tbody><tr><td><b>-5<br>7<br>2</b></td><td><b>-3<br>-2<br>10</b></td></tr>	
+							<tr><td><b>Talerz 1 (n)</b></td><td><b>Talerz 2 (m)<b></b></b></td></tr>	
+						</tbody></table>
+						<br>
+						Czynności:<br>
+						<b>Bajtek</b> zdejmuje naleśnik ze smakowitością <b>-3</b><br>
+						<b>Bitek</b> <b>-5</b><br>
+						<b>Bajtek</b> <b>7</b><br>
+						<b>Bitek</b> <b>2</b><br>
+						<b>Bajtek</b> <b>-2</b><br>
+						<b>Bitek</b> <b>10</b><br>
+						<br>
+						<b>Bajtek</b> uzbierał naleśniki: <b>-3</b> + <b>7</b> + <b>-2</b> = <b>2</b><br>
+						<b>Bitek</b> uzbierał naleśniki: <b>-5</b> + <b>2</b> + <b>10</b> = <b>7</b><br>
+						</p>
+<p id="subLink"><a href="https://ki.staszic.waw.pl/submit.php?task=nal" class="cButton">[Zgłoś rozwiązanie]</a> &nbsp;&nbsp;<a href="https://ki.staszic.waw.pl/submits.php?task=nal" class="cButton">[Moje zgłoszenia]</a></p>
+<div id="foot">
+
+<div class="clock">
+2021-02-21 21:05:57
+</div>
+Kółko informatyczne
+<br>
+<a href="mailto:mareksom+ki@staszic.waw.pl">Marek Sommer</a>, <a href="mailto:jsmigiel+ki@staszic.waw.pl">Joanna Śmigielska</a>,<br>
+<span class="old_admins"><a href="mailto:matrach+ki@staszic.waw.pl">Maciej Matraszek</a>, <a href="mailto:saddam+ki@staszic.waw.pl">Michał Adamczyk</a>, <a href="mailto:winemore+ki@staszic.waw.pl">Maciej Dębski</a></span>
+</div>
+
+</div>
+
+
+
+
+</body></html>

@@ -1,0 +1,52 @@
+                                             
+18.10: "Zastosowania przeszukiwania w glab"
+1. Zadanie rozgrzewkowe: do grafu pustego dodajemy krawedzie skierowane.
+Podac moment, w ktorym po raz pierwszy pojawia sie w grafie cykl.
+Rozwiazanie W zlozonosci O((n+m)*log(m)) z uzyciem wyszukiwania binarnego i przeszukiwania
+grafu.
+2. Sortowanie topologiczne DAG-u metoda iteracyjnego usuwania wierzcholkow
+o stopniu wyjsciowym 0 oraz metoda wypisywania wierzcholkow w kolejnosci
+przetworzenia przez algorytm DFS - oba w zlozonosci O(n+m).
+Kolejnosc pre-order i post-order.
+3. Pojecie silnej spojnosci grafu, podzial grafu na silnie spojne skladowe
+w zlozonosci O(n+m).
+4. Konstrukcja grafu silnie spojnych skladowych - usuwanie powtorzen krawedzi
+z grafu w zlozonosci O(n+m).
+5. Graf silnie spojnych skladowych jest DAG-iem. Wyznaczanie najdluzszej i najkrotszej
+sciezki w DAG-u w zlozonosci O(n+m).
+6. Rozwiazanie zadania Profesor Szu z 1 etapu XIII Olimpiady Informatycznej
+za pomoca podzialu grafu na silnie spojne skladowe i programowania dynamicznego w DAG-u.
+Wiekszosc algorytmow mozna znalezc w Cormenie.
+
+
+25.10 "Drzewo przedzialowe":
+1. Rozszerzony algorytm Euklidesa, wyznaczajacy dla x oraz y takie p i q calkowite, ze
+px+qy=NWD(x,y).
+2. Zadanie rozgrzewkowe: zadanie Generis z I Internetowych Mistrzostw Polski
+w Programowaniu za pomoca rozwiazania rownania ax+by=c (a,x,b,y,c naturalne,
+zmiennymi sa x oraz y). Algorytm rozwiazania tego rownania, dowod kompletnosci
+skonstruowanych rozwiazan (pkt. 1 i 2 - patrz "Teoria liczb" Sierpinskiego lub Konkretna).
+3. Statyczne drzewo przedzialowe, jego wlasciwosci i reprezentacja w tablicy.
+4. Rozklad przedzialu na przedzialy bazowe w drzewie przedzialowym w O(log(n)).
+5. Rozwiazanie problemu obslugiwania operacji w O(log(n)): dodawania pewnej wartosci
+do wszystkich liczb z przedzialu i zapytania o wartosc punktu za pomoca drzewa
+przedzialowego (pkt 3-5: patrz opis rozwiazania zadania Koleje z 1 etapu IX OI lub
+zadania Tetris 3D z 1 etapu XIII OI).
+6. Rozwiazanie wolniejsze od 5, ale latwiejsze do wymyslenia - w O(sqrt(n)).
+Dzielimy przedzial na O(sqrt(n)) przedzialow wielkosci O(sqrt(n)) (patrz kurs algorytmiki
+na www.main.edu.pl).
+
+
+08.11 "Szybkie potegowanie macierzy":
+1. Rozwiazanie zadania Tetris 2D (2-wymiarowej wersji zadania z 1 etapu XIII OI)
+za pomoca drzewa przedzialowego (patrz moj opis w Niebieskiej Ksiazeczce XIII OI).
+2. Macierze, mnozenie macierzy, jego lacznosc i brak przemiennosci.
+3. Szybkie potegowanie liczb (liczenie a<sup>n</sup>) w zlozonosci O(log(n)).
+4. Liczenie n-tego wyrazu ciagu Fibonacciego w O(log(n)) za pomoca szybkiego potegowania
+macierzy.
+5. Ogolny algorytm wyznaczania n-tego wyrazu ciagu zdefiniowanego rekurencyjnie
+(a<sub>n</sub> zalezy od k poprzednich wartosci) z wykorzystaniem szybkiego potegowania
+macierzy w zlozonosci O(k<sup>3</sup>log(n)).
+6. Zastosowanie potegowania macierzy do wyznaczania liczby sciezek dlugosci k w grafie
+miedzy kazda para wierzcholkow w zlozonosci O(n<sup>3</sup>log(k)).
+7. Szkic rozwiazania zadania Mrowka z Potyczek Algorytmicznych 2006 za pomoca metody z pkt. 6.

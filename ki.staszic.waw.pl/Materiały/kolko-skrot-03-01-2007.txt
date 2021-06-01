@@ -1,0 +1,27 @@
+
+03.01 - "Algorytmy tekstowe"
+1. Sformulowanie problemu wyszukiwania wzorca (dlugosci m) w tekscie
+(dlugosci n).
+2. Wyznaczanie funkcji prefiksowej w O(m) i wlasnosci prefikso-sufiksow.
+3. Algorytm KMP jako wyznaczanie funkcji prefiksowej dla slowa
+wzorzec#tekst.
+4. Kazdemu prefikso-sufiksowi slowa o dlugosci p odpowiada okres dlugosci
+n-p i odwrotnie.
+5. Lemat o okresowosci: jezeli slowo ma okresy o dlugosciach
+p i q spelniajacych p+q<=m (w wersji slabej lematu) lub p+q<=m+nwd(p,q)
+(w wersji silnej lematu), to ma tez okres dlugosci NWD(p,q). Dowod
+slabej wersji lematu.
+6. Pierwiastek pierwotny slowa jako najkrotsze slowo, ktorego potega
+jest dane slowo. Twierdzenie o dlugosci pierwiastka pierwotnego
+slowa (jezeli (m-P[m])|m, to pierwiastek pierwotny ma dlugosc m-P[m],
+a w przeciwnym przypadku dlugosc m).
+7. Zastosowania wyprowadzonych wlasnosci w zadaniach olimpijskich:
+Szablon z 2 etapu XII OI (rozwiazanie O(nlogn)), Okresy slow z 1 etapu
+XIII OI i Palindromy z 3 etapu XIII OI.
+
+Literatura: KMP jest opisane w Cormenie, ale tam jest to tak rozwodnione,
+ze nie da sie chyba dobrze zrozumiec. Jest tez opisane w BDR
+(Banachowski, Diks, Rytter), ale tam jest chyba nadmiernie skompresowane.
+Polecalbym raczej opisy z Niebieskich Ksiazeczek, glownie rozwiazania
+zadan Szablon i Palindromy.
+

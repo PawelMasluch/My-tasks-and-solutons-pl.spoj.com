@@ -1,0 +1,225 @@
+
+
+(function (globals) {
+
+  var django = globals.django || (globals.django = {});
+
+  
+  django.pluralidx = function (n) {
+    var v=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);
+    if (typeof(v) == 'boolean') {
+      return v ? 1 : 0;
+    } else {
+      return v;
+    }
+  };
+  
+
+  
+  /* gettext library */
+
+  django.catalog = {
+    "%(countdown_days)sleft to the %(countdown_destination)s.": [
+      "zosta\u0142 %(countdown_days)s dzie\u0144 do %(countdown_destination)s.", 
+      "zosta\u0142y %(countdown_days)s dni do %(countdown_destination)s.", 
+      "zosta\u0142o %(countdown_days)s dni do %(countdown_destination)s."
+    ], 
+    "%(countdown_hours)sleft to the ": [
+      "zosta\u0142a %(countdown_hours)s godzina do", 
+      "zosta\u0142y %(countdown_hours)s godziny do", 
+      "zosta\u0142o %(countdown_hours)s godzin do"
+    ], 
+    "%(countdown_minutes)sleft to the ": [
+      "zosta\u0142a %(countdown_minutes)s minuta do", 
+      "zosta\u0142y %(countdown_minutes)s minuty do", 
+      "zosta\u0142o %(countdown_minutes)s minut do"
+    ], 
+    "%(countdown_seconds)sleft to the ": [
+      "zosta\u0142a %(countdown_seconds)s sekunda do", 
+      "zosta\u0142y %(countdown_seconds)s sekundy do", 
+      "zosta\u0142o %(countdown_seconds)s sekund do"
+    ], 
+    "%(days)s day ": [
+      "%(days)s dzie\u0144 ", 
+      "%(days)s dni ", 
+      "%(days)s dni "
+    ], 
+    "%(days)sd ": "%(days)sd ", 
+    "%(hours)s hour ": [
+      "%(hours)s godzina ", 
+      "%(hours)s godziny ", 
+      "%(hours)s godzin "
+    ], 
+    "%(hours)sh ": "%(hours)sg ", 
+    "%(minutes)s minute ": [
+      "%(minutes)s minuta ", 
+      "%(minutes)s minuty ", 
+      "%(minutes)s minut "
+    ], 
+    "%(minutes)sm ": "%(minutes)sm ", 
+    "%(seconds)s second ": [
+      "%(seconds)s sekunda.", 
+      "%(seconds)s sekundy.", 
+      "%(seconds)s sekund."
+    ], 
+    "%(seconds)ss ": "%(seconds)ss ", 
+    "Busy workers": "Zaj\u0119te sprawdzaczki", 
+    "Capacity": "Wydolno\u015b\u0107", 
+    "Change date in a datebox by clicking the corresponding <span class=\"icon-calendar\"></span> button. You can also use the keyboard: <br> <ul>     <li><strong>TAB</strong> - go to the next datebox</li>     <li><strong>ENTER</strong> - confirm date</li>     <li><strong>ESC, CTRL+Z</strong> - reset date</li> </ul> <hr> You can filter events by clicking the vertical bar representing a round. <hr> If you want to split a date group, click the corresponding <span class=\"icon-resize-vertical\"></span> button.": "Mo\u017cesz zmienia\u0107 daty naciskaj\u0105c <span class=\"icon-calendar\"></span>. Dost\u0119pne s\u0105 r\u00f3wnie\u017c skr\u00f3ty klawiaturowe: <br> <ul>     <li><strong>TAB</strong> \u2013 przejd\u017a do nast\u0119pnego pola</li>     <li><strong>ENTER</strong> \u2013 zapisz dat\u0119</li>     <li><strong>ESC, CTRL+Z</strong> \u2013 przywr\u00f3\u0107 dat\u0119</li> </ul> <hr> Aby wy\u015bwietli\u0107 jedynie wydarzenia z konkretnej rundy, naci\u015bnij pionowy pasek j\u0105 reprezentuj\u0105cy. <hr> Przycisk <span class=\"icon-resize-vertical\"></span> rozdziela grup\u0119 wydarze\u0144 odbywaj\u0105cych si\u0119 w tym samym czasie.", 
+    "Collapse all messages": "Zwi\u0144 pytania i og\u0142oszenia", 
+    "Collapse message": "Zwi\u0144", 
+    "Corrupt data": "Uszkodzone dane", 
+    "Couldn't get data from server. Please refresh the page.": "Nie mo\u017cna pobra\u0107 danych z serwera. Od\u015bwie\u017c stron\u0119.", 
+    "Delivered": "Dostarczone", 
+    "Delivering...": "Dostarczanie\u2026", 
+    "Drop file here": "Upu\u015b\u0107 plik tutaj", 
+    "Drop one file.": "Upu\u015b\u0107 dok\u0142adnie jeden plik.", 
+    "Expand all messages": "Rozwi\u0144 wszystkie pytania i og\u0142oszenia", 
+    "Expand message": "Rozwi\u0144", 
+    "File is empty.": "Plik jest pusty.", 
+    "File too big.": "Plik jest za du\u017cy.", 
+    "First to solve": "Pierwsze rozwi\u0105zanie", 
+    "Load": "Wczytaj", 
+    "No color": "Bez koloru", 
+    "No connection": "Brak po\u0142\u0105czenia z serwerem", 
+    "Not a text file.": "Oczekiwano pliku tekstowego.", 
+    "Not delivered": "Niedostarczone", 
+    "Reason: Admin-time status has changed.": "Pow\u00f3d: czas administratora zosta\u0142 zmieniony.", 
+    "Reason: User assoctiated with this session has changed.": "Pow\u00f3d: u\u017cytkownik zwi\u0105zany z t\u0105 sesj\u0105 zmieni\u0142 si\u0119.", 
+    "Tag '%(query)s' doesn't exist.": "Znacznik \u201e%(query)s\u201d nie istnieje.", 
+    "Tag exists.": "Znacznik istnieje.", 
+    "Taking back...": "Zabieranie\u2026", 
+    "The round has started!": "Runda rozpocz\u0119\u0142a si\u0119!", 
+    "The round is over!": "Runda zako\u0144czy\u0142a si\u0119!", 
+    "Try: ": "Spr\u00f3buj:", 
+    "Type tag name.": "Wpisz nazw\u0119 znacznika.", 
+    "end of the %(round_name)s": [
+      "koniec %(round_name)s", 
+      "koniec %(round_name)s", 
+      "koniec %(round_name)s"
+    ], 
+    "now": "teraz", 
+    "start of the %(round_name)s": [
+      "pocz\u0105tek %(round_name)s", 
+      "pocz\u0105tek %(round_name)s", 
+      "pocz\u0105tek %(round_name)s"
+    ], 
+    "to the end": "do ko\u0144ca", 
+    "to the start": "do rozpocz\u0119cia"
+  };
+
+  django.gettext = function (msgid) {
+    var value = django.catalog[msgid];
+    if (typeof(value) == 'undefined') {
+      return msgid;
+    } else {
+      return (typeof(value) == 'string') ? value : value[0];
+    }
+  };
+
+  django.ngettext = function (singular, plural, count) {
+    var value = django.catalog[singular];
+    if (typeof(value) == 'undefined') {
+      return (count == 1) ? singular : plural;
+    } else {
+      return value[django.pluralidx(count)];
+    }
+  };
+
+  django.gettext_noop = function (msgid) { return msgid; };
+
+  django.pgettext = function (context, msgid) {
+    var value = django.gettext(context + '\x04' + msgid);
+    if (value.indexOf('\x04') != -1) {
+      value = msgid;
+    }
+    return value;
+  };
+
+  django.npgettext = function (context, singular, plural, count) {
+    var value = django.ngettext(context + '\x04' + singular, context + '\x04' + plural, count);
+    if (value.indexOf('\x04') != -1) {
+      value = django.ngettext(singular, plural, count);
+    }
+    return value;
+  };
+  
+
+  django.interpolate = function (fmt, obj, named) {
+    if (named) {
+      return fmt.replace(/%\(\w+\)s/g, function(match){return String(obj[match.slice(2,-2)])});
+    } else {
+      return fmt.replace(/%s/g, function(match){return String(obj.shift())});
+    }
+  };
+
+
+  /* formatting library */
+
+  django.formats = {
+    "DATETIME_FORMAT": "Y-m-d H:i:s", 
+    "DATETIME_INPUT_FORMATS": [
+      "%Y-%m-%d %H:%M:%S", 
+      "%Y-%m-%d %H:%M:%S.%f", 
+      "%Y-%m-%d %H:%M", 
+      "%Y-%m-%d", 
+      "%m/%d/%Y %H:%M:%S", 
+      "%m/%d/%Y %H:%M:%S.%f", 
+      "%m/%d/%Y %H:%M", 
+      "%m/%d/%Y", 
+      "%m/%d/%y %H:%M:%S", 
+      "%m/%d/%y %H:%M:%S.%f", 
+      "%m/%d/%y %H:%M", 
+      "%m/%d/%y"
+    ], 
+    "DATE_FORMAT": "N j, Y", 
+    "DATE_INPUT_FORMATS": [
+      "%Y-%m-%d", 
+      "%m/%d/%Y", 
+      "%m/%d/%y", 
+      "%b %d %Y", 
+      "%b %d, %Y", 
+      "%d %b %Y", 
+      "%d %b, %Y", 
+      "%B %d %Y", 
+      "%B %d, %Y", 
+      "%d %B %Y", 
+      "%d %B, %Y"
+    ], 
+    "DECIMAL_SEPARATOR": ".", 
+    "FIRST_DAY_OF_WEEK": "0", 
+    "MONTH_DAY_FORMAT": "F j", 
+    "NUMBER_GROUPING": "0", 
+    "SHORT_DATETIME_FORMAT": "m/d/Y P", 
+    "SHORT_DATE_FORMAT": "m/d/Y", 
+    "THOUSAND_SEPARATOR": ",", 
+    "TIME_FORMAT": "P", 
+    "TIME_INPUT_FORMATS": [
+      "%H:%M:%S", 
+      "%H:%M:%S.%f", 
+      "%H:%M"
+    ], 
+    "YEAR_MONTH_FORMAT": "F Y"
+  };
+
+  django.get_format = function (format_type) {
+    var value = django.formats[format_type];
+    if (typeof(value) == 'undefined') {
+      return format_type;
+    } else {
+      return value;
+    }
+  };
+
+  /* add to global namespace */
+  globals.pluralidx = django.pluralidx;
+  globals.gettext = django.gettext;
+  globals.ngettext = django.ngettext;
+  globals.gettext_noop = django.gettext_noop;
+  globals.pgettext = django.pgettext;
+  globals.npgettext = django.npgettext;
+  globals.interpolate = django.interpolate;
+  globals.get_format = django.get_format;
+
+}(this));
+

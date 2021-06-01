@@ -1,0 +1,126 @@
+
+<!-- saved from url=(0057)https://ki.staszic.waw.pl/materialy/kolko-07-03-2006.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Kółko 7.03.2006</title>
+</head>
+<body>
+  <h1>Co robiliśmy na kółku 7.03.2006</h1>
+
+  <p>Na prośbę dużej grupy tych, którzy nie mogli być wtedy obecni, umieszczam streszczenie
+  mojego gadulstwa z kółka 7.03.2006. Ponieważ nie będzie kółka 21.03, to zachęcam tę grupę
+  do przejrzenia niniejszego wywodu zamiast kółka i oczywiście do zrobienia umieszczonych
+  w serwisie zadań!</p>
+  
+  <h2>Widoczność</h2>
+  <p>Na początek zajęliśmy się zadaniem Widoczność (dostępnym na sprawdzaczce).
+  Najpierw przyszedł nam do głowy algorytm brutalny, który dla każdej pozycji w tablicy
+  wyznacza najbliższą większą, przechodząc tablicę krok po kroku. Dla danych
+  typu n, 1, 2, ..., n-1 ten algorytm okazuje się być kwadratowy (złożoność
+  czasowa O(n<sup>2</sup>)).</p>
+  
+  <p>W związku z tym usprawniliśmy algorytm, tak aby wykorzystywał obliczone już wartości.
+  Aby obliczyć wynik dla pozycji k-tej, sprawdzamy, czy na pozycji (k-1)-szej jest liczba większa -
+  jeżeli tak, to wynikiem dla k jest właśnie (k-1) (W[k]=k-1), a jeżeli nie, to sprawdzamy, czy
+  może liczba stojąca na pozycji W[k-1] jest większa od k-tej - jeżeli nie, to sprawdzamy
+  pozycję W[W[k-1]] itd. Ogólnie poruszamy się po takich strzałkach w lewo aż do opuszczenia
+  tablicy bądź do pozytywnego skutku.</p>
+  
+  <p>Na pierwszy rzut oka nie widać, czemu ten algorytm miałby być w pesymistycznym przypadku
+  lepszy od poprzedniego. Tak jednak jest, ten algorytm ma złożoność czasową O(n).
+  Dlaczego? Otóż, biorąc pod uwagę <i>wszystkie</i> spacerki po strzałkach, nigdy nie przejdziemy
+  dwa razy po tej samej strzałce. Ponownie - dlaczego? Jeżeli w trakcie wyliczania W[k]
+  przejdziemy po strzałce i-&gt;W[i], to i &lt;= k, co oznacza, że w pozycji i-tej nigdy się
+  już przy spacerkach nie znajdziemy, bo po prostu liczba z pozycji k-tej przesłoni liczbę
+  z pozycji i-tej. A więc mamy ograniczenie na liczbę wszystkich operacji łącznie,
+  a skoro strzałek jest O(n), to tyle pesymistycznie operacji wykonamy.</p>
+
+  <p>To rozumowanie pokazuje, że często warto lepiej przyjrzeć się złożoności algorytmu, niż
+  po prostu uznać go za zbyt wolny tylko dlatego, że pesymistycznie w jednym kroku wykonuje dużo operacji
+  (powyższy nawet O(n) w jednym spacerze - <i>ćwiczenie</i> - znaleźć przykład takiego ciągu!).</p>
+  
+  <h2>Licznik binarny</h2>
+  <p>Innym przykładem na potrzebę dobrego szacowania jest Licznik binarny. Otóż załóżmy, że wykonujemy
+  n (=2<sup>k</sup> dla ułatwienia) operacji zwiększenia licznika binarnego o 1, przy początkowym stanie równym
+  0 (czyli wyliczamy reprezentacje kolejnych liczb binarnych). Pytanie, jaka jest złożoność całej
+  tej operacji (zakładamy, że nie musimy wypisywać np. tych liczb, czyli wykonujemy tylko tyle operacji,
+  ile trzeba i nie ruszamy niezmieniających się w danym kroku cyfr)?
+  Pesymistycznie szacując, wychodzi O(nlog(n)) - n operacji, każda liczba od 1 do n ma długość zapisu binarnego
+  co najwyżej log(n). Przypomnienie ze szkoly podstawowej: dodawanie 1 do liczby binarnej polega
+  na zmienianiu kolejnych 1 od końca liczby na 0 aż do momentu, kiedy natrafimy na 0; wtedy zmieniamy je
+  na 1 i kończymy.</p>
+
+  <p>No to oszacujmy lepiej. Na zajęciach najpierw próbowaliśmy powalczyć z rozumowaniem pokroju:
+  ostatnią cyfrę zmieniamy w n krokach, przedostatnią w n/2 krokach itd., ale otrzymaliśmy jakieś koszmarne sumy
+  i to podejście porzuciliśmy. Aby się nie namęczyć, spróbujmy pokombinować w szacowaniach.
+  Otóż każdy krok dostarcza dokładnie jedną jedynkę. Łączna liczba wszystkich zmian cyfr
+  jest niewiększa od podwojonej liczby wszystkich dostarczonych jedynek: no bo każdy krok najpierw
+  usuwa jedynki, które się już wcześniej pojawiły (w wyniku innych kroków), a potem dodaje jedną nową
+  jedynkę. No to łączna liczba operacji jest równa O(n).</p>
+
+  <h2>Krzyżyki</h2>
+  <p>Następnie przeszliśmy do zadania o krzyżykach, które już teraz jest na sprawdzaczce.
+  Zastanawialiśmy się, jakie złożoności możemy uzyskać. Na początek zauważmy, że krzyżyka
+  usadowionego w danym polu opłaca się użyć co najwyżej raz, gdyż dwa jego wykonania niwelują się
+  wzajemnie. To spostrzeżenie dostarcza nam pomysł, aby generować wszystkie podzbiory zbioru wszystkich
+  pozycji szachownicy (jest ich 2<sup>n*n</sup>) i dla każdego podzbioru wykonywać krzyżyki
+  umiejscowione we wszystkich pozycjach z tego podzbioru i sprawdzać, czy udało się wygasić wszystkie
+  lampki (którą to operację daje się wykonać w czasie O(n<sup>2</sup>).
+  Ostatecznie złożoność czasowa tego rozwiązania to O(n<sup>2</sup>*2<sup>n*n</sup>), czyli koszmarnie
+  dużo, nawet jak dla proponowanego w zadaniu n=10.</p>
+
+  <p>Musimy więc usprawnić nasze rozwiązanie. Zauważmy, że jeżeli ustalimy jakiś konkretny
+  podzbiór kwadracików z górnego, jednostkowej szerokości paska kratownicy i wykonamy krzyżyki o środkach
+  w nim usadowionych, to jeżeli teraz ograniczymy się do krzyżyków, których środki są w innych
+  polach niż w górnym rzędzie, to operacje, które muszą być wykonane, są określone jednoznacznie!
+  No bo w drugim od góry rzędzie wykonujemy krzyżyki tylko w tych polach, nad którymi są zapalone lampki
+  (innych nam nie wolno, bo popsujemy górny rząd i nie będziemy mogli tego już naprawić).
+  Czyli drugi rząd jest wyznaczony jednoznacznie - i teraz to rozumowanie możemy kontynuować dla
+  kolejnych rzędów. Jeżeli na końcu uzyskamy wygaszoną szachownicę, to się udało, a jeżeli nie, to
+  kontynuujemy poszukiwania dla kolejnych podzbiorów górnego rzędu.
+  Całkowity koszt algorytmu możemy oszacować przez O(2<sup>n</sup>*n<sup>2</sup>), czyli liczba podzbiorów
+  razy koszt jednej symulacji.
+  Pytanie, jak generować wszystkie podzbiory danego zbioru? Jedną metodę już kiedyś przerabialiśmy
+  (też jest zadanie na to na sprawdzaczce). Inną omówię na następnym kółku.</p>
+
+  <p>Przypomnę jeszcze, że na kółku 14.03 udało nam się wymyślić rozwiązanie o złożoności wielomianowej
+  (O(n<sup>6</sup>)), wykorzystujące eliminację Gaussa.</p>
+
+  <h2>Meet in the middle i zadanie Szyfr</h2>
+  <p>Na koniec kółka zastanawialiśmy się nad pewnym metaproblemem. Otóż załóżmy, że chcemy dojść
+  z jednego położenia do drugiego i w każdym kroku mamy do wykonania kilka (np. 2) typy ruchów.
+  Jeżeli wykonamy n kroków, to łatwo widać, że łączna liczba odwiedzonych położeń może być
+  rzędu 2<sup>n</sup> (wyobraź sobie rozrastające się drzewo binarne, które na każdym poziomie
+  jest 2 razy liczniejsze niż na poprzednim). Można jednak całą operację przyspieszyć, jeżeli znamy
+  i początek, i koniec. Otóż będziemy wykonywać kolejno fazy ruchów od początku i od końca naprzemian.
+  Czyli najpierw patrzymy, gdzie się da dojść z początku w 1 kroku, potem gdzie z końca w 1 kroku,
+  potem gdzie z początku w 2 krokach, potem gdzie z końca w 2 krokach itd. Czyli tym razem
+  budujemy sobie dwa drzewka, które się spotkają na środku - jeżeli wykonaliśmy n kroków od początku
+  do końca, to każde drzewko ma wysokość n/2, czyli rozmiar przeszukanego przez nas zbioru
+  to 2*2<sup>n/2</sup>, czyli znacznie lepiej niż poprzednio.</p>
+  
+  <p>Ten metapomysł, podany w zasadzie jako ciekawostkę, wykorzystaliśmy jednak, omawiając zadanie
+  Szyfr z finału IX OI (też je umieściłem na sprawdzaczce). Jednym z pomysłów w kierunku
+  jego rozwiązania jest oczywiście próbować wszystkie podzbiory zbioru indeksów; dla danego
+  podzbioru do sumy brać właśnie liczby z tego podzbioru i sprawdzać, czy uzyskaliśmy
+  sukces. To nam zajmie gdzieś koło n*2<sup>n</sup> operacji, czyli za dużo dla
+  proponowanego n=40.</p>
+  
+  <p>No to zastosujemy inne podejście. Podzielmy sobie zbiór liczb na połowy (każdy po n/2
+  elementów). Dla każdego możemy już sobie pozwolić na wygenerowanie wszystkich podzbiorów
+  i policzenie wszystkich możliwych do uzyskania sum - to nam zajmie coś koło
+  2*(n/2)*2<sup>n/2</sup> operacji.
+  Teraz sortujemy te dwa zbiory i dla każdej sumy z jednego zbioru, wyszukujemy binarnie
+  odpowiadającą sumę z drugiego zbioru, która łącznie z naszą da sumę, której pragniemy
+  (można trochę przyspieszyć drugi krok i używać po posortowaniu innego, szybszego sposobu -
+  ćwiczenie - jakiego?). Uzyskaliśmy więc rozwiązanie o złożoności O(coś*2<sup>n/2</sup>),
+  gdzie coś jest jakimś wielomianem. I jest to rozwiązaniem znacznie szybszym
+  niż poprzednie.</p>
+
+  <p>To chyba tyle. Jeżeli coś napisałem niezrozumiale, piszcie na adres
+  <a href="mailto:swistak@mimuw.edu.pl">swistak@mimuw.edu.pl</a> 
+  albo pytajcie się na kolejnych zajęciach.</p>
+  
+
+
+</body></html>

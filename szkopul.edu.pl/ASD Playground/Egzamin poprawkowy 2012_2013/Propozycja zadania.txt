@@ -1,0 +1,45 @@
+Problem:
+Dane jest drzewo n-wierzcho³kowe z wa¿onymi krawêdziami.
+Chcemy wybraæ takie krawêdzie tego drzewa tak, aby:
+1) suma wag wybranych krawêdzi by³a najwiêksza mo¿liwa
+2) ka¿de dwie wybrane krawêdzie nie mia³y wspólnego wierzcho³ka
+3) ka¿de dwa wierzcho³ki, stanowi¹ce koñce jakiœ wybranych krawêdzi,
+  nie by³y po³¹czone krawêdzi¹ niewybran¹. 
+
+
+Rozwi¹zanie:
+Rozwi¹¿emy to zadanie metod¹ programowania dynamicznego - bêdziemy obliczali pewne wartoœci dla poddrzew ka¿dego wierzcho³ka drzewa, od liœci a¿ do korzenia.
+
+Niech 'best[u]' oznacza najlepszy wynik dla poddrzewa wierzcho³ka 'u'.
+
+Niech 'dp1[u]' niech oznacza najlepszy wynik dla poddrzewa wierzcho³ka 'u', w którym to nie u¿ywamy krawêdzi z wierzcho³ka 'u' do któregoœ jego syna.
+
+Niech 'dp2[u]' niech oznacza najlepszy wynik dla poddrzewa wierzcho³ka 'u', w którym to nie u¿ywamy ani krawêdzi z wierzcho³ka 'u' do jakiegokolwiek syna 'v' wierzcho³ka 'u', ani krawêdzi z wierzcho³ka 'v' do jakiegokolwiek syna wierzcho³ka 'v'.
+
+Jeœli wierzcho³ek 'u' jest liœciem, to dp1[u] = dp2[u] = best[u] = 0.
+
+Jeœli wierzcho³ek 'u' nie jest liœciem, to dp1[u] = suma_od_i=1_do_k {best[v_i]} ( sumowanie przebiega po wszystkich synach wierzcho³ka 'u' ; k - liczba synów wierzcho³ka 'u' ; tak naprawdê 'dp1[u]' to suma najlepszych wyników dla wszystkich synów wierzcho³ka 'u' ).
+
+Jeœli wierzcho³ek 'u' nie jest liœciem, to dp2[u] = suma_od_i=1_do_k {dp1[v_i]} ( sumowanie przebiega po wszystkich synach wierzcho³ka 'u' ; k - liczba synów wierzcho³ka 'u' ; tak naprawdê 'dp2[u]' to suma najlepszych wyników dla wszystkich wnuków wierzcho³ka 'u' ).
+
+Jeœli wierzcho³ek 'u' nie jest liœciem, to mamy 2 opcje obliczenia wartoœci 'best[u]':
+1) nie bierzemy ¿adnej krawêdzi z wierzcho³ka 'u' do jakiegoœ jego syna - wtedy kandydatem na wartoœæ 'best[u]' jest A = dp1[u]
+2) bierzemy jak¹œ krawêdŸ z wierzcho³ka 'u' do jakiegoœ jego syna - wtedy kandydatem na wartoœæ 'best[u]' jest B = dp2[u] + max_od_i=1_do_k {w(u,v_i)} ( maxowanie przebiega po wszystkich synach wierzcho³ka 'u' ; k - liczba synów wierzcho³ka 'u' ; w(a,b) - waga krawêdzi miêdzy wierzcho³kami 'a' oraz 'b' )
+Mówi¹c inaczej, albo nie bierzemy ¿adnej krawêdzi postaci 'u-v' (v - jakiœ syn wierzcho³ka 'u') i bierzemy najlepsze wyniki dla synów wierzcho³ka 'u', albo bierzemy dok³adnie jedn¹ krawêdŸ postaci 'u-v' (v - jakiœ syn wierzcho³ka 'u') i bierzemy najlepsze wyniki dla wnuków wierzcho³ka 'u'.
+
+Wartoœæ 'best[u]' wynosi max(A,B).
+
+Wynikiem zadania jest 'best[root]' , gdzie 'root' - korzeñ drzewa.
+
+
+Z³o¿onoœæ czasowa rozwi¹zania: O(n).
+Z³o¿onoœæ pamiêciowa rozwi¹zania: O(n).
+
+
+Ciekawostka:
+Warunek 3) mo¿na uogólniæ - ka¿de 2, 3, ..., p wierzcho³ków, stanowi¹cych koñce jakiœ wybranych krawêdzi, nie mo¿e le¿eæ na œcie¿ce z³o¿onej z samych krawêdzi niewybranych (wtedy przedstawione wy¿ej rozwi¹zanie równie¿ jest poprawne !!! jeœli mamy tak¹ niepo¿¹dan¹ œcie¿kê z³o¿on¹ z liczby wierzcho³ków wiêkszej ni¿ 2, to równie¿ mamy niepo¿¹dan¹ krawêdŸ z³o¿on¹ z dok³adnie 2 wierzcho³ków).
+Ewentualnie warunek 3) mo¿na by napisaæ tak: ka¿de p (p >= 2) wierzcho³ków, stanowi¹cych koñce jakiœ wybranych krawêdzi, nie mo¿e le¿eæ na œcie¿ce z³o¿onej z samych krawêdzi niewybranych (ka¿da krótsza taka œcie¿ka jest akceptowalna).
+Warunek 2) mo¿na uogólniæ - nie istnieje œcie¿ka d³ugoœci 2, 3, ..., p krawêdzi, z³o¿ona z samych krawêdzi wybranych (wtedy przedstawione wy¿ej rozwi¹zanie równie¿ jest poprawne !!! jeœli mamy tak¹ niepo¿¹dan¹ œcie¿kê, to równie¿ mamy niepo¿¹dan¹ œcie¿kê o d³ugoœci dok³adnie 2 krawêdzi).
+Ewentualnie 2) mo¿na by uogólniæ: nie istnieje œcie¿ka d³ugoœci p (p >= 1) krawêdzi, z³o¿ona wy³¹cznie z krawêdzi wybranych (ka¿da krótsza taka œcie¿ka jest akceptowalna).
+
+Ciekawe zadanie mamy wtedy, gdy chcemy ewentualnie uogólniæ warunki 2) oraz 3) jednoczeœnie.
