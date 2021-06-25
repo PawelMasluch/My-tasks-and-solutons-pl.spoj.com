@@ -128,7 +128,7 @@ class Node{
 			}
 		}
 		
-		// make prefix sums for s given node
+		// make prefix sums for a given node
 		// only for internal nodes in a range tree!!!
 		void makePrefixSums(){
 			int n = this -> histogram.size();
@@ -287,7 +287,7 @@ class RangeTree{
 			int result = 0;
 			
 			REP(i,0,nV-1){
-				result = max( result, this -> t[ V[i] ].getHistogram( this -> t[ V[i] ].getSize() - 1 ).value ); // first elements of histograms have maximal values (in given histograms)
+				result = max( result, this -> t[ V[i] ].getHistogram( this -> t[ V[i] ].getSize() - 1 ).value ); // last elements of histograms have maximal values (in given histograms)
 			}
 			
 			return result;
