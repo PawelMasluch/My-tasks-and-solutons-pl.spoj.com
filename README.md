@@ -11,4 +11,5 @@ Dodatkowo, moje implementacje klasycznych algorytmów.
 Copyright (C) Paweł Maśluch, 2021. All rights reserved.
 
 Programming tasks and my solutions from various websites.
+
 Additionally, my implementations of classic algorithms.
