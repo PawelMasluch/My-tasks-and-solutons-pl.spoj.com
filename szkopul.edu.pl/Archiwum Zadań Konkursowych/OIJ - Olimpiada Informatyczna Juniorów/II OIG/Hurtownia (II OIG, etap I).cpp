@@ -20,9 +20,10 @@ int main(){
 	ios_base::sync_with_stdio(0);
 	
 	/* 
-		Kolejnosc produktow zgodna 
+		Kolejnosc kodow produktow zgodna 
 		z kolejnoscia pojawiania sie 
-		na wejsciu. 
+		na wejsciu (poczatkowo, gdyz potem 
+		zmienimy kolejnosc na alfabetyczna). 
 	*/
 	VC products_order;
 	
